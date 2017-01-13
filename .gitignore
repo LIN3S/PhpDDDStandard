@@ -1,0 +1,24 @@
+#### Symfony ####
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+/var/bootstrap.php.cache
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+!var/sessions/.gitkeep
+/vendor
+
+#### CAPISTRANO ####
+/log
+
+#### LIN3S ####
+.editorconfig
+.eslint.yml
+.lin3s_cs.yml
+.scss_lint.yml
+
+#### Node.js ####
+/node_modules
+
+#### Composer ####
+/composer.phar
