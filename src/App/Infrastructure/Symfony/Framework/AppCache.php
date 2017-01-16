@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+namespace App\Infrastructure\Symfony\Framework;
+
 use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
 class AppCache extends HttpCache

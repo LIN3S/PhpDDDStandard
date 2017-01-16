@@ -2,4 +2,4 @@ services:
     app.http_action.default:
         class: App\Infrastructure\Symfony\HttpAction\DefaultAction
         arguments:
-            - '@twig'
+            - "@twig"
