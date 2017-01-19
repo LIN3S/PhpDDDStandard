@@ -1,5 +1,7 @@
 {
-    "name": "lin3s/symfony-standard-ddd",
+    "name": "lin3s/php-ddd-standard",
+    "description": "The \"Php DDD Standard Edition\" distribution in the LIN3S way",
+    "keywords": ["lin3s", "php", "ddd", "standard"],
     "license": "MIT",
     "type": "project",
     "authors": [
