@@ -50,16 +50,16 @@ parameters:
         - strict
         - strict_param
 
-    scsslint_path: src/App/Infrastucture/Ui/Assets/scss
-    scsslint_file_location: src/App/Infrastucture/Ui/Assets
+    scsslint_path: src/App/Infrastructure/Ui/Assets/scss
+    scsslint_file_location: src/App/Infrastructure/Ui/Assets
     scsslint_exclude: []
     scsslint_rules:             # available rules can view for https://github.com/brigade/scss-lint/blob/master/config/default.yml
         linters:
             SelectorFormat:
                 enabled: true
                 convention: hyphenated_BEM
-    eslint_path: src/App/Infrastucture/Ui/Assets/js
-    eslint_file_location: src/App/Infrastucture/Ui/Assets
+    eslint_path: src/App/Infrastructure/Ui/Assets/js
+    eslint_file_location: src/App/Infrastructure/Ui/Assets
     eslint_exclude: []
     eslint_rules:               # available rules can view in http://eslint.org/docs/rules/
         ecmaFeatures: []
