@@ -15,7 +15,7 @@ parameters:
         - scsslint
         - eslint
 
-    name: Symfony Standard DDD
+    name: Php DDD Standard
     type: project
     year: 2017
     author: LIN3S
@@ -50,19 +50,17 @@ parameters:
         - strict
         - strict_param
 
-    scsslint_path: app/Resources/assets/scss
-    scsslint_file_location: .
-    scsslint_exclude:
-        - base/_reset.scss
+    scsslint_path: src/App/Infrastucture/Ui/Assets/scss
+    scsslint_file_location: src/App/Infrastucture/Ui/Assets
+    scsslint_exclude: []
     scsslint_rules:             # available rules can view for https://github.com/brigade/scss-lint/blob/master/config/default.yml
         linters:
             SelectorFormat:
                 enabled: true
                 convention: hyphenated_BEM
-    eslint_path: app/Resources/assets/js
-    eslint_file_location: .
-    eslint_exclude:
-        - cookies.js
+    eslint_path: src/App/Infrastucture/Ui/Assets/js
+    eslint_file_location: src/App/Infrastucture/Ui/Assets
+    eslint_exclude: []
     eslint_rules:               # available rules can view in http://eslint.org/docs/rules/
         ecmaFeatures: []
         env:
