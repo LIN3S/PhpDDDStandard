@@ -24,6 +24,8 @@ class DefaultAction
 
     public function __invoke()
     {
-        return new Response($this->twig->render('default/index.html.twig'));
+        return new Response(
+            $this->twig->render('default/index.html.twig')
+        );
     }
 }

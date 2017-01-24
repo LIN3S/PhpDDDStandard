@@ -27,7 +27,7 @@
     },
     "require-dev": {
         "lin3s/cs": "^0.4.3",
-        "phpspec/phpspec": "^3.1"
+        "phpspec/phpspec": "^3.2"
     },
     "scripts": {
         "symfony-scripts": [
