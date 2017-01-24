@@ -12,6 +12,7 @@
 /.lin3s_cs.yml
 /composer.phar
 /log
+/parameters.yml
 /src/App/Infrastructure/Ui/Assets/.eslint.yml
 /src/App/Infrastructure/Ui/Assets/.scss_lint.yml
 /src/App/Infrastructure/Ui/Assets/node_modules
