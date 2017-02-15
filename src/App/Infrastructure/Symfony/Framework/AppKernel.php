@@ -12,6 +12,7 @@
 namespace App\Infrastructure\Symfony\Framework;
 
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
+use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
 use Sensio\Bundle\DistributionBundle\SensioDistributionBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
 use Symfony\Bundle\DebugBundle\DebugBundle;
@@ -35,6 +36,7 @@ class AppKernel extends Kernel
             new MonologBundle(),
             new SwiftmailerBundle(),
             new DoctrineBundle(),
+            new DoctrineMigrationsBundle(),
             new SensioFrameworkExtraBundle(),
         ];
 

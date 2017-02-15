@@ -40,7 +40,7 @@ Symfony:
 * `Symfony\HttpAction`: Contains controller actions based in Symfony's Http components. 
 
 Persistence:
-* `Persistence\Doctrine`: Contains DBAL and ORM implementations required to persist the domain layer.
+* `Persistence\Doctrine`: Contains DBAL, ORM and Migrations implementations required to persist the domain layer.
 
 Ui:
 * `UI\Assets`: Will contain assets required in the frontend (css, js, svg...)
