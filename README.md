@@ -21,6 +21,11 @@ In order to use the built-in server, use the following scripts:
 $ sh etc/bash/server_start.sh
 $ sh etc/bash/server_stop.sh
 ```
+In order to load database with its migrations using Doctrine:
+```bash
+$ sh etc/bash/drop_and_reload_db.sh
+```
+
 By default the symfony console is in `src/App/Infrastructure/Ui/Cli/Symfony/console` but to make your life more easy
 this repo provides a symlink of this file inside `etc/bin` directory so you can access to Symfony's console like this: 
 ```
@@ -40,7 +45,7 @@ Symfony:
 * `Symfony\HttpAction`: Contains controller actions based in Symfony's Http components. 
 
 Persistence:
-* `Persistence\Doctrine`: Contains DBAL and ORM implementations required to persist the domain layer.
+* `Persistence\Doctrine`: Contains DBAL, ORM and Migrations implementations required to persist the domain layer.
 
 Ui:
 * `UI\Assets`: Will contain assets required in the frontend (css, js, svg...)
