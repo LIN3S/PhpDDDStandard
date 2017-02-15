@@ -1,0 +1,29 @@
+# This file is part of the Php DDD Standard project.
+#
+# Copyright (c) 2017 LIN3S <info@lin3s.com>
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @author Beñat Espiña <benatespina@gmail.com>
+
+namespace :compile_and_upload do
+  desc 'Compiled the assets'
+  task :webpack do
+    run_locally do
+      execute "cd #{fetch(:assets_path)} && yarn install && yarn run build:prod"
+    end
+  end
+
+  desc 'Upload needed files'
+  task :upload do
+    on roles(:all) do |host|
+      Dir.glob("#{fetch(:web_path)}/app.*.{js,css}").each do |file|
+        file = File.basename file
+
+        upload! "#{fetch(:web_path)}/#{file}", "#{release_path}/#{fetch(:web_path)}"
+      end
+      upload! "#{fetch(:ui_path)}/manifest.json", "#{release_path}/#{fetch(:ui_path)}"
+    end
+  end
+end
