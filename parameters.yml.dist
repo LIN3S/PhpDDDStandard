@@ -21,3 +21,4 @@ parameters:
     mailer_password:   ~
 
     secret:            ThisTokenIsNotSoSecretChangeIt
+    hostname:          http://php-ddd-standard.com

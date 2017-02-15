@@ -50,3 +50,7 @@ swiftmailer:
     username: "%mailer_user%"
     password: "%mailer_password%"
     spool: { type: memory }
+
+accelerator_cache:
+    host: "%hostname%"
+    web_dir: "%kernel.root_dir%/../../Ui/Http/Symfony"
