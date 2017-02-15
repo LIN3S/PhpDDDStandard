@@ -61,17 +61,19 @@ parameters:
     eslint_path: src/App/Infrastructure/Ui/Assets/js
     eslint_file_location: src/App/Infrastructure/Ui/Assets
     eslint_exclude: []
-    eslint_rules:               # available rules can view in http://eslint.org/docs/rules/
-        ecmaFeatures: []
+    eslint_rules:           # check the LIN3SCS config if you need to use React.js in your project https://github.com/LIN3S/CS#use-eslint-in-a-reactjs-environment
+        ecmaFeatures:
+            modules: true
         env:
+            es6: true
             browser: true
-            jquery: true
+        parserOptions:
+            sourceType: module
+            ecmaFeatures:
+                classes: true
+                experimentalObjectRestSpread: true
+                templateStrings: true
         globals:
             dataLayer: true
-            FastClick: true
-            Modernizr: true
-            svg4everybody: true
-        rules:
-            max-len:
-                - 2
-                - 120
+            FB: true
+            google: true
