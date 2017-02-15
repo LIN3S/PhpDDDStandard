@@ -1,0 +1,47 @@
+// This file is part of the Php DDD Standard project.
+//
+// Copyright (c) 2017 LIN3S <info@lin3s.com>
+//
+// For the full copyright and license information, please view the LICENSE
+// file that was distributed with this source code.
+//
+// @author Beñat Espiña <benatespina@gmail.com>
+// @author Gorka Laucirica <gorka.lauzirika@gmail.com>
+
+@import '../_variables/colors';
+@import '../_variables/typography';
+
+$body-background-color: $color-white;
+$strong-font-weight: $font-weight-bold;
+$small-font-size: .7em;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $body-background-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  overflow-x: hidden; // Prevents mobile menu been shown when is hidden
+  text-rendering: optimizelegibility;
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+strong {
+  font-weight: $strong-font-weight;
+}
+
+em {
+  font-style: italic;
+}
