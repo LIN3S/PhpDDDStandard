@@ -52,5 +52,5 @@ swiftmailer:
     spool: { type: memory }
 
 accelerator_cache:
-    host: "%hostname%"
+    host: "%router.request_context.scheme%://%router.request_context.host%"
     web_dir: "%kernel.root_dir%/../../Ui/Http/Symfony"
