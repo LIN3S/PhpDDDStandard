@@ -13,8 +13,8 @@
 # Setup project
 ############################################
 
-set :application,   "php-ddd-standard"
-set :repo_url,      "https://github.com/LIN3S/PhpDDDStandard.git"
+set :application,   "rome-reports"
+set :repo_url,      "git@gitlab.lin3s.com:romereports/rome-reports.git"
 set :scm,           :git
 
 set :infr_path, "src/App/Infrastructure"
@@ -26,6 +26,7 @@ set :bin_path, fetch(:infr_path) + "/Ui/Cli/Symfony"
 
 set :ui_path, fetch(:infr_path) + "/Ui"
 set :assets_path, fetch(:ui_path) + "/Assets"
+set :build_path, fetch(:assets_path) + "/build"
 
 set :sessions_path, fetch(:var_path) + "/sessions"
 
@@ -58,5 +59,5 @@ namespace :deploy do
   after :updated, 'compile_and_upload:webpack'
   after :updated, 'compile_and_upload:upload'
   after :updated, 'database:migrate'
-# after :finishing, 'cache:clear'
+  after :finishing, 'cache:clear'
 end

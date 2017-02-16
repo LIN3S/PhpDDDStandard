@@ -18,10 +18,10 @@ namespace :compile_and_upload do
   desc 'Upload needed files'
   task :upload do
     on roles(:all) do |host|
-      Dir.glob("#{fetch(:web_path)}/app.*.{js,css}").each do |file|
+      Dir.glob("#{fetch(:build_path)}/*").each do |file|
         file = File.basename file
 
-        upload! "#{fetch(:web_path)}/#{file}", "#{release_path}/#{fetch(:web_path)}"
+        upload! "#{fetch(:build_path)}/#{file}", "#{release_path}/#{fetch(:build_path)}"
       end
       upload! "#{fetch(:ui_path)}/manifest.json", "#{release_path}/#{fetch(:ui_path)}"
     end
