@@ -8,9 +8,8 @@
 // @author Beñat Espiña <bespina@lin3s.com>
 // @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-@import '_base/reset';
-@import '_base/common';
-@import '_base/fonts';
+@import '_definitions/animations';
+@import '_definitions/fonts';
 
 @import 'atoms/button';
 @import 'atoms/form-checkbox';

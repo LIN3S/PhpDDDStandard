@@ -7,9 +7,10 @@
 //
 // @author Beñat Espiña <benatespina@gmail.com>
 
-$z-index-1: 1;
-$z-index-5: 5;
-$z-index-50: 50;
-$z-index-100: 100;
-$z-index-200: 200;
-$z-index-900: 900;
+/*
+  Use this file to put z-indexes that mark contexts between
+  atoms, components, compositions layout and pages.
+
+  The internal layers inside atoms, components,
+  compositions layout or pages put inside the file itself.
+*/
