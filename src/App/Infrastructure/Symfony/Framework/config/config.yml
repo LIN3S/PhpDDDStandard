@@ -54,3 +54,9 @@ swiftmailer:
 accelerator_cache:
     host: "%router.request_context.scheme%://%router.request_context.host%"
     web_dir: "%kernel.root_dir%/../../Ui/Http/Symfony"
+
+lin3s_distribution:
+    webpack:
+        manifest_path: "%kernel.root_dir%/../../Ui/manifest.json"
+        public_js_path: "/build/"
+        public_css_path: "/build/"

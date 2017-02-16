@@ -18,6 +18,7 @@
         "doctrine/doctrine-cache-bundle": "^1.2",
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "incenteev/composer-parameter-handler": "^2.0",
+        "lin3s/distribution": "^2.4",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "smart-core/accelerator-cache-bundle": "^1.2",

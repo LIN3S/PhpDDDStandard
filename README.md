@@ -14,24 +14,6 @@ Firstly, you need to **create the project**:
 $ composer create-project lin3s/php-ddd-standard <project-name> && cd <project-name>
 ```
 
-## Symfony as infrastructure tool
-###Useful shortcuts
-In order to use the built-in server, use the following scripts:
-```
-$ sh etc/bash/server_start.sh
-$ sh etc/bash/server_stop.sh
-```
-In order to load database with its migrations using Doctrine:
-```bash
-$ sh etc/bash/drop_and_reload_db.sh
-```
-
-By default the symfony console is in `src/App/Infrastructure/Ui/Cli/Symfony/console` but to make your life more easy
-this repo provides a symlink of this file inside `etc/bin` directory so you can access to Symfony's console like this: 
-```
-$ etc/bin/symfony-console
-```
-
 ## Domain-Driven Design
 This projects follows the architecture proposed by [Domain-Driven Design][3]. Make sure you understand the basic 
 concepts before you start meshing around with this projects.
@@ -57,6 +39,34 @@ Ui:
 Persistence (if they manage and store data) or under vendor name (f.e Laravel) in case it does not meet the two other 
 descriptions.
 
+## Symfony as infrastructure tool
+### Useful shortcuts
+In order to use the built-in server, use the following scripts:
+```
+$ sh etc/bash/server_start.sh
+$ sh etc/bash/server_stop.sh
+```
+In order to delete current db and load an empty one with its migrations using Doctrine:
+```bash
+$ sh etc/bash/drop_and_reload_db.sh
+```
+
+By default the symfony console is in `src/App/Infrastructure/Ui/Cli/Symfony/console` but to make your life more easy
+this repo provides a symlink of this file inside `etc/bin` directory so you can access to Symfony's console like this: 
+```
+$ etc/bin/symfony-console
+```
+
+## Front-end stuff
+The `Assets` directory contains all the code and assets related with the front. It has **Sass** as CSS preprocessor
+and **ES2015** as JavaScript version. These assets and code need to compile as the following way:
+```bash
+$ cd src/App/Infrastructure/Ui/Assets
+$ yarn install
+$ yarn run build
+```
+All the resultant code is generated inside the `build` directory.
+
 ## Deployment
 This package comes with **Symfony as infrastructure tool** so, this section is about automatized deployment process with
 Capistrano using Symfony as web framework.
@@ -76,7 +86,7 @@ $ cap <stage> deploy    # <stage> can be dev1, prod or whatever file inside stag
 ```
 
 > In the Capistrano shared directory you should create the `parameters.yml`,
-> `src/App/Infrastructure/Ui/Http/Symfony/.htaccess` and `src/App/Infrastructure/Ui/Http/Symfony/.robots.txt` files
+> `src/App/Infrastructure/Ui/Http/Symfony/.htaccess` and `src/App/Infrastructure/Ui/Http/Symfony/robots.txt` files
 > and `var/logs`, `var/sessions` and `src/App/Infrastructure/Ui/Http/Symfony/uploads` folders should be created for you.
 
 ### Clearing remote caches
