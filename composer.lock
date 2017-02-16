@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c26091de519893433c5e3500aa18df53",
-    "content-hash": "dc5412b402837611f55908427c4175ce",
+    "hash": "99feebe806bf39692f39fd8edbf75ec3",
+    "content-hash": "de8d6c522bd599577e83f3f709acd3d2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -912,6 +912,47 @@
             "time": "2016-12-18 15:42:34"
         },
         {
+            "name": "fullpipe/twig-webpack-extension",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fullpipe/twig-webpack-extension.git",
+                "reference": "56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fullpipe/twig-webpack-extension/zipball/56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67",
+                "reference": "56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "^1.20 || ^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fullpipe\\TwigWebpackExtension\\": "src/Fullpipe/TwigWebpackExtension/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Bravov",
+                    "email": "eugene.bravov@gmail.com"
+                }
+            ],
+            "description": "Inject your webpack entry points into twig templates with easy.",
+            "keywords": [
+                "extension",
+                "twig",
+                "webpack"
+            ],
+            "time": "2016-12-30 08:09:06"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -1011,6 +1052,57 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "lin3s/distribution",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LIN3S/Distribution.git",
+                "reference": "7788fc580fbec3810df4fb3aaa50fde56f598a57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LIN3S/Distribution/zipball/7788fc580fbec3810df4fb3aaa50fde56f598a57",
+                "reference": "7788fc580fbec3810df4fb3aaa50fde56f598a57",
+                "shasum": ""
+            },
+            "require": {
+                "fullpipe/twig-webpack-extension": "^2.0.0",
+                "symfony/filesystem": "^2.3 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.12"
+            },
+            "suggest": {
+                "symfony/framework-bundle": "Allows to integrate the distribution with Symfony"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LIN3S\\Distribution\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/Javascript/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LIN3S",
+                    "email": "info@lin3s.com",
+                    "homepage": "https://lin3s.com"
+                }
+            ],
+            "description": "Distribution library for different purposes inside LIN3S",
+            "keywords": [
+                "distribution",
+                "lin3s"
+            ],
+            "time": "2017-02-08 16:09:36"
         },
         {
             "name": "monolog/monolog",

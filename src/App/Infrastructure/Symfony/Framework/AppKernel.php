@@ -13,8 +13,10 @@ namespace App\Infrastructure\Symfony\Framework;
 
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
+use LIN3S\Distribution\Php\Symfony\Lin3sDistributionBundle;
 use Sensio\Bundle\DistributionBundle\SensioDistributionBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use SmartCore\Bundle\AcceleratorCacheBundle\AcceleratorCacheBundle;
 use Symfony\Bundle\DebugBundle\DebugBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MonologBundle\MonologBundle;
@@ -30,14 +32,16 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = [
-            new FrameworkBundle(),
-            new SecurityBundle(),
-            new TwigBundle(),
-            new MonologBundle(),
-            new SwiftmailerBundle(),
-            new DoctrineBundle(),
+            new AcceleratorCacheBundle(),
             new DoctrineMigrationsBundle(),
+            new DoctrineBundle(),
+            new FrameworkBundle(),
+            new Lin3sDistributionBundle(),
+            new MonologBundle(),
+            new SecurityBundle(),
             new SensioFrameworkExtraBundle(),
+            new SwiftmailerBundle(),
+            new TwigBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

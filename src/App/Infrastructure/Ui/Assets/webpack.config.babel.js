@@ -22,7 +22,7 @@ const options = {
     scss: `scss`
   },
   output: {
-    jsPath: './../Http/Symfony',
+    jsPath: './build',
     jsPublicPath: '/',
     jsFilename: '[name].js',
     jsFilenameProduction: '[name].[chunkhash].js',

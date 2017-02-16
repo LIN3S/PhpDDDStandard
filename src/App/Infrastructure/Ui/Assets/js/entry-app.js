@@ -13,9 +13,4 @@
 
 import './../scss/app/app.scss';
 
-import {listenDomReady, listenDomLoaded} from 'lin3s-event-bus';
-
 import './app/app';
-
-listenDomReady();
-listenDomLoaded();

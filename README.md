@@ -46,7 +46,7 @@ In order to use the built-in server, use the following scripts:
 $ sh etc/bash/server_start.sh
 $ sh etc/bash/server_stop.sh
 ```
-In order to load database with its migrations using Doctrine:
+In order to delete current db and load an empty one with its migrations using Doctrine:
 ```bash
 $ sh etc/bash/drop_and_reload_db.sh
 ```
@@ -65,6 +65,7 @@ $ cd src/App/Infrastructure/Ui/Assets
 $ yarn install
 $ yarn run build
 ```
+All the resultant code is generated inside the `build` directory.
 
 ## Deployment
 This package comes with **Symfony as infrastructure tool** so, this section is about automatized deployment process with
@@ -85,7 +86,7 @@ $ cap <stage> deploy    # <stage> can be dev1, prod or whatever file inside stag
 ```
 
 > In the Capistrano shared directory you should create the `parameters.yml`,
-> `src/App/Infrastructure/Ui/Http/Symfony/.htaccess` and `src/App/Infrastructure/Ui/Http/Symfony/.robots.txt` files
+> `src/App/Infrastructure/Ui/Http/Symfony/.htaccess` and `src/App/Infrastructure/Ui/Http/Symfony/robots.txt` files
 > and `var/logs`, `var/sessions` and `src/App/Infrastructure/Ui/Http/Symfony/uploads` folders should be created for you.
 
 ### Clearing remote caches

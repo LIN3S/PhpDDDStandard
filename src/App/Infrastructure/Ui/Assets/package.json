@@ -6,7 +6,7 @@
     "fastclick": "^1.0.6",
     "jquery": "^3.1.1",
     "lin3s-css-grid": "^0.3.0",
-    "lin3s-event-bus": "^0.3.2",
+    "lin3s-event-bus": "^0.4.0",
     "parsleyjs": "^2.6.2",
     "picturefill": "^3.0.2",
     "svg4everybody": "^2.1.0"

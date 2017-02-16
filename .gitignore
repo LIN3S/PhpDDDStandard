@@ -16,11 +16,10 @@
 /src/App/Infrastructure/Ui/Assets/.eslint.yml
 /src/App/Infrastructure/Ui/Assets/.scss_lint.yml
 /src/App/Infrastructure/Ui/Assets/node_modules
-/src/App/Infrastructure/Ui/Http/Symfony/admin.*
+/src/App/Infrastructure/Ui/Assets/build
+!/src/App/Infrastructure/Ui/Assets/build/.gitkeep
 /src/App/Infrastructure/Ui/Http/Symfony/.htaccess
-/src/App/Infrastructure/Ui/Http/Symfony/app.*
 !/src/App/Infrastructure/Ui/Http/Symfony/app.php
-/src/App/Infrastructure/Ui/Http/Symfony/modernizr.js
 /src/App/Infrastructure/Ui/Http/Symfony/robots.txt
 /src/App/Infrastructure/Ui/manifest.json
 /var/bootstrap.php.cache
