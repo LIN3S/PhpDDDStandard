@@ -19,7 +19,6 @@
 /src/App/Infrastructure/Ui/Assets/build
 !/src/App/Infrastructure/Ui/Assets/build/.gitkeep
 /src/App/Infrastructure/Ui/Http/Symfony/.htaccess
-!/src/App/Infrastructure/Ui/Http/Symfony/app.php
 /src/App/Infrastructure/Ui/Http/Symfony/robots.txt
 /src/App/Infrastructure/Ui/manifest.json
 /var/bootstrap.php.cache

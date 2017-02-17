@@ -11,4 +11,4 @@
 app_homepage:
     path: /
     defaults:
-        _controller: "app.http_action.default:__invoke"
+        _controller: "app.http_action.home:__invoke"

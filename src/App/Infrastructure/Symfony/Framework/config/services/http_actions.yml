@@ -9,7 +9,7 @@
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
 services:
-    app.http_action.default:
-        class: App\Infrastructure\Symfony\HttpAction\DefaultAction
+    app.http_action.home:
+        class: App\Infrastructure\Symfony\HttpAction\HomeAction
         arguments:
             - "@twig"

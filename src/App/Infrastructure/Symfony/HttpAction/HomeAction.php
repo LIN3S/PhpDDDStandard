@@ -13,7 +13,7 @@ namespace App\Infrastructure\Symfony\HttpAction;
 
 use Symfony\Component\HttpFoundation\Response;
 
-class DefaultAction
+class HomeAction
 {
     private $twig;
 
@@ -25,7 +25,7 @@ class DefaultAction
     public function __invoke()
     {
         return new Response(
-            $this->twig->render('default/index.html.twig')
+            $this->twig->render('pages/home.html.twig')
         );
     }
 }
