@@ -35,6 +35,7 @@ set :sessions_path, fetch(:var_path) + "/sessions"
 ############################################
 
 set :log_level, :info
+set :format_options, log_file: "var/logs/capistrano.log"
 set :use_sudo, false
 
 set :ssh_options, {
