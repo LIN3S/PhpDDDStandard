@@ -9,8 +9,8 @@
 # @author Jon Torrado <jontorrado@gmail.com>
 # @author Beñat Espiña <benatespina@gmail.com>
 
-set :deploy_config_path, 'deploy/deploy.rb'
-set :stage_config_path, 'deploy/stages/'
+set :deploy_config_path, 'etc/deploy/deploy.rb'
+set :stage_config_path, 'etc/deploy/stages/'
 
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
@@ -20,4 +20,4 @@ require 'capistrano/deploy'
 require 'capistrano/symfony'
 
 # Override the default path to bundle deployments scripts and tasks
-Dir.glob('deploy/tasks/*.cap').each { |r| import r }
+Dir.glob('etc/deploy/tasks/*.cap').each { |r| import r }

@@ -72,13 +72,14 @@ This package comes with **Symfony as infrastructure tool** so, this section is a
 Capistrano using Symfony as web framework.
 
 To automatize the deployment process this project is using **Capistrano** with **capistrano-symfony** plugin. You can
-find the whole configuration within the `deploy` directory. Customize deploy tasks modifying the `deploy/deploy.rb` file.
+find the whole configuration within the `etc/deploy` directory. Customize deploy tasks modifying the
+`etc/deploy/deploy.rb` file.
 
 You should update the *php-ddd-standard* application name for your awesome project name and the repo url with your
 Git project url.
 
-Inside `deploy/stages` directory there are two files that can be considered as pre-production stage and production stage.
-There is no logic, these files only contain few parameters that you should customize for your proper deployment.
+Inside `etc/deploy/stages` directory there are two files that can be considered as pre-production stage and production
+stage. There is no logic, these files only contain few parameters that you should customize for your proper deployment.
 
 After all, and following the Capistrano [documentation][5] to configure the server, you can deploy executing:
 ```
@@ -98,11 +99,11 @@ with the correct website domain. If you need this feature, just open the `deploy
 ```
 
 This is done by [Smart-Core/AcceleratorCacheBundle][6]. If you need different configurations for your deployment
-stages, feel free to create a variable and add the required parameters to the `stages/*.rb` files.
+stages, feel free to create a variable and add the required parameters to the `etc/deploy/stages/*.rb` files.
 
 ## Bonus
-Also `admin-cms` branch is available implementing bridges with the LIN3SAdminBundle and CMSKernel projects we use for 
-our developments in [LIN3S][2].
+Also `admin-cms` branch is available adding the CMSKernel package with its Symfony bridges of LIN3SAdminBundle and
+BenGorUserBundle, that we use for our developments in [LIN3S][2].
  
 [1]: http://symfony.com/
 [2]: http://www.lin3s.com/
