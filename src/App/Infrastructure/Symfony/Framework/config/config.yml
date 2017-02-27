@@ -10,12 +10,13 @@
 
 imports:
     - { resource: ../../../../../../parameters.yml }
+    - { resource: admin.yml }
     - { resource: security.yml }
     - { resource: doctrine.yml }
     - { resource: services/, type: directory }
 
 parameters:
-    locale: en
+    locale: en_US
 
 framework:
     translator: { fallbacks: ["%locale%"] }
@@ -54,6 +55,31 @@ swiftmailer:
 accelerator_cache:
     host: "%router.request_context.scheme%://%router.request_context.host%"
     web_dir: "%kernel.root_dir%/../../Ui/Http/Symfony"
+
+ben_gor_user:
+    user_class:
+        user:
+            class: App\Domain\Model\User\User
+            firewall: main
+            use_cases:
+                security:
+                    enabled: true
+                sign_up:
+                    enabled: false
+                change_password:
+                    enabled: false
+                remove:
+                    enabled: false
+            routes:
+                security:
+                    login:
+                        path: /admin/login
+                    login_check:
+                        path: /admin/login-check
+                    logout:
+                        path: /admin/logout
+                    success_redirection_route:
+                        route: lin3s_admin_dashboard
 
 lin3s_distribution:
     webpack:

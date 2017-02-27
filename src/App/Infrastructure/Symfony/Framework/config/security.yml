@@ -9,12 +9,29 @@
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
 security:
+    encoders:
+        App\Domain\Model\User\User: bcrypt
     providers:
-        in_memory:
-            memory: ~
+        bengor_user:
+            id: bengor_user.user.provider
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: ~
+            pattern: ^/admin
+            guard:
+                authenticators:
+                    - bengor_user.user.form_login_authenticator
+            provider: bengor_user
+            form_login:
+                check_path: bengor_user_user_login_check
+                login_path: bengor_user_user_login
+                failure_path: bengor_user_user_login
+            logout:
+                path: bengor_user_user_logout
+                target: /
+    access_control:
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_USER }
