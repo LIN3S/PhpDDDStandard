@@ -102,7 +102,7 @@ This is done by [Smart-Core/AcceleratorCacheBundle][6]. If you need different co
 stages, feel free to create a variable and add the required parameters to the `etc/deploy/stages/*.rb` files.
 
 ## Bonus
-Also `admin-cms` branch is available adding the CMSKernel package with its Symfony bridges of LIN3SAdminBundle and
+Also **[admin-cms][7]** branch is available adding the CMSKernel package with its Symfony bridges of LIN3SAdminBundle and
 BenGorUserBundle, that we use for our developments in [LIN3S][2].
  
 [1]: http://symfony.com/
@@ -111,3 +111,4 @@ BenGorUserBundle, that we use for our developments in [LIN3S][2].
 [4]: https://github.com/symfony/symfony-standard
 [5]: http://capistranorb.com/
 [6]: https://github.com/Smart-Core/AcceleratorCacheBundle
+[7]: https://github.com/LIN3S/PhpDDDStandard/tree/admin-cms
