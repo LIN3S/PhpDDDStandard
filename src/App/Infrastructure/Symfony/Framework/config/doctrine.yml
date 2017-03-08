@@ -46,3 +46,9 @@ doctrine:
                 dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/Page/Mapping/"
                 prefix: 'App\Domain\Model\Page'
                 is_bundle: false
+            CMSPageTemplate:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/Page/Template/Mapping/"
+                prefix: 'App\Domain\Model\Page\Template'
+                is_bundle: false

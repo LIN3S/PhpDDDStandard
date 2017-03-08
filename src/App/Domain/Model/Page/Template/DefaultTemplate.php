@@ -11,15 +11,12 @@
 
 namespace App\Domain\Model\Page\Template;
 
-use LIN3S\CMSKernel\Domain\Model\Template\Template;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateContent;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateId;
 
-final class DefaultTemplate implements Template
+final class DefaultTemplate extends Template
 {
-    private $id;
     private $content;
-    private $pageTranslation;
 
     private function __construct(TemplateId $id, $content)
     {
@@ -40,11 +37,6 @@ final class DefaultTemplate implements Template
         return [
             'content' => $this->content,
         ];
-    }
-
-    public function id()
-    {
-        return $this->id;
     }
 
     public function content()

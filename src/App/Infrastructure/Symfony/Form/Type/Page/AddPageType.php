@@ -46,7 +46,12 @@ class AddPageType extends AbstractType implements DataMapperInterface
                     'fields' => [
                         'translation.title',
                         'translation.slug',
-//                        'translation.content',
+                    ],
+                ],
+                [
+                    'name'   => 'Template',
+                    'fields' => [
+                        'translation.templateSelector',
                     ],
                 ],
                 [
@@ -84,14 +89,13 @@ class AddPageType extends AbstractType implements DataMapperInterface
         $forms = iterator_to_array($forms);
 
         $translation = $forms['translation']->getData();
+        $template = $forms['template']->getData();
 
         $data = new AddPageCommand(
             $this->locale,
             $translation['title'],
-            'default',
-            [
-                'content' => 'lalal'
-            ],
+            $template['name'],
+            $template['content'],
             $translation['slug'],
             $translation['metaTitle'],
             $translation['metaDescription'],

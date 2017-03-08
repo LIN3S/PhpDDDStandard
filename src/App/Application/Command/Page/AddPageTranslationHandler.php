@@ -14,8 +14,8 @@ namespace App\Application\Command\Page;
 use App\Domain\Model\Page\Page;
 use App\Domain\Model\Page\PageRepository;
 use App\Domain\Model\Page\PageTranslation;
+use LIN3S\CMSKernel\Domain\Model\Page\PageDoesNotExistException;
 use LIN3S\CMSKernel\Domain\Model\Page\PageId;
-use LIN3S\CMSKernel\Domain\Model\Page\PageIsAlreadyExistsException;
 use LIN3S\CMSKernel\Domain\Model\Page\PageTitle;
 use LIN3S\CMSKernel\Domain\Model\Page\PageTranslationId;
 use LIN3S\CMSKernel\Domain\Model\Seo\Metadata;
@@ -26,7 +26,7 @@ use LIN3S\CMSKernel\Domain\Model\Template\TemplateFactory;
 use LIN3S\CMSKernel\Domain\Model\Translation\Locale;
 use LIN3S\SharedKernel\Domain\Model\Slug\Slug;
 
-class AddPageHandler
+class AddPageTranslationHandler
 {
     private $repository;
     private $templateFactory;
@@ -37,23 +37,18 @@ class AddPageHandler
         $this->templateFactory = $templateFactory;
     }
 
-    public function __invoke(AddPageCommand $command)
+    public function __invoke(AddPageTranslationCommand $command)
     {
-        if (null !== $pageId = $command->pageId()) {
-            $page = $this->repository->pageOfId(
-                PageId::generate(
-                    $pageId
-                )
-            );
-            if ($page instanceof Page) {
-                throw new PageIsAlreadyExistsException();
-            }
+        $page = $this->repository->pageOfId(
+            PageId::generate(
+                $command->pageId()
+            )
+        );
+        if (!$page instanceof Page) {
+            throw new PageDoesNotExistException();
         }
 
-        $page = new Page(
-            PageId::generate(
-                $command->id()
-            ),
+        $page->addTranslation(
             new PageTranslation(
                 PageTranslationId::generate(),
                 new Locale(

@@ -11,8 +11,10 @@
 
 namespace App\Infrastructure\Symfony\Form\Type\Page;
 
+use App\Infrastructure\Symfony\Form\Type\Page\Template\ContactTemplateType;
+use App\Infrastructure\Symfony\Form\Type\Page\Template\DefaultTemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\SeoType;
-use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\WysiwygType;
+use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateSelectorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -24,7 +26,22 @@ class PageTranslationType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('slug', TextType::class)
-//            ->add('content', WysiwygType::class)
-            ->add('seo', SeoType::class);
+            ->add('seo', SeoType::class)
+            ->add('templateSelector', TemplateSelectorType::class, [
+                'templates' => [
+                    'default' => [
+                        'type'    => DefaultTemplateType::class,
+                        'options' => [
+                            'label' => 'Default'
+                        ],
+                    ],
+                    'contact' => [
+                        'type'    => ContactTemplateType::class,
+                        'options' => [
+                            'label' => 'Contact'
+                        ],
+                    ],
+                ],
+            ]);
     }
 }

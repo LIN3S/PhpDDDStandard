@@ -50,11 +50,11 @@ class AddPageTranslationCommand
         $this->templateContent = $templateContent;
         $this->metaTitle = $metaTitle;
         $this->metaDescription = $metaDescription;
-        $this->robotsIndex = $robotsIndex;
-        $this->robotsFollow = $robotsFollow;
+        $this->robotsIndex = (bool)$robotsIndex;
+        $this->robotsFollow = (bool)$robotsFollow;
     }
 
-    public function id()
+    public function pageId()
     {
         return $this->pageId;
     }

@@ -48,7 +48,12 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
                     'fields' => [
                         'translation.title',
                         'translation.slug',
-//                        'translation.content',
+                    ],
+                ],
+                [
+                    'name'   => 'Template',
+                    'fields' => [
+                        'translation.templateSelector',
                     ],
                 ],
                 [
@@ -82,14 +87,18 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
     public function mapFormsToData($forms, &$data)
     {
         $forms = iterator_to_array($forms);
+
         $translation = $forms['translation']->getData();
+        $templateName = $translation['templateSelector']['name'];
+        $templateContent = $translation['templateSelector'][$templateName];
+
         if (empty($data)) {
             $data = new AddPageTranslationCommand(
                 $this->pageId,
                 $this->locale,
                 $translation['title'],
-                'default', //$translation['template'],
-                ['content' => 'sdsds'],
+                $templateName,
+                $templateContent,
                 $translation['slug'],
                 $translation['metaTitle'],
                 $translation['metaDescription'],
@@ -101,8 +110,8 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
                 $this->pageId,
                 $this->locale,
                 $translation['title'],
-                'default', //$translation['template'],
-                ['content' => 'sdsds'],
+                $templateName,
+                $templateContent,
                 $translation['slug'],
                 $translation['seo']['metaTitle'],
                 $translation['seo']['metaDescription'],

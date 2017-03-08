@@ -12,13 +12,11 @@
 namespace App\Domain\Model\Page\Template;
 
 use App\Domain\Model\Location\Address;
-use LIN3S\CMSKernel\Domain\Model\Template\Template;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateContent;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateId;
 
-final class ContactTemplate implements Template
+final class ContactTemplate extends Template
 {
-    private $id;
     private $address;
 
     private function __construct(TemplateId $id, Address $address)
@@ -46,11 +44,6 @@ final class ContactTemplate implements Template
             'postal_code' => $this->address->postalCode(),
             'city'        => $this->address->city(),
         ];
-    }
-
-    public function id()
-    {
-        return $this->id;
     }
 
     public function address()
