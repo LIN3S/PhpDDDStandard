@@ -43,4 +43,9 @@ final class DefaultTemplate extends Template
     {
         return $this->content;
     }
+
+    public static function name()
+    {
+        return 'default';
+    }
 }

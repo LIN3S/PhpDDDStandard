@@ -99,8 +99,8 @@ lin3s_cms_kernel:
     templates:
         class_map:
             page:
-                default: App\Domain\Model\Page\Template\DefaultTemplate
-                contact: App\Domain\Model\Page\Template\ContactTemplate
+                - App\Domain\Model\Page\Template\DefaultTemplate
+                - App\Domain\Model\Page\Template\ContactTemplate
 
 cms_kernel_admin_bridge:
     locales:

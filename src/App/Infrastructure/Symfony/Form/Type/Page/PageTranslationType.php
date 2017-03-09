@@ -11,6 +11,8 @@
 
 namespace App\Infrastructure\Symfony\Form\Type\Page;
 
+use App\Domain\Model\Page\Template\ContactTemplate;
+use App\Domain\Model\Page\Template\DefaultTemplate;
 use App\Infrastructure\Symfony\Form\Type\Page\Template\ContactTemplateType;
 use App\Infrastructure\Symfony\Form\Type\Page\Template\DefaultTemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\SeoType;
@@ -29,16 +31,18 @@ class PageTranslationType extends AbstractType
             ->add('seo', SeoType::class)
             ->add('templateSelector', TemplateSelectorType::class, [
                 'templates' => [
-                    'default' => [
+                    [
                         'type'    => DefaultTemplateType::class,
                         'options' => [
-                            'label' => 'Default'
+                            'template' => DefaultTemplate::class,
+                            'label'    => 'Default',
                         ],
                     ],
-                    'contact' => [
+                    [
                         'type'    => ContactTemplateType::class,
                         'options' => [
-                            'label' => 'Contact'
+                            'template' => ContactTemplate::class,
+                            'label'    => 'Contact',
                         ],
                     ],
                 ],

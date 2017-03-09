@@ -36,7 +36,11 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setRequired(['locale', 'page_id']);
+        $resolver
+            ->setRequired(['locale', 'page_id'])
+            ->setDefaults([
+                'empty_data' => null,
+            ]);
     }
 
     public function buildView(FormView $view, FormInterface $form, array $options)
@@ -72,33 +76,30 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
             return;
         }
         $forms = iterator_to_array($forms);
+
         $forms['translation']->setData([
-            'title' => $data->title(),
-            'slug'  => $data->slug(),
-            'seo'   => [
-                'metaTitle'       => $data->seo()->title()->title(),
-                'metaDescription' => $data->seo()->description()->description(),
-                'robotsIndex'     => $data->seo()->robots()->index(),
-                'robotsFollow'    => $data->seo()->robots()->follow(),
-            ],
+            'title'            => $data->title(),
+            'slug'             => $data->slug(),
+            'templateSelector' => $data->template(),
+            'metaTitle'        => null === $data->seo() ? null : $data->seo()->title()->title(),
+            'metaDescription'  => null === $data->seo() ? null : $data->seo()->description()->description(),
+            'robotsIndex'      => null === $data->seo() ? null : $data->seo()->robots()->index(),
+            'robotsFollow'     => null === $data->seo() ? null : $data->seo()->robots()->follow(),
         ]);
     }
 
     public function mapFormsToData($forms, &$data)
     {
         $forms = iterator_to_array($forms);
-
         $translation = $forms['translation']->getData();
-        $templateName = $translation['templateSelector']['name'];
-        $templateContent = $translation['templateSelector'][$templateName];
 
         if (empty($data)) {
             $data = new AddPageTranslationCommand(
                 $this->pageId,
                 $this->locale,
                 $translation['title'],
-                $templateName,
-                $templateContent,
+                $translation['templateSelector']['name'],
+                $translation['templateSelector']['content'],
                 $translation['slug'],
                 $translation['metaTitle'],
                 $translation['metaDescription'],
@@ -110,13 +111,13 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
                 $this->pageId,
                 $this->locale,
                 $translation['title'],
-                $templateName,
-                $templateContent,
+                $translation['templateSelector']['name'],
+                $translation['templateSelector']['content'],
                 $translation['slug'],
-                $translation['seo']['metaTitle'],
-                $translation['seo']['metaDescription'],
-                $translation['seo']['robotsIndex'],
-                $translation['seo']['robotsFollow']
+                $translation['metaTitle'],
+                $translation['metaDescription'],
+                $translation['robotsIndex'],
+                $translation['robotsFollow']
             );
         }
     }

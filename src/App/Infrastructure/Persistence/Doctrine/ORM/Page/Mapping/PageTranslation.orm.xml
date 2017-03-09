@@ -14,5 +14,13 @@
         <many-to-one field="origin" target-entity="App\Domain\Model\Page\Page" inversed-by="translations">
             <join-column name="page_id" referenced-column-name="id"/>
         </many-to-one>
+
+        <one-to-one field="template" target-entity="App\Domain\Model\Page\Template\Template"
+                     mapped-by="pageTranslation" orphan-removal="true">
+            <cascade>
+                <cascade-persist/>
+                <cascade-remove/>
+            </cascade>
+        </one-to-one>
     </entity>
 </doctrine-mapping>

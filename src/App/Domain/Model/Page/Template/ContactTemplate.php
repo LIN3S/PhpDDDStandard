@@ -50,4 +50,9 @@ final class ContactTemplate extends Template
     {
         return $this->address;
     }
+
+    public static function name()
+    {
+        return 'contact';
+    }
 }

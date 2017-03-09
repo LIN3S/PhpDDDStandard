@@ -11,19 +11,17 @@
 
 namespace App\Infrastructure\Symfony\Form\Type\Page\Template;
 
-use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\SeoType;
-use Symfony\Component\Form\AbstractType;
+use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ContactTemplateType extends AbstractType
+class ContactTemplateType extends TemplateType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('street', TextType::class)
             ->add('postal_code', TextType::class)
-            ->add('city', TextType::class)
-            ->add('seo', SeoType::class);
+            ->add('city', TextType::class);
     }
 }
