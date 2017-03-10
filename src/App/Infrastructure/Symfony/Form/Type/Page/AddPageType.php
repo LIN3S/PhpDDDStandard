@@ -73,34 +73,28 @@ class AddPageType extends AbstractType implements DataMapperInterface
         $translation = $data->${$this->locale}();
 
         $forms['translation']->setData([
-            'title' => $translation->title(),
-            'slug'  => $translation->description(),
-            'seo'   => [
-                'metaTitle'       => $translation->seo()->title()->title(),
-                'metaDescription' => $translation->seo()->description()->description(),
-                'robotsIndex'     => $translation->seo()->robots()->index(),
-                'robotsFollow'    => $translation->robots()->follow(),
-            ],
+            'title'            => $translation->title(),
+            'slug'             => $translation->slug(),
+            'templateSelector' => $translation->template(),
+            'seo'              => $translation->seo(),
         ]);
     }
 
     public function mapFormsToData($forms, &$data)
     {
         $forms = iterator_to_array($forms);
-
         $translation = $forms['translation']->getData();
-        $template = $forms['template']->getData();
 
         $data = new AddPageCommand(
             $this->locale,
             $translation['title'],
-            $template['name'],
-            $template['content'],
+            $translation['templateSelector']['name'],
+            $translation['templateSelector']['content'],
             $translation['slug'],
-            $translation['metaTitle'],
-            $translation['metaDescription'],
-            $translation['robotsIndex'],
-            $translation['robotsFollow']
+            $translation['seo']['metaTitle'],
+            $translation['seo']['metaDescription'],
+            $translation['seo']['robotsIndex'],
+            $translation['seo']['robotsFollow']
         );
     }
 }

@@ -52,7 +52,7 @@ class AddPageHandler
 
         $page = new Page(
             PageId::generate(
-                $command->id()
+                $command->pageId()
             ),
             new PageTranslation(
                 PageTranslationId::generate(),
