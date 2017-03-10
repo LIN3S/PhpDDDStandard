@@ -81,10 +81,7 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
             'title'            => $data->title(),
             'slug'             => $data->slug(),
             'templateSelector' => $data->template(),
-            'metaTitle'        => null === $data->seo() ? null : $data->seo()->title()->title(),
-            'metaDescription'  => null === $data->seo() ? null : $data->seo()->description()->description(),
-            'robotsIndex'      => null === $data->seo() ? null : $data->seo()->robots()->index(),
-            'robotsFollow'     => null === $data->seo() ? null : $data->seo()->robots()->follow(),
+            'seo'              => $data->seo()
         ]);
     }
 
@@ -101,10 +98,10 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
                 $translation['templateSelector']['name'],
                 $translation['templateSelector']['content'],
                 $translation['slug'],
-                $translation['metaTitle'],
-                $translation['metaDescription'],
-                $translation['robotsIndex'],
-                $translation['robotsFollow']
+                $translation['seo']['metaTitle'],
+                $translation['seo']['metaDescription'],
+                $translation['seo']['robotsIndex'],
+                $translation['seo']['robotsFollow']
             );
         } elseif (null !== $this->pageId) {
             $data = new EditPageTranslationCommand(
@@ -114,10 +111,10 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
                 $translation['templateSelector']['name'],
                 $translation['templateSelector']['content'],
                 $translation['slug'],
-                $translation['metaTitle'],
-                $translation['metaDescription'],
-                $translation['robotsIndex'],
-                $translation['robotsFollow']
+                $translation['seo']['metaTitle'],
+                $translation['seo']['metaDescription'],
+                $translation['seo']['robotsIndex'],
+                $translation['seo']['robotsFollow']
             );
         }
     }
