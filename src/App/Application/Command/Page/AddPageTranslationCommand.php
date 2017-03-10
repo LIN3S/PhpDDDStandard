@@ -11,6 +11,11 @@
 
 namespace App\Application\Command\Page;
 
+use LIN3S\SharedKernel\Exception\InvalidArgumentException;
+
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class AddPageTranslationCommand
 {
     private $pageId;
@@ -36,11 +41,14 @@ class AddPageTranslationCommand
         $robotsIndex = null,
         $robotsFollow = null
     ) {
-        if (null === $locale) {
-            throw new \InvalidArgumentException('The locale cannot be null');
+        if (!$pageId) {
+            throw new InvalidArgumentException('The page id cannot be null');
         }
-        if (null === $title) {
-            throw new \InvalidArgumentException('The title cannot be null');
+        if (!$locale) {
+            throw new InvalidArgumentException('The locale cannot be null');
+        }
+        if (!$title) {
+            throw new InvalidArgumentException('The title cannot be null');
         }
         $this->pageId = $pageId;
         $this->locale = $locale;
@@ -50,8 +58,8 @@ class AddPageTranslationCommand
         $this->templateContent = $templateContent;
         $this->metaTitle = $metaTitle;
         $this->metaDescription = $metaDescription;
-        $this->robotsIndex = (bool)$robotsIndex;
-        $this->robotsFollow = (bool)$robotsFollow;
+        $this->robotsIndex = $robotsIndex;
+        $this->robotsFollow = $robotsFollow;
     }
 
     public function pageId()

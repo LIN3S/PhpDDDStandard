@@ -17,6 +17,9 @@ use LIN3S\CMSKernel\Domain\Model\Page\PageDoesNotExistException;
 use LIN3S\CMSKernel\Domain\Model\Page\PageId;
 use LIN3S\CMSKernel\Domain\Model\Translation\Locale;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class RemovePageTranslationHandler
 {
     private $repository;

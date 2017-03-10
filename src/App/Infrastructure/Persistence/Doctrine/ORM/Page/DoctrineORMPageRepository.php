@@ -18,6 +18,9 @@ use LIN3S\CMSKernel\Domain\Model\Page\PageId;
 use LIN3S\CMSKernel\Domain\Model\Translation\TranslatableId;
 use LIN3S\CMSKernel\Domain\Model\Translation\TranslatableRepository;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class DoctrineORMPageRepository extends EntityRepository implements PageRepository, TranslatableRepository
 {
     public function pageOfId(PageId $id)

@@ -11,6 +11,11 @@
 
 namespace App\Application\Command\Page;
 
+use LIN3S\SharedKernel\Exception\InvalidArgumentException;
+
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class AddPageCommand
 {
     private $pageId;
@@ -37,10 +42,10 @@ class AddPageCommand
         $pageId = null
     ) {
         if (null === $locale) {
-            throw new \InvalidArgumentException('The locale cannot be null');
+            throw new InvalidArgumentException('The locale cannot be null');
         }
         if (null === $title) {
-            throw new \InvalidArgumentException('The title cannot be null');
+            throw new InvalidArgumentException('The title cannot be null');
         }
         $this->pageId = $pageId;
         $this->locale = $locale;

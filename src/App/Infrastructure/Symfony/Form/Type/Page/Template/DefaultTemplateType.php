@@ -15,6 +15,9 @@ use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\WysiwygType;
 use Symfony\Component\Form\FormBuilderInterface;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class DefaultTemplateType extends TemplateType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)

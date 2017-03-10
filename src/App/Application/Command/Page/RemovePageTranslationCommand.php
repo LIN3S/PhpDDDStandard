@@ -11,6 +11,11 @@
 
 namespace App\Application\Command\Page;
 
+use LIN3S\SharedKernel\Exception\InvalidArgumentException;
+
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class RemovePageTranslationCommand
 {
     private $pageId;
@@ -19,10 +24,10 @@ class RemovePageTranslationCommand
     public function __construct($pageId, $locale)
     {
         if (null === $pageId) {
-            throw new \InvalidArgumentException('The page id cannot be null');
+            throw new InvalidArgumentException('The page id cannot be null');
         }
         if (null === $locale) {
-            throw new \InvalidArgumentException('The locale cannot be null');
+            throw new InvalidArgumentException('The locale cannot be null');
         }
         $this->pageId = $pageId;
         $this->locale = $locale;

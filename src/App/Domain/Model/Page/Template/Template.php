@@ -11,6 +11,7 @@
 
 namespace App\Domain\Model\Page\Template;
 
+use App\Domain\Model\Page\PageTranslation;
 use LIN3S\CMSKernel\Domain\Model\Template\Template as BaseTemplate;
 
 /**
@@ -29,5 +30,17 @@ abstract class Template implements BaseTemplate
     public function __toString()
     {
         return (string)$this->id;
+    }
+
+    public function pageTranslation()
+    {
+        return $this->pageTranslation;
+    }
+
+    // This is a hack to satisfy the Doctrine ORM
+    // limitations with bidirectional relationships.
+    public function setPageTranslation(PageTranslation $pageTranslation)
+    {
+        $this->pageTranslation = $pageTranslation;
     }
 }

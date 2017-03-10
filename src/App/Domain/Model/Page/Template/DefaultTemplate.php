@@ -14,6 +14,9 @@ namespace App\Domain\Model\Page\Template;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateContent;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateId;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 final class DefaultTemplate extends Template
 {
     private $content;

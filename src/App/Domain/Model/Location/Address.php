@@ -13,6 +13,9 @@ namespace App\Domain\Model\Location;
 
 use LIN3S\SharedKernel\Exception\DomainException;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class Address
 {
     private $street;
@@ -21,18 +24,48 @@ class Address
 
     public function __construct($street, $postalCode, $city)
     {
+        $this->setStreet($street);
+        $this->setPostalCode($postalCode);
+        $this->setCity($city);
+    }
+
+    private function setStreet($street)
+    {
+        $this->checkStreetIsValid($street);
+        $this->street = $street;
+    }
+
+    private function checkStreetIsValid($street)
+    {
         if (null === $street || '' === $street) {
             throw new DomainException('The given street cannot be empty');
         }
+    }
+
+    private function setPostalCode($postalCode)
+    {
+        $this->checkPostalCodeIsValid($postalCode);
+        $this->postalCode = $postalCode;
+    }
+
+    private function checkPostalCodeIsValid($postalCode)
+    {
         if (null === $postalCode || '' === $postalCode) {
             throw new DomainException('The given postal code cannot be empty');
         }
-        if (null === $city || '' === $city) {
-            throw new \DomainException('The given city cannot be empty');
-        }
-        $this->street = $street;
-        $this->postalCode = $postalCode;
+    }
+
+    private function setCity($city)
+    {
+        $this->checkCityIsValid($city);
         $this->city = $city;
+    }
+
+    private function checkCityIsValid($city)
+    {
+        if (null === $city || '' === $city) {
+            throw new DomainException('The given city cannot be empty');
+        }
     }
 
     public function street()

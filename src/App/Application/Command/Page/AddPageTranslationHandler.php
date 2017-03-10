@@ -26,6 +26,9 @@ use LIN3S\CMSKernel\Domain\Model\Template\TemplateFactory;
 use LIN3S\CMSKernel\Domain\Model\Translation\Locale;
 use LIN3S\SharedKernel\Domain\Model\Slug\Slug;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class AddPageTranslationHandler
 {
     private $repository;

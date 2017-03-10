@@ -11,14 +11,17 @@
 
 namespace App\Domain\Model\Page;
 
+use App\Domain\Model\Page\Template\Template;
 use LIN3S\CMSKernel\Domain\Model\Page\PageTitle;
 use LIN3S\CMSKernel\Domain\Model\Page\PageTranslationId;
 use LIN3S\CMSKernel\Domain\Model\Seo\Metadata;
-use LIN3S\CMSKernel\Domain\Model\Template\Template;
 use LIN3S\CMSKernel\Domain\Model\Translation\Locale;
 use LIN3S\CMSKernel\Domain\Model\Translation\Translation;
 use LIN3S\SharedKernel\Domain\Model\Slug\Slug;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class PageTranslation extends Translation
 {
     private $id;
@@ -41,6 +44,12 @@ class PageTranslation extends Translation
         $this->slug = $slug;
         $this->seo = $seo;
         $this->setTemplate($template);
+    }
+
+    private function setTemplate(Template $template)
+    {
+        $template->setPageTranslation($this);
+        $this->template = $template;
     }
 
     public function id()
@@ -71,15 +80,5 @@ class PageTranslation extends Translation
     public function __toString()
     {
         return (string)$this->id->id();
-    }
-
-    private function setTemplate(Template $template)
-    {
-        $templateReflection = new \ReflectionClass($template);
-        $pageTranslation = $templateReflection->getProperty('pageTranslation');
-        $pageTranslation->setAccessible(true);
-        $pageTranslation->setValue($template, $this);
-
-        $this->template = $template;
     }
 }

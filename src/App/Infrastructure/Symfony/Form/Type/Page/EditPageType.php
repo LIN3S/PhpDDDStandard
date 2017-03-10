@@ -14,6 +14,9 @@ namespace App\Infrastructure\Symfony\Form\Type\Page;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class EditPageType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)

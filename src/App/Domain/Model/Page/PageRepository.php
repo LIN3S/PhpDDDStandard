@@ -13,6 +13,9 @@ namespace App\Domain\Model\Page;
 
 use LIN3S\CMSKernel\Domain\Model\Page\PageId;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 interface PageRepository
 {
     public function pageOfId(PageId $id);

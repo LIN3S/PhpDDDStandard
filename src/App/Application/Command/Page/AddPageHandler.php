@@ -26,6 +26,9 @@ use LIN3S\CMSKernel\Domain\Model\Template\TemplateFactory;
 use LIN3S\CMSKernel\Domain\Model\Translation\Locale;
 use LIN3S\SharedKernel\Domain\Model\Slug\Slug;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class AddPageHandler
 {
     private $repository;
@@ -39,52 +42,33 @@ class AddPageHandler
 
     public function __invoke(AddPageCommand $command)
     {
-        if (null !== $pageId = $command->pageId()) {
-            $page = $this->repository->pageOfId(
-                PageId::generate(
-                    $pageId
-                )
-            );
-            if ($page instanceof Page) {
-                throw new PageIsAlreadyExistsException();
-            }
-        }
+        $pageId = PageId::generate($command->pageId());
+        $this->checkPageIsAlreadyExists($pageId);
 
-        $page = new Page(
-            PageId::generate(
-                $command->pageId()
-            ),
-            new PageTranslation(
-                PageTranslationId::generate(),
-                new Locale(
-                    $command->locale()
-                ),
-                new PageTitle(
-                    $command->title()
-                ),
-                new Slug(
-                    null === $command->slug()
-                        ? $command->title()
-                        : $command->slug()
-                ),
-                new Metadata(
-                    new MetaTitle(
-                        $command->metaTitle()
-                    ),
-                    new MetaDescription(
-                        $command->metaDescription()
-                    ),
-                    new MetaRobots(
-                        $command->robotsIndex(),
-                        $command->robotsFollow()
-                    )
-                ),
-                $this->templateFactory->build(
-                    $command->templateName(),
-                    $command->templateContent()
-                )
-            )
+        $pageTranslationId = PageTranslationId::generate();
+        $locale = new Locale($command->locale());
+        $title = new PageTitle($command->title());
+        $slug = null === $command->slug() ? $title->title() : $command->slug();
+        $slug = new Slug($slug);
+        $seo = new Metadata(
+            new MetaTitle($command->metaTitle()),
+            new MetaDescription($command->metaDescription()),
+            new MetaRobots($command->robotsIndex(), $command->robotsFollow())
         );
+        $templateName = $command->templateName();
+        $templateContent = $command->templateContent();
+
+        $template = $this->templateFactory->build($templateName, $templateContent);
+        $pageTranslation = new PageTranslation($pageTranslationId, $locale, $title, $slug, $seo, $template);
+        $page = new Page($pageId, $pageTranslation);
         $this->repository->persist($page);
+    }
+
+    private function checkPageIsAlreadyExists(PageId $pageId)
+    {
+        $page = $this->repository->pageOfId($pageId);
+        if ($page instanceof Page) {
+            throw new PageIsAlreadyExistsException();
+        }
     }
 }

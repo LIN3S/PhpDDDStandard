@@ -14,6 +14,9 @@ namespace App\Domain\Model\Page;
 use LIN3S\CMSKernel\Domain\Model\Page\PageId;
 use LIN3S\CMSKernel\Domain\Model\Translation\Translatable;
 
+/**
+ * @author Beñat Espiña <benatespina@gmail.com>
+ */
 class Page extends Translatable
 {
     private $id;
