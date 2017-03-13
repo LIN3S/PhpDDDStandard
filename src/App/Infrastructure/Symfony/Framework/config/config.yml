@@ -43,7 +43,7 @@ twig:
     debug: "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     paths:
-        "%kernel.root_dir%/../../Ui/Templates/Twig": ~
+        - "%kernel.root_dir%/../../Ui/Templates/Twig"
 
 swiftmailer:
     transport: "%mailer_transport%"

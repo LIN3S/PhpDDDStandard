@@ -1,0 +1,8 @@
+services:
+    app.repository.page:
+         class: App\Infrastructure\Persistence\Doctrine\ORM\Page\DoctrineORMPageRepository
+         factory:
+             - '@doctrine.orm.default_entity_manager'
+             - 'getRepository'
+         arguments:
+             - App\Domain\Model\Page\Page

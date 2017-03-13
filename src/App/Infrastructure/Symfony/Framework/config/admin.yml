@@ -1,10 +1,3 @@
-cms_kernel_admin_bridge:
-    locales:
-        default: '%locale%'
-        others:
-            - es_ES
-            - eu_ES
-
 lin3s_admin:
     entities:
         pages:
@@ -17,7 +10,7 @@ lin3s_admin:
                     name: lin3s_admin.action.new
                     type: new_translatable
                     options:
-                        form: App\Infrastructure\Web\Symfony\Form\Type\Page\PageType
+                        form: App\Infrastructure\Symfony\Form\Type\Page\AddPageType
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
                             title: cms_kernel_admin_bridge.new.confirm.title
@@ -27,11 +20,15 @@ lin3s_admin:
                                     es_ES: cms_kernel_admin_bridge.locale.es_ES
                                     en_US: cms_kernel_admin_bridge.locale.en_US
                                     eu_ES: cms_kernel_admin_bridge.locale.eu_ES
+                edit:
+                    type: handle_command
+                    options:
+                        form: App\Infrastructure\Symfony\Form\Type\Page\EditPageType
                 translate:
                     name: lin3s_admin.action.translate
                     type: translate
                     options:
-                        form: App\Infrastructure\Web\Symfony\Form\Type\Page\PageTranslationType
+                        form: App\Infrastructure\Symfony\Form\Type\Page\EditPageTranslationType
                 removeTranslation:
                     name: lin3s_admin.action.remove_translation
                     type: remove_translation
@@ -69,3 +66,45 @@ lin3s_admin:
                         type: text
                         field: title
                 global_actions: ['new']
+
+#        menus:
+#            name:
+#                singular: Menú
+#                plural: Menús
+#            class: LIN3S\CMSKernel\Domain\Model\Menu\Menu
+#            actions:
+##                nuevo:
+##                    class: lin3s_admin.action.type.new
+##                    options:
+##                        form: Denbolan\InfrastructureBundle\Form\PageType
+##                        redirectAction: editar
+##                editar:
+##                    class: lin3s_admin.action.type.edit
+##                    options:
+##                        form: Denbolan\InfrastructureBundle\Form\PageType
+#            list:
+##                actions: ['editar']
+#                fields:
+#                    'Título':
+#                        class: lin3s_admin.list_field_type.string
+#                        options:
+#                            field: title.title
+#                filters:
+#                    'Título':
+#                        class: lin3s_admin.list_filter_type.text
+#                        field: title.title
+##                globalActions: ['nuevo']
+
+lin3s_cms_kernel:
+    templates:
+        class_map:
+            page:
+                - App\Domain\Model\Page\Template\DefaultTemplate
+                - App\Domain\Model\Page\Template\ContactTemplate
+
+cms_kernel_admin_bridge:
+    locales:
+        default: '%locale%'
+        others:
+            - es_ES
+            - eu_ES
