@@ -4,6 +4,6 @@ and **ES2015** as JavaScript version. These assets and code need to compile as t
 ```bash
 $ cd src/App/Infrastructure/Ui/Assets
 $ yarn install
-$ yarn run build
+$ yarn build
 ```
 All the resultant code is generated inside the `build` directory.
