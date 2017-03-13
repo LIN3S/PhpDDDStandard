@@ -1,0 +1,9 @@
+<a class="menu__item" href="{{ path('lin3s_admin_dashboard') }}">
+    {{ 'cms_kernel_admin_bridge.menu.dashboard' | trans({}, 'CmsKernelAdminBridge') }}
+</a>
+<a class="menu__item" href="{{ path('lin3s_admin_list', {'entity': 'menus'}) }}">
+    {{ 'cms_kernel_admin_bridge.menu.menus' | trans({}, 'CmsKernelAdminBridge') }}
+</a>
+<a class="menu__item" href="{{ path('lin3s_admin_list', {'entity': 'pages'}) }}">
+    {{ 'admin.menu.pages' | trans }}
+</a>

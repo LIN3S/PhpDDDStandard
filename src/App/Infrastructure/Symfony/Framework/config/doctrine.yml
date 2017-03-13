@@ -27,3 +27,28 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        mappings:
+            CMSUser:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/User/Mapping/"
+                prefix: 'App\Domain\Model\User'
+                is_bundle: false
+            CMSLocation:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/Location/Mapping/"
+                prefix: 'App\Domain\Model\Location'
+                is_bundle: false
+            CMSPage:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/Page/Mapping/"
+                prefix: 'App\Domain\Model\Page'
+                is_bundle: false
+            CMSPageTemplate:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/Page/Template/Mapping/"
+                prefix: 'App\Domain\Model\Page\Template'
+                is_bundle: false
