@@ -42,47 +42,33 @@ class AddPageTranslationHandler
 
     public function __invoke(AddPageTranslationCommand $command)
     {
-        $page = $this->repository->pageOfId(
-            PageId::generate(
-                $command->pageId()
-            )
+        $pageId = PageId::generate($command->pageId());
+        $page = $this->repository->pageOfId($pageId); /** @var Page $page */
+        $this->checkPageExists($page);
+
+        $pageTranslationId = PageTranslationId::generate();
+        $locale = new Locale($command->locale());
+        $title = new PageTitle($command->title());
+        $slug = null === $command->slug() ? $title->title() : $command->slug();
+        $slug = new Slug($slug);
+        $seo = new Metadata(
+            new MetaTitle($command->metaTitle()),
+            new MetaDescription($command->metaDescription()),
+            new MetaRobots($command->robotsIndex(), $command->robotsFollow())
         );
+        $templateName = $command->templateName();
+        $templateContent = $command->templateContent();
+
+        $template = $this->templateFactory->build($templateName, $templateContent);
+        $pageTranslation = new PageTranslation($pageTranslationId, $locale, $title, $slug, $seo, $template);
+        $page->addTranslation($pageTranslation);
+        $this->repository->persist($page);
+    }
+
+    private function checkPageExists(Page $page = null)
+    {
         if (!$page instanceof Page) {
             throw new PageDoesNotExistException();
         }
-
-        $page->addTranslation(
-            new PageTranslation(
-                PageTranslationId::generate(),
-                new Locale(
-                    $command->locale()
-                ),
-                new PageTitle(
-                    $command->title()
-                ),
-                new Slug(
-                    null === $command->slug()
-                        ? $command->title()
-                        : $command->slug()
-                ),
-                new Metadata(
-                    new MetaTitle(
-                        $command->metaTitle()
-                    ),
-                    new MetaDescription(
-                        $command->metaDescription()
-                    ),
-                    new MetaRobots(
-                        $command->robotsIndex(),
-                        $command->robotsFollow()
-                    )
-                ),
-                $this->templateFactory->build(
-                    $command->templateName(),
-                    $command->templateContent()
-                )
-            )
-        );
-        $this->repository->persist($page);
     }
 }

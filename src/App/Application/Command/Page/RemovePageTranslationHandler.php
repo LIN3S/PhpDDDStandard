@@ -31,20 +31,19 @@ class RemovePageTranslationHandler
 
     public function __invoke(RemovePageTranslationCommand $command)
     {
-        $page = $this->repository->pageOfId(
-            PageId::generate(
-                $command->pageId()
-            )
-        );
+        $pageId = PageId::generate($command->pageId());
+        $locale = new Locale($command->locale());
+
+        $page = $this->repository->pageOfId($pageId); /** @var Page $page */
+        $this->checkPageExists($page);
+        $page->removeTranslation($locale);
+        $this->repository->persist($page);
+    }
+
+    private function checkPageExists(Page $page = null)
+    {
         if (!$page instanceof Page) {
             throw new PageDoesNotExistException();
         }
-        $page->removeTranslation(
-            new Locale(
-                $command->locale()
-            )
-        );
-
-        $this->repository->persist($page);
     }
 }
