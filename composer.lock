@@ -2051,12 +2051,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminBundle.git",
-                "reference": "37edcd25a4f1dc9e4d4aa1246d4ffa09e6fab6c2"
+                "reference": "8976f630efaa00530feb265008d7bb24dc4b53f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/37edcd25a4f1dc9e4d4aa1246d4ffa09e6fab6c2",
-                "reference": "37edcd25a4f1dc9e4d4aa1246d4ffa09e6fab6c2",
+                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/8976f630efaa00530feb265008d7bb24dc4b53f2",
+                "reference": "8976f630efaa00530feb265008d7bb24dc4b53f2",
                 "shasum": ""
             },
             "require": {
@@ -2093,7 +2093,7 @@
                 }
             ],
             "description": "Admin Bundle in the LIN3S way",
-            "time": "2017-03-14 15:19:58"
+            "time": "2017-03-15 15:17:23"
         },
         {
             "name": "lin3s/admin-ddd-extensions-bundle",
@@ -2147,12 +2147,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "f7384445ea12100a920fe30affe4d38ec113717d"
+                "reference": "02bccbbd1aba7811a1f49ce2e60d5e5b7655ded1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/f7384445ea12100a920fe30affe4d38ec113717d",
-                "reference": "f7384445ea12100a920fe30affe4d38ec113717d",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/02bccbbd1aba7811a1f49ce2e60d5e5b7655ded1",
+                "reference": "02bccbbd1aba7811a1f49ce2e60d5e5b7655ded1",
                 "shasum": ""
             },
             "require": {
@@ -2191,7 +2191,7 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-03-15 09:30:54"
+            "time": "2017-03-15 15:25:53"
         },
         {
             "name": "lin3s/distribution",

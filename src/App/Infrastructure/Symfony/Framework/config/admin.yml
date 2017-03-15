@@ -7,9 +7,9 @@ lin3s_admin:
                 plural: admin.page.name.plural
             actions:
                 new:
-                    name: lin3s_admin.action.new
                     type: new_translatable
                     options:
+                        name: "New"
                         form: App\Infrastructure\Symfony\Form\Type\Page\AddPageType
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
@@ -21,16 +21,16 @@ lin3s_admin:
                                     en_US: cms_kernel_admin_bridge.locale.en_US
                                     eu_ES: cms_kernel_admin_bridge.locale.eu_ES
                 edit:
-                    type: handle_command
+                    type: ddd_handle_command
                     options:
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageType
                 translate:
-                    name: lin3s_admin.action.translate
                     type: translate
                     options:
+                        name: "Translate"
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageTranslationType
                 removeTranslation:
-                    name: lin3s_admin.action.remove_translation
+                    name: "Remove translation"
                     type: remove_translation
             list:
                 fields:
