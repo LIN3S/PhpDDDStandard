@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "450f1e1c644e5c7eab9be5d5d9b85cb0",
+    "content-hash": "86be8125f1827b328e7f6b9cc22aed5e",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -2101,12 +2101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminDDDExtensionsBundle.git",
-                "reference": "e72b5e3ed551ebe8f21e01c3be273552e682aa44"
+                "reference": "f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/e72b5e3ed551ebe8f21e01c3be273552e682aa44",
-                "reference": "e72b5e3ed551ebe8f21e01c3be273552e682aa44",
+                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5",
+                "reference": "f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5",
                 "shasum": ""
             },
             "require": {
@@ -2139,7 +2139,7 @@
                 }
             ],
             "description": "DDD extensions for LIN3S-Admin",
-            "time": "2017-03-15 09:24:00"
+            "time": "2017-03-15 09:39:55"
         },
         {
             "name": "lin3s/cms-kernel",
@@ -4921,13 +4921,13 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "lin3s/admin-bundle": 20,
         "lin3s/admin-ddd-extensions-bundle": 20,
         "lin3s/cms-kernel": 20
     },
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^5.6 || ^7.0"
