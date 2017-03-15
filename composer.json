@@ -26,9 +26,10 @@
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "lin3s/admin-bundle": "dev-master",
+        "lin3s/admin-ddd-extensions-bundle": "dev-master",
         "lin3s/cms-kernel": "dev-master",
         "lin3s/distribution": "^2.4",
-        "lin3s/shared-kernel": "dev-master",
+        "lin3s/shared-kernel": "^0.3",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "simple-bus/doctrine-orm-bridge": "^4.0",
@@ -110,5 +111,7 @@
                 "dist-file": ".lin3s_cs.yml.dist"
             }
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
