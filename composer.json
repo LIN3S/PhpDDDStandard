@@ -57,14 +57,6 @@
             "@symfony-scripts"
         ]
     },
-    "scripts-dev": {
-        "post-install-cmd": [
-            "@lin3scs-scripts"
-        ],
-        "post-update-cmd": [
-            "@lin3scs-scripts"
-        ]
-    },
     "autoload": {
         "psr-4": {
             "App\\": "src/App/"
@@ -96,6 +88,14 @@
                 "file": ".lin3s_cs.yml",
                 "dist-file": ".lin3s_cs.yml.dist"
             }
-        ]
+        ],
+        "scripts-dev": {
+            "post-install-cmd": [
+                "@lin3scs-scripts"
+            ],
+            "post-update-cmd": [
+                "@lin3scs-scripts"
+            ]
+        }
     }
 }
