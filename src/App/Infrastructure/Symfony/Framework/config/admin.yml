@@ -9,7 +9,7 @@ lin3s_admin:
                 new:
                     type: new_translatable
                     options:
-                        name: "New"
+                        name: admin.page.action.new
                         form: App\Infrastructure\Symfony\Form\Type\Page\AddPageType
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
@@ -23,48 +23,45 @@ lin3s_admin:
                 edit:
                     type: ddd_handle_command
                     options:
+                        name: admin.page.action.edit
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageType
                 translate:
                     type: translate
                     options:
-                        name: "Translate"
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageTranslationType
                 removeTranslation:
-                    name: "Remove translation"
                     type: remove_translation
             list:
                 fields:
                     id:
-                        name: id
+                        name: Id
                         type: string
                         options:
                             field: id
                     title:
-                        name: admin.page.translation.field.title
+                        name: admin.page.list.fields.title
                         type: translatable_string
                         options:
                             field: translations.title.title
-
                     actions:
-                        name: lin3s_admin.list_field_type.actions
+                        name: lin3s_admin.list.table.actions
                         type: actions
                         options:
                             actions: ['edit']
                             name: lin3s_admin.list.table.actions
                     translations:
-                        name: translate
                         type: translate
                         options:
                             action: 'translate'
                 filters:
-                    Id:
-                        name: id
+                    id:
+                        name: Id
                         type: text
                         field: id
                     title:
-                        name: "Título"
+                        name: admin.page.list.filters.title
                         type: text
-                        field: title
+                        field: translations.title.title
                 global_actions: ['new']
 
 #        menus:
