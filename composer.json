@@ -42,6 +42,7 @@
         "twig/extensions": "^1.4"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
         "lin3s/cs": "^0.4.3",
         "phpspec/phpspec": "^3.2"
     },

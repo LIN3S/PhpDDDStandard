@@ -20,6 +20,7 @@ use BenGorUser\SymfonySecurityBridgeBundle\SymfonySecurityBridgeBundle;
 use BenGorUser\TwigBridgeBundle\TwigBridgeBundle;
 use BenGorUser\UserBundle\BenGorUserBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
+use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
 use LIN3S\AdminBundle\Lin3sAdminBundle;
 use LIN3S\AdminDDDExtensionsBundle\Lin3sAdminDDDExtensionsBundle;
@@ -81,6 +82,7 @@ class AppKernel extends Kernel
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            $bundles[] = new DoctrineFixturesBundle();
             $bundles[] = new DebugBundle();
             $bundles[] = new WebProfilerBundle();
             $bundles[] = new SensioDistributionBundle();
