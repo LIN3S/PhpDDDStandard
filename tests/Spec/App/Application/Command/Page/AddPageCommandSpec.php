@@ -47,7 +47,7 @@ class AddPageCommandSpec extends ObjectBehavior
             $this->robotsFollow
         );
 
-        $this->pageId()->shouldReturn(null);
+        $this->id()->shouldReturn(null);
         $this->locale()->shouldReturn($this->locale);
         $this->title()->shouldReturn($this->title);
         $this->slug()->shouldReturn($this->slug);

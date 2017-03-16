@@ -59,7 +59,7 @@ class AddPageCommand
         $this->robotsFollow = $robotsFollow;
     }
 
-    public function pageId()
+    public function id()
     {
         return $this->pageId;
     }

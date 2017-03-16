@@ -40,7 +40,7 @@ class RemovePageTranslationHandlerSpec extends ObjectBehavior
         $this->robotsIndex = 1;
         $this->robotsFollow = 1;
 
-        $command->pageId()->shouldBeCalled()->willReturn($this->pageId);
+        $command->id()->shouldBeCalled()->willReturn($this->pageId);
         $command->locale()->shouldBeCalled()->willReturn($this->locale);
 
         $this->beConstructedWith($repository, $templateFactory);

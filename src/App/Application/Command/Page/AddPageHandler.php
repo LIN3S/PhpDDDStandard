@@ -42,7 +42,7 @@ class AddPageHandler
 
     public function __invoke(AddPageCommand $command)
     {
-        $pageId = PageId::generate($command->pageId());
+        $pageId = PageId::generate($command->id());
         $this->checkPageIsAlreadyExists($pageId);
 
         $pageTranslationId = PageTranslationId::generate();

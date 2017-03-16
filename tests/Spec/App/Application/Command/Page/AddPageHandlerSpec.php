@@ -41,7 +41,7 @@ class AddPageHandlerSpec extends ObjectBehavior
         $this->robotsIndex = 1;
         $this->robotsFollow = 1;
 
-        $command->pageId()->shouldBeCalled()->willReturn($this->pageId);
+        $command->id()->shouldBeCalled()->willReturn($this->pageId);
 
         $this->beConstructedWith($repository, $templateFactory);
     }

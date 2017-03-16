@@ -26,7 +26,7 @@ class RemovePageTranslationCommandSpec extends ObjectBehavior
             $this->locale
         );
 
-        $this->pageId()->shouldReturn($this->pageId);
+        $this->id()->shouldReturn($this->pageId);
         $this->locale()->shouldReturn($this->locale);
     }
 

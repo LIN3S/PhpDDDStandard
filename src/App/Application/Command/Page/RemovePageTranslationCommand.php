@@ -33,7 +33,7 @@ class RemovePageTranslationCommand
         $this->locale = $locale;
     }
 
-    public function pageId()
+    public function id()
     {
         return $this->pageId;
     }

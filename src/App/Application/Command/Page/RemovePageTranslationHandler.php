@@ -31,7 +31,7 @@ class RemovePageTranslationHandler
 
     public function __invoke(RemovePageTranslationCommand $command)
     {
-        $pageId = PageId::generate($command->pageId());
+        $pageId = PageId::generate($command->id());
         $locale = new Locale($command->locale());
 
         $page = $this->repository->pageOfId($pageId); /** @var Page $page */

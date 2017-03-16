@@ -42,7 +42,7 @@ class EditPageTranslationHandler
 
     public function __invoke(EditPageTranslationCommand $command)
     {
-        $pageId = PageId::generate($command->pageId());
+        $pageId = PageId::generate($command->id());
         $page = $this->repository->pageOfId($pageId); /** @var Page $page */
         $this->checkPageExists($page);
 

@@ -50,7 +50,7 @@ class AddPageTranslationCommandSpec extends ObjectBehavior
             $this->robotsFollow
         );
 
-        $this->pageId()->shouldReturn($this->pageId);
+        $this->id()->shouldReturn($this->pageId);
         $this->locale()->shouldReturn($this->locale);
         $this->title()->shouldReturn($this->title);
         $this->slug()->shouldReturn($this->slug);
