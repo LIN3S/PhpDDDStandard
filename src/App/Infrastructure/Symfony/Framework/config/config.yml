@@ -84,6 +84,11 @@ ben_gor_user:
                     success_redirection_route:
                         route: lin3s_admin_dashboard
 
+ben_gor_file:
+    file_class:
+        file:
+            class: App\Domain\Model\File\File
+
 lin3s_distribution:
     webpack:
         manifest_path: "%kernel.root_dir%/../../Ui/manifest.json"

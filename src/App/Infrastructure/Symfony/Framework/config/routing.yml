@@ -11,6 +11,9 @@
 ben_gor_user:
     resource: "@BenGorUserBundle/Resources/config/routing/all.yml"
 
+ben_gor_file:
+    resource: '@BenGorFileBundle/Resources/config/routing/all.yml'
+
 cms_kernel_admin_bridge:
     resource: "@CmsKernelAdminBridgeBundle/Resources/config/routing_locale.yml"
     prefix: "admin/"

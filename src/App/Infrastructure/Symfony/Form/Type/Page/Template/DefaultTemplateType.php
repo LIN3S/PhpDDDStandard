@@ -11,6 +11,7 @@
 
 namespace App\Infrastructure\Symfony\Form\Type\Page\Template;
 
+use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\FileType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\WysiwygType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,5 +24,15 @@ class DefaultTemplateType extends TemplateType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('content', WysiwygType::class);
+        $builder->add('testFile', FileType::class, [
+            'upload_endpoint' => '/upload',
+            'gallery_endpoint' => '/',
+            'mime_types' => [
+                'image/gif',
+                'image/jpeg',
+                'image/jpg',
+                'image/png',
+            ]
+        ]);
     }
 }

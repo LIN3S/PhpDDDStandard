@@ -34,6 +34,12 @@ doctrine:
                 dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/User/Mapping/"
                 prefix: 'App\Domain\Model\User'
                 is_bundle: false
+            CMSFile:
+                mapping: true
+                type: xml
+                dir: "%kernel.root_dir%/../../Persistence/Doctrine/ORM/File/Mapping/"
+                prefix: 'App\Domain\Model\File'
+                is_bundle: false
             CMSLocation:
                 mapping: true
                 type: xml

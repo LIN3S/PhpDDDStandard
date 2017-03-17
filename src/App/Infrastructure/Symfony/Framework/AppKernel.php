@@ -11,6 +11,11 @@
 
 namespace App\Infrastructure\Symfony\Framework;
 
+use BenGorFile\DoctrineORMBridgeBundle\BenGorFileDoctrineORMBridgeBundle;
+use BenGorFile\FileBundle\BenGorFileBundle;
+use BenGorFile\SimpleBusBridgeBundle\BenGorFileSimpleBusBridgeBundle;
+use BenGorFile\SimpleBusBridgeBundle\BenGorFileSimpleBusDoctrineORMBridgeBundle;
+use BenGorFile\SymfonyFilesystemBridgeBundle\BenGorFileSymfonyFilesystemBridgeBundle;
 use BenGorUser\DoctrineORMBridgeBundle\DoctrineORMBridgeBundle;
 use BenGorUser\SimpleBusBridgeBundle\SimpleBusBridgeBundle;
 use BenGorUser\SimpleBusBridgeBundle\SimpleBusDoctrineORMBridgeBundle as BenGorUserSimpleBusDoctrineOrmBridgeBundle;
@@ -74,9 +79,16 @@ class AppKernel extends Kernel
             new TwigBridgeBundle(),
             new BenGorUserBundle(),
 
+            new BenGorFileSymfonyFilesystemBridgeBundle(),
+            new BenGorFileDoctrineORMBridgeBundle(),
+            new BenGorFileSimpleBusBridgeBundle(),
+            new BenGorFileSimpleBusDoctrineORMBridgeBundle(),
+            new BenGorFileBundle(),
+
             new Lin3sAdminBundle(),
             new Lin3sAdminDDDExtensionsBundle(),
             new Lin3sCmsKernelBundle(),
+
             new CmsKernelAdminBridgeBundle(),
             new CmsKernelBenGorUserBridgeBundle(),
         ];
