@@ -71,10 +71,9 @@ lin3s_admin:
                 plural: Menús
             actions:
                 new:
-                    type: new_translatable
+                    type: menu
                     options:
                         name: admin.menu.action.new
-                        form: App\Infrastructure\Symfony\Form\Type\Menu\AddMenuType
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
                             title: cms_kernel_admin_bridge.new.confirm.title
@@ -84,15 +83,8 @@ lin3s_admin:
                                     es_ES: cms_kernel_admin_bridge.locale.es_ES
                                     en_US: cms_kernel_admin_bridge.locale.en_US
                                     eu_ES: cms_kernel_admin_bridge.locale.eu_ES
-                edit:
-                    type: ddd_handle_command
-                    options:
-                        name: admin.menu.action.edit
-                        form: App\Infrastructure\Symfony\Form\Type\Menu\EditMenuType
                 translate:
-                    type: translate
-                    options:
-                        form: App\Infrastructure\Symfony\Form\Type\Menu\EditMenuTranslationType
+                    type: menu
                 removeTranslation:
                     type: remove_translation
             list:
@@ -107,12 +99,6 @@ lin3s_admin:
                         type: translatable_string
                         options:
                             field: translations.name.name
-                    actions:
-                        name: lin3s_admin.list.table.actions
-                        type: actions
-                        options:
-                            actions: ['edit']
-                            name: lin3s_admin.list.table.actions
                     translations:
                         type: translate
                         options:
