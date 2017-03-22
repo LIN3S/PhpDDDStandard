@@ -64,33 +64,69 @@ lin3s_admin:
                         field: translations.title.title
                 global_actions: ['new']
 
-#        menus:
-#            name:
-#                singular: Menú
-#                plural: Menús
-#            class: LIN3S\CMSKernel\Domain\Model\Menu\Menu
-#            actions:
-##                nuevo:
-##                    class: lin3s_admin.action.type.new
-##                    options:
-##                        form: Denbolan\InfrastructureBundle\Form\PageType
-##                        redirectAction: editar
-##                editar:
-##                    class: lin3s_admin.action.type.edit
-##                    options:
-##                        form: Denbolan\InfrastructureBundle\Form\PageType
-#            list:
-##                actions: ['editar']
-#                fields:
-#                    'Título':
-#                        class: lin3s_admin.list_field_type.string
-#                        options:
-#                            field: title.title
-#                filters:
-#                    'Título':
-#                        class: lin3s_admin.list_filter_type.text
-#                        field: title.title
-##                globalActions: ['nuevo']
+        menus:
+            class: LIN3S\CMSKernel\Domain\Model\Menu\Menu
+            name:
+                singular: Menú
+                plural: Menús
+            actions:
+                new:
+                    type: new_translatable
+                    options:
+                        name: admin.menu.action.new
+                        form: App\Infrastructure\Symfony\Form\Type\Menu\AddMenuType
+                        confirm:
+                            button: cms_kernel_admin_bridge.new.confirm.button
+                            title: cms_kernel_admin_bridge.new.confirm.title
+                            content:
+                                main: cms_kernel_admin_bridge.new.confirm.content
+                                locales:
+                                    es_ES: cms_kernel_admin_bridge.locale.es_ES
+                                    en_US: cms_kernel_admin_bridge.locale.en_US
+                                    eu_ES: cms_kernel_admin_bridge.locale.eu_ES
+                edit:
+                    type: ddd_handle_command
+                    options:
+                        name: admin.menu.action.edit
+                        form: App\Infrastructure\Symfony\Form\Type\Menu\EditMenuType
+                translate:
+                    type: translate
+                    options:
+                        form: App\Infrastructure\Symfony\Form\Type\Menu\EditMenuTranslationType
+                removeTranslation:
+                    type: remove_translation
+            list:
+                fields:
+                    id:
+                        name: Id
+                        type: string
+                        options:
+                            field: id
+                    name:
+                        name: admin.menu.list.fields.name
+                        type: translatable_string
+                        options:
+                            field: translations.name.name
+                    actions:
+                        name: lin3s_admin.list.table.actions
+                        type: actions
+                        options:
+                            actions: ['edit']
+                            name: lin3s_admin.list.table.actions
+                    translations:
+                        type: translate
+                        options:
+                            action: 'translate'
+                filters:
+                    id:
+                        name: Id
+                        type: text
+                        field: id
+                    name:
+                        name: admin.menu.list.filters.name
+                        type: text
+                        field: translations.name.name
+                global_actions: ['new']
 
 lin3s_cms_kernel:
     templates:
