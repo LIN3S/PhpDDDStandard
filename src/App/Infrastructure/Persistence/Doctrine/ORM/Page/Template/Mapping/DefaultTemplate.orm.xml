@@ -6,5 +6,6 @@
 
     <entity name="App\Domain\Model\Page\Template\DefaultTemplate" table="default_template">
         <field name="content" type="string" length="255" column="content" nullable="true"/>
+        <field name="file" type="file_id" column="file_id" nullable="true"/>
     </entity>
 </doctrine-mapping>

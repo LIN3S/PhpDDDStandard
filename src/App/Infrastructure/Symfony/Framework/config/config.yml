@@ -88,6 +88,8 @@ ben_gor_file:
     file_class:
         file:
             class: App\Domain\Model\File\File
+            upload_strategy: "by_hash"
+            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads'
 
 lin3s_distribution:
     webpack:

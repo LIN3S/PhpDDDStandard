@@ -1,0 +1,12 @@
+[
+    {% for file in files %}
+        {% if not loop.first %}
+        ,
+        {% endif %}
+        {
+            "id": "{{ file.id }}",
+            "mimeType": "{{ file.mime_type }}",
+            "name": "{{ bengor_file_download('file', file.file_name) }}"
+        }
+    {% endfor %}
+]

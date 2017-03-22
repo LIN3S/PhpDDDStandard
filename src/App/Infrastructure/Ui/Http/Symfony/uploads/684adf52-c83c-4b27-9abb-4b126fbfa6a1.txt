@@ -1,0 +1,41 @@
+********************************** EventBus **********************************
+
+- Test Symbol aproach.
+- DomReadyEventSubscriber -> isSubscribedTo method
+	We are instantiating a new DOMReadyEvent each time this method is called. Make static method on DOMReadyEvent to retrieve its NAME.
+
+- Add priority to the eventBus
+- Add stopPropagation
+
+
+
+
+
+
+********************************* ScrollProxy *********************************
+
+- Update ScrollProxy to cache values on implementations (cacheOnLoad = true), for logic that uses getBoundingClientRect extensively.
+- Update ScrollProxy to observe horizontal scroll events in the specific implementations.
+- Update ScrollProxy to a more generic aproach, that will let observer scroll events (& get notified) on the specified element (not only window object).
+	- f.e: ScrollProxyFactory.on(window).getInstance() -> instantiate a new ScrollProxy for the desired element on demand.
+
+
+
+- Update ScrollStickyListener (both basic & withContents). Add method setTriggerOffset(triggerOffset) to update dinammically the triggerOffset.
+
+
+
+
+***** DEMOS *****
+
+https://material.uplabs.com/search?q=scroll
+
+https://material.uplabs.com/posts/ticket-scroll
+https://material.uplabs.com/posts/principle-parallax-scroll-template
+https://material.uplabs.com/posts/material-design-smooth-scroll-mirchu
+https://material.uplabs.com/posts/offer-screen-scrolling
+https://material.uplabs.com/posts/details-scroll-interaction
+https://material.uplabs.com/posts/presentation-for-drive
+https://material.uplabs.com/posts/focusresize
+https://material.uplabs.com/posts/album-details
+https://material.uplabs.com/posts/magazine-tablet-concept

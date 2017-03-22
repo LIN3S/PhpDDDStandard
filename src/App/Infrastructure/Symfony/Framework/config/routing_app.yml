@@ -12,3 +12,17 @@ app_homepage:
     path: /
     defaults:
         _controller: "app.http_action.home:__invoke"
+
+app_file_upload:
+    path: /file-upload
+    defaults:
+        _controller: "app.http_action.file_upload:__invoke"
+    methods:
+        - POST
+
+app_file_gallery:
+    path: /file-gallery
+    defaults:
+        _controller: "app.http_action.file_gallery:__invoke"
+    methods:
+        - GET

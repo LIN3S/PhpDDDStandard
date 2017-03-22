@@ -11,6 +11,7 @@
 
 namespace App\Domain\Model\Page\Template;
 
+use BenGorFile\File\Domain\Model\FileId;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateContent;
 use LIN3S\CMSKernel\Domain\Model\Template\TemplateId;
 
@@ -20,18 +21,21 @@ use LIN3S\CMSKernel\Domain\Model\Template\TemplateId;
 final class DefaultTemplate extends Template
 {
     private $content;
+    private $file;
 
-    private function __construct(TemplateId $id, $content)
+    private function __construct(TemplateId $id, $content, FileId $file)
     {
         $this->id = $id;
         $this->content = $content;
+        $this->file = $file;
     }
 
     public static function fromContent(TemplateContent $content)
     {
         return new self(
             TemplateId::generate(),
-            $content->get('content')
+            $content->get('content'),
+            new FileId($content->get('file'))
         );
     }
 
@@ -39,12 +43,18 @@ final class DefaultTemplate extends Template
     {
         return [
             'content' => $this->content,
+            'file' => $this->file,
         ];
     }
 
     public function content()
     {
         return $this->content;
+    }
+
+    public function file()
+    {
+        return $this->file;
     }
 
     public static function name()
