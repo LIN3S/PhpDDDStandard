@@ -11,17 +11,19 @@
 
 namespace App\Infrastructure\Symfony\HttpAction;
 
-use BenGorFile\File\Application\Command\Upload\ByHashUploadFileCommand;
 use BenGorFile\File\Domain\Model\FileAlreadyExistsException;
 use BenGorFile\File\Domain\Model\FileDoesNotExistException;
 use BenGorFile\File\Domain\Model\FileMimeTypeDoesNotSupportException;
 use BenGorFile\File\Domain\Model\FileNameInvalidException;
-use BenGorFile\File\Infrastructure\CommandBus\FileCommandBus;
+use BenGorFile\File\Infrastructure\Application\FileCommandBus;
+use BenGorFile\FileBundle\Controller\SuffixNumberUploadAction;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class FileUploadAction
 {
+    use SuffixNumberUploadAction;
+
     private $commandBus;
     private $twig;
 
@@ -42,7 +44,7 @@ class FileUploadAction
         $fileData = null;
 
         try {
-            $fileData = $this->upload($request);
+            $fileData = $this->upload($request, $this->commandBus, 'file');
             $success = true;
         } catch (FileDoesNotExistException $exception) {
             $errorCode = 'FileDoesNotExistException';
@@ -61,26 +63,5 @@ class FileUploadAction
                 'errorCode' => $errorCode,
             ])
         );
-    }
-
-    private function upload(Request $request)
-    {
-
-        $uploadedFile = $request->files->get('file');
-
-        $command = new ByHashUploadFileCommand(
-            $uploadedFile->getClientOriginalName(),
-            file_get_contents($uploadedFile->getPathname()),
-            $uploadedFile->getMimeType()
-        );
-        $this->commandBus->handle($command);
-
-        $request->files->remove('file');
-
-        return [
-            'id'       => $command->id(),
-            'name'     => $uploadedFile->getClientOriginalName(),
-            'mimeType' => $uploadedFile->getMimeType(),
-        ];
     }
 }

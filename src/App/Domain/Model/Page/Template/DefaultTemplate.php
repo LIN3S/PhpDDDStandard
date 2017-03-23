@@ -23,7 +23,7 @@ final class DefaultTemplate extends Template
     private $content;
     private $file;
 
-    private function __construct(TemplateId $id, $content, FileId $file)
+    private function __construct(TemplateId $id, $content, FileId $file = null)
     {
         $this->id = $id;
         $this->content = $content;
@@ -32,10 +32,15 @@ final class DefaultTemplate extends Template
 
     public static function fromContent(TemplateContent $content)
     {
+        $fileId = null;
+        if ($content->has('file')) {
+            $fileId = new FileId($content->get('file'));
+        }
+
         return new self(
             TemplateId::generate(),
             $content->get('content'),
-            new FileId($content->get('file'))
+            $fileId
         );
     }
 
@@ -43,7 +48,7 @@ final class DefaultTemplate extends Template
     {
         return [
             'content' => $this->content,
-            'file' => $this->file,
+            'file'    => $this->file,
         ];
     }
 
