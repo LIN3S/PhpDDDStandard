@@ -24,15 +24,6 @@ class DefaultTemplateType extends TemplateType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('content', WysiwygType::class);
-        $builder->add('file', FileType::class, [
-            'upload_endpoint' => '/file-upload',
-            'gallery_endpoint' => '/file-gallery',
-            'mime_types' => [
-                'image/gif',
-                'image/jpeg',
-                'image/jpg',
-                'image/png',
-            ]
-        ]);
+        $builder->add('file', FileType::class);
     }
 }

@@ -13,15 +13,3 @@ services:
         class: App\Infrastructure\Symfony\HttpAction\HomeAction
         arguments:
             - "@twig"
-
-    app.http_action.file_upload:
-        class: App\Infrastructure\Symfony\HttpAction\FileUploadAction
-        arguments:
-            - "@twig"
-            - "@bengor_file.file.command_bus"
-
-    app.http_action.file_gallery:
-        class: App\Infrastructure\Symfony\HttpAction\FileGalleryAction
-        arguments:
-            - "@twig"
-            - "@app.application.query_handler.file.all"

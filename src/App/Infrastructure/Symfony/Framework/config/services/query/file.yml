@@ -8,8 +8,9 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
+# TODO: THIS SERVICE MUST BE DECLARE INSIDE BENGORFILE
 services:
-    app.application.query_handler.file.all:
+    bengor_file.application.query_handler.file.all:
         class: BenGorFile\File\Application\Query\AllFilesHandler
         arguments:
             - "@bengor_file.file.repository"

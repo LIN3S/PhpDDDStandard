@@ -90,6 +90,7 @@ ben_gor_file:
             class: App\Domain\Model\File\File
             upload_strategy: "suffix_number"
             upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads'
+            download_base_url: files
 
 lin3s_distribution:
     webpack:

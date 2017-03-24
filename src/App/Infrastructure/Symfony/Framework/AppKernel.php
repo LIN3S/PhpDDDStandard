@@ -29,6 +29,7 @@ use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
 use LIN3S\AdminBundle\Lin3sAdminBundle;
 use LIN3S\AdminDDDExtensionsBundle\Lin3sAdminDDDExtensionsBundle;
+use LIN3S\CMSKernel\Infrastructure\BenGorFileBundle\CmsKernelBenGorFileBridgeBundle;
 use LIN3S\CMSKernel\Infrastructure\BenGorUserBundle\CmsKernelBenGorUserBridgeBundle;
 use LIN3S\CMSKernel\Infrastructure\Lin3sAdminBundle\CmsKernelAdminBridgeBundle;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Bundle\Lin3sCmsKernelBundle;
@@ -90,6 +91,7 @@ class AppKernel extends Kernel
             new Lin3sCmsKernelBundle(),
 
             new CmsKernelAdminBridgeBundle(),
+            new CmsKernelBenGorFileBridgeBundle(),
             new CmsKernelBenGorUserBridgeBundle(),
         ];
 

@@ -127,3 +127,13 @@ cms_kernel_admin_bridge:
         others:
             - es_ES
             - eu_ES
+
+cms_kernel_ben_gor_file_bridge:
+    file_types:
+        file:
+            upload_endpoint:
+                path: "/file-upload"
+                name: "cms_kernel_ben_gor_file_bridge_file_upload"
+            gallery_endpoint:
+                path: "/file-gallery"
+                name: "cms_kernel_ben_gor_file_bridge_file_gallery"
