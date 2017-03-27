@@ -25,5 +25,6 @@ class DefaultTemplateType extends TemplateType
     {
         $builder->add('content', WysiwygType::class);
         $builder->add('file', FileType::class);
+        $builder->add('image', FileType::class);
     }
 }

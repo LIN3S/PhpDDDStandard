@@ -89,8 +89,13 @@ ben_gor_file:
         file:
             class: App\Domain\Model\File\File
             upload_strategy: "suffix_number"
-            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads'
+            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads/files'
             download_base_url: files
+        image:
+            class: App\Domain\Model\Image\Image
+            upload_strategy: "suffix_number"
+            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads/images'
+            download_base_url: images
 
 lin3s_distribution:
     webpack:

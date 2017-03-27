@@ -1,8 +1,0 @@
-[
-    {% for file in files %}
-        {% if not loop.first %}
-        ,
-        {% endif %}
-        {{ file | json_encode | raw }}
-    {% endfor %}
-]

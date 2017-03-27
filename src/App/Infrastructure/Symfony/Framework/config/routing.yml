@@ -20,7 +20,6 @@ cms_kernel_admin_bridge:
 
 cms_kernel_bengor_file_bridge:
     resource: "@CmsKernelBenGorFileBridgeBundle/Resources/config/routing.yml"
-    prefix: "admin/"
 
 lin3s_admin:
     resource: "@Lin3sAdminBundle/Resources/config/routing.yml"

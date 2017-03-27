@@ -1,7 +1,0 @@
-{
-    "success": "{{ success }}",
-    "fileData": "{{ fileData | json_encode() }}"
-    {% if not success %}
-    ,"errorCode": "{{ errorCode }}"
-    {% endif %}
-}
