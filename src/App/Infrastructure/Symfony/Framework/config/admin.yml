@@ -47,12 +47,12 @@ lin3s_admin:
                         name: lin3s_admin.list.table.actions
                         type: actions
                         options:
-                            actions: ['edit']
+                            actions: ["edit"]
                             name: lin3s_admin.list.table.actions
                     translations:
                         type: translate
                         options:
-                            action: 'translate'
+                            action: "translate"
                 filters:
                     id:
                         name: Id
@@ -62,7 +62,7 @@ lin3s_admin:
                         name: admin.page.list.filters.title
                         type: text
                         field: translations.title.title
-                global_actions: ['new']
+                global_actions: ["new"]
 
         menus:
             class: LIN3S\CMSKernel\Domain\Model\Menu\Menu
@@ -102,7 +102,7 @@ lin3s_admin:
                     translations:
                         type: translate
                         options:
-                            action: 'translate'
+                            action: "translate"
                 filters:
                     id:
                         name: Id
@@ -112,7 +112,7 @@ lin3s_admin:
                         name: admin.menu.list.filters.name
                         type: text
                         field: translations.name.name
-                global_actions: ['new']
+                global_actions: ["new"]
 
 lin3s_cms_kernel:
     templates:
@@ -123,7 +123,7 @@ lin3s_cms_kernel:
 
 cms_kernel_admin_bridge:
     locales:
-        default: '%locale%'
+        default: "%locale%"
         others:
             - es_ES
             - eu_ES
