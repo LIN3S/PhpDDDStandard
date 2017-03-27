@@ -12,14 +12,14 @@ ben_gor_user:
     resource: "@BenGorUserBundle/Resources/config/routing/all.yml"
 
 ben_gor_file:
-    resource: '@BenGorFileBundle/Resources/config/routing/all.yml'
+    resource: "@BenGorFileBundle/Resources/config/routing/all.yml"
 
 cms_kernel_admin_bridge:
-    resource: "@CmsKernelAdminBridgeBundle/Resources/config/routing_locale.yml"
+    resource: "@CmsKernelAdminBridgeBundle/Resources/config/routing.yml"
     prefix: "admin/"
 
-lin3s_cms_kernel:
-    resource: "@Lin3sCmsKernelBundle/Resources/config/routing/routing.yml"
+cms_kernel_bengor_file_bridge:
+    resource: "@CmsKernelBenGorFileBridgeBundle/Resources/config/routing/routing.yml"
     prefix: "admin/"
 
 lin3s_admin:

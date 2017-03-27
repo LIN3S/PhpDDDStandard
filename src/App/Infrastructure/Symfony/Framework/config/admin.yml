@@ -132,8 +132,6 @@ cms_kernel_ben_gor_file_bridge:
     file_types:
         file:
             upload_endpoint:
-                path: "/file-upload"
-                name: "cms_kernel_ben_gor_file_bridge_file_upload"
+                path: "/upload"
             gallery_endpoint:
-                path: "/file-gallery"
-                name: "cms_kernel_ben_gor_file_bridge_file_gallery"
+                path: "/gallery"
