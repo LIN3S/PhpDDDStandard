@@ -122,6 +122,7 @@ lin3s_cms_kernel:
                 - App\Domain\Model\Page\Template\ContactTemplate
 
 cms_kernel_admin_bridge:
+    user_type: "user"
     locales:
         default: "%locale%"
         others:
