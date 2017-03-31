@@ -30,7 +30,7 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->pageId = $options['page_id'];
+        $this->pageId = $options['translatable_id'];
         $this->locale = $options['locale'];
 
         $builder
@@ -41,7 +41,7 @@ class EditPageTranslationType extends AbstractType implements DataMapperInterfac
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver
-            ->setRequired(['locale', 'page_id'])
+            ->setRequired(['locale', 'translatable_id'])
             ->setDefaults([
                 'empty_data' => null,
             ]);
