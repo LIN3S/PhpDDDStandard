@@ -16,12 +16,12 @@ Alternatively, you want to create a project with all the [**CMS boilerplate**][3
 $ composer create-project lin3s/php-ddd-standard <project-name> dev-admin-cms && cd <project-name>
 ```
 
-##Documentation
+## Documentation
 All the documentation is stored in the `docs` folder.
 
 [Show me the docs!](docs/index.md)
 
-##Licensing Options
+## Licensing Options
 [![License](https://poser.pugx.org/lin3s/php-ddd-standard/license.svg)](https://github.com/LIN3S/PhpDDDStandard/blob/master/LICENSE)
  
 [1]: http://www.lin3s.com/
