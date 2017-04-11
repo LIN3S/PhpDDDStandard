@@ -12,26 +12,10 @@
 'use strict';
 
 import {onDomReady} from 'lin3s-event-bus';
-import $ from 'jquery';
-import Parsley from 'parsleyjs';
-import 'parsleyjs/dist/i18n/en';
-import 'parsleyjs/dist/i18n/es';
-
-const initParsley = (lang) => {
-  const splittedLang = lang.split('_');
-
-  let locale = lang;
-  if (splittedLang.length > 0) {
-    locale = splittedLang[0];
-  }
-
-  Parsley.setLocale(locale);
-};
+import {initParsley} from 'lin3s-front-foundation';
 
 const onReady = () => {
-  const lang = $('html').attr('lang');
-
-  initParsley(lang);
+  initParsley();
 };
 
 onDomReady(onReady);
