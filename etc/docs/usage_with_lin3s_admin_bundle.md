@@ -1,4 +1,4 @@
-#Using with the LIN3S Admin Bundle
+# Using with the LIN3S Admin Bundle
 
 In this chapter will explain how to integrate the [Lin3sAdminBundle][1] with this package. For this purpose it needs the
 authentication flow so, it also integrates the **[BenGorUserBundle][2]**.

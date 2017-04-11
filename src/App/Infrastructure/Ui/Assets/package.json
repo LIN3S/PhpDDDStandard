@@ -7,6 +7,7 @@
     "jquery": "^3.1.1",
     "lin3s-css-grid": "^0.3.0",
     "lin3s-event-bus": "^0.4.0",
+    "lin3s-front-foundation": "^0.2.1",
     "parsleyjs": "^2.6.2",
     "picturefill": "^3.0.2",
     "svg4everybody": "^2.1.0"
