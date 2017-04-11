@@ -13,9 +13,8 @@
 # Setup project
 ############################################
 
-set :application,   "rome-reports"
-set :repo_url,      "git@gitlab.lin3s.com:romereports/rome-reports.git"
-set :scm,           :git
+set :application,   "project-name"
+set :repo_url,      "git@github.com:organization/project.git"
 
 set :infr_path, "src/App/Infrastructure"
 set :symfony_path, fetch(:infr_path) + "/Symfony/Framework"
