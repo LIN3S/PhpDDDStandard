@@ -116,16 +116,16 @@
         },
         {
             "name": "bengor-file/doctrine-orm-bridge",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/DoctrineORMBridge.git",
-                "reference": "15a999af226e531df79efc562f98bc640a54bff3"
+                "reference": "0ceaca06de3209b2128c2a200b8dec3e7ad85444"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridge/zipball/15a999af226e531df79efc562f98bc640a54bff3",
-                "reference": "15a999af226e531df79efc562f98bc640a54bff3",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridge/zipball/0ceaca06de3209b2128c2a200b8dec3e7ad85444",
+                "reference": "0ceaca06de3209b2128c2a200b8dec3e7ad85444",
                 "shasum": ""
             },
             "require": {
@@ -175,24 +175,24 @@
                 "file",
                 "orm"
             ],
-            "time": "2017-03-22T11:51:46+00:00"
+            "time": "2017-04-04T06:59:10+00:00"
         },
         {
             "name": "bengor-file/doctrine-orm-bridge-bundle",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/DoctrineORMBridgeBundle.git",
-                "reference": "3ac0b5d13d5a974c20ff3f401c2a5391b8c553b4"
+                "reference": "efb22f3a9a9982869d7aa3ea13008b77b3f2b754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridgeBundle/zipball/3ac0b5d13d5a974c20ff3f401c2a5391b8c553b4",
-                "reference": "3ac0b5d13d5a974c20ff3f401c2a5391b8c553b4",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridgeBundle/zipball/efb22f3a9a9982869d7aa3ea13008b77b3f2b754",
+                "reference": "efb22f3a9a9982869d7aa3ea13008b77b3f2b754",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/doctrine-orm-bridge": "^1.1.0",
+                "bengor-file/doctrine-orm-bridge": "^1.2",
                 "bengor-file/file-bundle": "^0.3",
                 "doctrine/doctrine-bundle": "^1.6",
                 "php": "^5.5 || ^7.0"
@@ -240,20 +240,20 @@
                 "orm",
                 "symfony"
             ],
-            "time": "2017-03-22T12:09:15+00:00"
+            "time": "2017-04-04T07:04:08+00:00"
         },
         {
             "name": "bengor-file/file",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/File.git",
-                "reference": "9a462ce88c1eb408f9b253a8a564161f603960dc"
+                "reference": "4bfbe0214a1aff3a628a6e697543309ba4a37689"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/File/zipball/9a462ce88c1eb408f9b253a8a564161f603960dc",
-                "reference": "9a462ce88c1eb408f9b253a8a564161f603960dc",
+                "url": "https://api.github.com/repos/BenGorFile/File/zipball/4bfbe0214a1aff3a628a6e697543309ba4a37689",
+                "reference": "4bfbe0214a1aff3a628a6e697543309ba4a37689",
                 "shasum": ""
             },
             "require": {
@@ -300,20 +300,20 @@
                 "ddd",
                 "file"
             ],
-            "time": "2017-03-22T13:56:26+00:00"
+            "time": "2017-03-24T14:50:38+00:00"
         },
         {
             "name": "bengor-file/file-bundle",
-            "version": "v0.3.0",
+            "version": "v0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/FileBundle.git",
-                "reference": "fcd1f6b4b36e3d3edda60e713905f592ddfe5ab2"
+                "reference": "bf0d307b5df85028a81889c7d7034d9d532dcab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/FileBundle/zipball/fcd1f6b4b36e3d3edda60e713905f592ddfe5ab2",
-                "reference": "fcd1f6b4b36e3d3edda60e713905f592ddfe5ab2",
+                "url": "https://api.github.com/repos/BenGorFile/FileBundle/zipball/bf0d307b5df85028a81889c7d7034d9d532dcab7",
+                "reference": "bf0d307b5df85028a81889c7d7034d9d532dcab7",
                 "shasum": ""
             },
             "require": {
@@ -363,20 +363,20 @@
                 "ddd",
                 "file"
             ],
-            "time": "2017-03-22T12:50:11+00:00"
+            "time": "2017-03-27T07:00:34+00:00"
         },
         {
             "name": "bengor-file/simple-bus-bridge",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/SimpleBusBridge.git",
-                "reference": "f615de83aeca1bc9b166e87c2d43c83ac0a4d38f"
+                "reference": "9dae230a697887badfdbfbe115855ae242498075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridge/zipball/f615de83aeca1bc9b166e87c2d43c83ac0a4d38f",
-                "reference": "f615de83aeca1bc9b166e87c2d43c83ac0a4d38f",
+                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridge/zipball/9dae230a697887badfdbfbe115855ae242498075",
+                "reference": "9dae230a697887badfdbfbe115855ae242498075",
                 "shasum": ""
             },
             "require": {
@@ -426,7 +426,7 @@
                 "file",
                 "simple-bus"
             ],
-            "time": "2017-03-22T17:51:33+00:00"
+            "time": "2017-03-23T10:33:25+00:00"
         },
         {
             "name": "bengor-file/simple-bus-bridge-bundle",
@@ -1386,16 +1386,16 @@
         },
         {
             "name": "bengor-user/user",
-            "version": "v0.8.0",
+            "version": "v0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorUser/User.git",
-                "reference": "22712cb25f8bdaa5a09143ff85dd37afc32aff48"
+                "reference": "734900f463042194502191e4fb3e4f588cb7bf6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorUser/User/zipball/22712cb25f8bdaa5a09143ff85dd37afc32aff48",
-                "reference": "22712cb25f8bdaa5a09143ff85dd37afc32aff48",
+                "url": "https://api.github.com/repos/BenGorUser/User/zipball/734900f463042194502191e4fb3e4f588cb7bf6f",
+                "reference": "734900f463042194502191e4fb3e4f588cb7bf6f",
                 "shasum": ""
             },
             "require": {
@@ -1442,7 +1442,7 @@
                 "ddd",
                 "user"
             ],
-            "time": "2017-02-02T21:42:35+00:00"
+            "time": "2017-03-30T11:48:33+00:00"
         },
         {
             "name": "bengor-user/user-bundle",
@@ -1510,6 +1510,65 @@
                 "user"
             ],
             "time": "2017-02-24T09:40:29+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5",
+                "psr/log": "^1.0",
+                "symfony/process": "^2.5 || ^3.0"
+            },
+            "suggest": {
+                "symfony/process": "This is necessary to reliably check whether openssl_x509_parse is vulnerable on older php versions, but can be ignored on PHP 5.5.6+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "time": "2017-03-06T11:59:08+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2609,12 +2668,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminBundle.git",
-                "reference": "143ff27876b04e28db3bfd1a6584acc6e11e10e7"
+                "reference": "e7e17a2216c3212480ea3bfdc5efe745af70d4e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/143ff27876b04e28db3bfd1a6584acc6e11e10e7",
-                "reference": "143ff27876b04e28db3bfd1a6584acc6e11e10e7",
+                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/e7e17a2216c3212480ea3bfdc5efe745af70d4e7",
+                "reference": "e7e17a2216c3212480ea3bfdc5efe745af70d4e7",
                 "shasum": ""
             },
             "require": {
@@ -2651,7 +2710,7 @@
                 }
             ],
             "description": "Admin Bundle in the LIN3S way",
-            "time": "2017-03-16 07:15:10"
+            "time": "2017-04-12 09:01:34"
         },
         {
             "name": "lin3s/admin-ddd-extensions-bundle",
@@ -2659,12 +2718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminDDDExtensionsBundle.git",
-                "reference": "f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5"
+                "reference": "3ada98a141cbbf6bf554836c16eaf31e1dfb1878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5",
-                "reference": "f6d86ec6cac86face0c69bb1d13f7f2c9a30f7e5",
+                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/3ada98a141cbbf6bf554836c16eaf31e1dfb1878",
+                "reference": "3ada98a141cbbf6bf554836c16eaf31e1dfb1878",
                 "shasum": ""
             },
             "require": {
@@ -2697,7 +2756,7 @@
                 }
             ],
             "description": "DDD extensions for LIN3S-Admin",
-            "time": "2017-03-15 09:39:55"
+            "time": "2017-04-05 08:49:03"
         },
         {
             "name": "lin3s/cms-kernel",
@@ -2705,12 +2764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "7fca1cb09115dad19f1a78df452ed8d240d623fa"
+                "reference": "c708896d3f26838910cf923da77415907f1c425f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/7fca1cb09115dad19f1a78df452ed8d240d623fa",
-                "reference": "7fca1cb09115dad19f1a78df452ed8d240d623fa",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/c708896d3f26838910cf923da77415907f1c425f",
+                "reference": "c708896d3f26838910cf923da77415907f1c425f",
                 "shasum": ""
             },
             "require": {
@@ -2749,20 +2808,20 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-03-16 10:00:51"
+            "time": "2017-04-12 12:04:33"
         },
         {
             "name": "lin3s/distribution",
-            "version": "v2.4.0",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/Distribution.git",
-                "reference": "7788fc580fbec3810df4fb3aaa50fde56f598a57"
+                "reference": "0deed39b43807a58ed16ba5ba968236e258ab248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/Distribution/zipball/7788fc580fbec3810df4fb3aaa50fde56f598a57",
-                "reference": "7788fc580fbec3810df4fb3aaa50fde56f598a57",
+                "url": "https://api.github.com/repos/LIN3S/Distribution/zipball/0deed39b43807a58ed16ba5ba968236e258ab248",
+                "reference": "0deed39b43807a58ed16ba5ba968236e258ab248",
                 "shasum": ""
             },
             "require": {
@@ -2800,7 +2859,7 @@
                 "distribution",
                 "lin3s"
             ],
-            "time": "2017-02-08T16:09:36+00:00"
+            "time": "2017-03-31T10:37:49+00:00"
         },
         {
             "name": "lin3s/shared-kernel",
@@ -3193,16 +3252,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458"
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0b7bdfb180e72c8d76e75a649ced67e392201458",
-                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
                 "shasum": ""
             },
             "require": {
@@ -3214,9 +3273,9 @@
             },
             "require-dev": {
                 "apigen/apigen": "^4.1",
-                "codeception/aspect-mock": "1.0.0",
+                "codeception/aspect-mock": "^1.0 | ^2.0",
                 "doctrine/annotations": "~1.2.0",
-                "goaop/framework": "1.0.0-alpha.2",
+                "goaop/framework": "1.0.0-alpha.2 | ^1.0 | ^2.1",
                 "ircmaxell/random-lib": "^1.1",
                 "jakub-onderka/php-parallel-lint": "^0.9.0",
                 "mockery/mockery": "^0.9.4",
@@ -3271,7 +3330,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2017-03-18T15:38:09+00:00"
+            "time": "2017-03-26T20:37:53+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -3397,19 +3456,20 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v4.0.2",
+            "version": "v4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "56bded66985e22f6eac2cf86735fd21c625bff2f"
+                "reference": "9e69eddf3bc49d1ee5c7908564da3141796d4bbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/56bded66985e22f6eac2cf86735fd21c625bff2f",
-                "reference": "56bded66985e22f6eac2cf86735fd21c625bff2f",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/9e69eddf3bc49d1ee5c7908564da3141796d4bbc",
+                "reference": "9e69eddf3bc49d1ee5c7908564da3141796d4bbc",
                 "shasum": ""
             },
             "require": {
+                "composer/ca-bundle": "^1.0",
                 "symfony/console": "~2.7|~3.0"
             },
             "bin": [
@@ -3437,7 +3497,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2017-03-09T17:33:20+00:00"
+            "time": "2017-03-31T14:50:32+00:00"
         },
         {
             "name": "simple-bus/doctrine-orm-bridge",
@@ -4177,16 +4237,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.6",
+            "version": "v3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe"
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
                 "shasum": ""
             },
             "require": {
@@ -4317,7 +4377,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-03-10T18:35:48+00:00"
+            "time": "2017-04-05T12:52:29+00:00"
         },
         {
             "name": "twig/extensions",
