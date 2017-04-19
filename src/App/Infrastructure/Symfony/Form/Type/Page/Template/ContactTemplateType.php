@@ -24,7 +24,7 @@ class ContactTemplateType extends TemplateType
     {
         $builder
             ->add('street', TextType::class)
-            ->add('postalCode', TextType::class)
+            ->add('postal_code', TextType::class)
             ->add('city', TextType::class);
     }
 }

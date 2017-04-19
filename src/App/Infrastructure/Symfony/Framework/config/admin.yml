@@ -29,6 +29,8 @@ lin3s_admin:
                     type: translate
                     options:
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageTranslationType
+                        catchable_exceptions:
+                            LIN3S\CMSKernel\Domain\Model\Page\PageDoesNotExistException: "Unfortunately the pages does not exist"
                 removeTranslation:
                     type: remove_translation
             list:

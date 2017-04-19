@@ -12,9 +12,11 @@
 namespace App\Infrastructure\Symfony\Form\Type\Page;
 
 use App\Application\Command\Page\AddPageCommand;
+use LIN3S\SharedKernel\Exception\InvalidArgumentException;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\DataMapperInterface;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -88,16 +90,20 @@ class AddPageType extends AbstractType implements DataMapperInterface
         $forms = iterator_to_array($forms);
         $translation = $forms['translation']->getData();
 
-        $data = new AddPageCommand(
-            $this->locale,
-            $translation['title'],
-            $translation['templateSelector']['name'],
-            $translation['templateSelector']['content'],
-            $translation['slug'],
-            $translation['seo']['metaTitle'],
-            $translation['seo']['metaDescription'],
-            $translation['seo']['robotsIndex'],
-            $translation['seo']['robotsFollow']
-        );
+        try {
+            $data = new AddPageCommand(
+                $this->locale,
+                $translation['title'],
+                $translation['templateSelector']['name'],
+                $translation['templateSelector']['content'],
+                $translation['slug'],
+                $translation['seo']['metaTitle'],
+                $translation['seo']['metaDescription'],
+                $translation['seo']['robotsIndex'],
+                $translation['seo']['robotsFollow']
+            );
+        } catch (InvalidArgumentException $exception) {
+            $forms['translation']['title']->addError(new FormError('The title should not be blank'));
+        }
     }
 }
