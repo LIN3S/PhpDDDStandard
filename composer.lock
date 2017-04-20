@@ -2718,12 +2718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminDDDExtensionsBundle.git",
-                "reference": "3ada98a141cbbf6bf554836c16eaf31e1dfb1878"
+                "reference": "2bac914e0a0f116e29f424f7eec5a0b3e969c36f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/3ada98a141cbbf6bf554836c16eaf31e1dfb1878",
-                "reference": "3ada98a141cbbf6bf554836c16eaf31e1dfb1878",
+                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/2bac914e0a0f116e29f424f7eec5a0b3e969c36f",
+                "reference": "2bac914e0a0f116e29f424f7eec5a0b3e969c36f",
                 "shasum": ""
             },
             "require": {
@@ -2756,7 +2756,7 @@
                 }
             ],
             "description": "DDD extensions for LIN3S-Admin",
-            "time": "2017-04-05 08:49:03"
+            "time": "2017-04-19 10:28:53"
         },
         {
             "name": "lin3s/cms-kernel",
@@ -2764,12 +2764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "c708896d3f26838910cf923da77415907f1c425f"
+                "reference": "cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/c708896d3f26838910cf923da77415907f1c425f",
-                "reference": "c708896d3f26838910cf923da77415907f1c425f",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484",
+                "reference": "cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484",
                 "shasum": ""
             },
             "require": {
@@ -2808,7 +2808,7 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-04-12 12:04:33"
+            "time": "2017-04-19 17:06:29"
         },
         {
             "name": "lin3s/distribution",
@@ -4433,16 +4433,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.33.0",
+            "version": "v1.33.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a"
+                "reference": "a87f959f4b691da66aada267a2dfdb260d0bb58a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
-                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a87f959f4b691da66aada267a2dfdb260d0bb58a",
+                "reference": "a87f959f4b691da66aada267a2dfdb260d0bb58a",
                 "shasum": ""
             },
             "require": {
@@ -4491,7 +4491,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-03-22T15:40:09+00:00"
+            "time": "2017-04-18T21:43:11+00:00"
         },
         {
             "name": "zendframework/zend-code",
