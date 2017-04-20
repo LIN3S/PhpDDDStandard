@@ -2764,12 +2764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484"
+                "reference": "83819769e8b4829906868d47e71841fc074328f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484",
-                "reference": "cff164ab6ce7863f2be2ff9e3bee26c1b8ed8484",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/83819769e8b4829906868d47e71841fc074328f0",
+                "reference": "83819769e8b4829906868d47e71841fc074328f0",
                 "shasum": ""
             },
             "require": {
@@ -2808,7 +2808,7 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-04-19 17:06:29"
+            "time": "2017-04-20 08:51:38"
         },
         {
             "name": "lin3s/distribution",
