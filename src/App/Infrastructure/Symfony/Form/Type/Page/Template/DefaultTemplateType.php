@@ -11,6 +11,7 @@
 
 namespace App\Infrastructure\Symfony\Form\Type\Page\Template;
 
+use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\DatePickerType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\FileType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\WysiwygType;
@@ -26,5 +27,6 @@ class DefaultTemplateType extends TemplateType
         $builder->add('content', WysiwygType::class);
         $builder->add('file', FileType::class);
         $builder->add('image', FileType::class);
+        $builder->add('date', DatePickerType::class);
     }
 }
