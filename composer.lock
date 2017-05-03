@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "419bea920a0b32a6fbaa104f04991aba",
+    "content-hash": "39fa35d4272120ec8e178b977c8c40cc",
     "packages": [
         {
             "name": "ajgl/simple-bus-query-bus",
@@ -61,16 +61,16 @@
         },
         {
             "name": "beberlei/assert",
-            "version": "v2.7.4",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/assert.git",
-                "reference": "3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a"
+                "reference": "2f688ee39ea9ce9e2c2164c9db62df3246b8fbff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a",
-                "reference": "3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/2f688ee39ea9ce9e2c2164c9db62df3246b8fbff",
+                "reference": "2f688ee39ea9ce9e2c2164c9db62df3246b8fbff",
                 "shasum": ""
             },
             "require": {
@@ -112,24 +112,24 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-03-14T18:06:52+00:00"
+            "time": "2017-04-26T09:32:13+00:00"
         },
         {
             "name": "bengor-file/doctrine-orm-bridge",
-            "version": "v1.2.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/DoctrineORMBridge.git",
-                "reference": "0ceaca06de3209b2128c2a200b8dec3e7ad85444"
+                "reference": "b45aaa9fe16a8a410976961571fafae0ee5ca511"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridge/zipball/0ceaca06de3209b2128c2a200b8dec3e7ad85444",
-                "reference": "0ceaca06de3209b2128c2a200b8dec3e7ad85444",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridge/zipball/b45aaa9fe16a8a410976961571fafae0ee5ca511",
+                "reference": "b45aaa9fe16a8a410976961571fafae0ee5ca511",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/file": "^0.3.0",
+                "bengor-file/file": "^0.4",
                 "doctrine/orm": "^2.5",
                 "php": "^5.5 || ^7.0"
             },
@@ -175,25 +175,25 @@
                 "file",
                 "orm"
             ],
-            "time": "2017-04-04T06:59:10+00:00"
+            "time": "2017-04-29T16:30:31+00:00"
         },
         {
             "name": "bengor-file/doctrine-orm-bridge-bundle",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/DoctrineORMBridgeBundle.git",
-                "reference": "efb22f3a9a9982869d7aa3ea13008b77b3f2b754"
+                "reference": "d2724e0589c83026ea97c57c437ecd6e7679ec70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridgeBundle/zipball/efb22f3a9a9982869d7aa3ea13008b77b3f2b754",
-                "reference": "efb22f3a9a9982869d7aa3ea13008b77b3f2b754",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridgeBundle/zipball/d2724e0589c83026ea97c57c437ecd6e7679ec70",
+                "reference": "d2724e0589c83026ea97c57c437ecd6e7679ec70",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/doctrine-orm-bridge": "^1.2",
-                "bengor-file/file-bundle": "^0.3",
+                "bengor-file/doctrine-orm-bridge": "^2.0",
+                "bengor-file/file-bundle": "^0.4",
                 "doctrine/doctrine-bundle": "^1.6",
                 "php": "^5.5 || ^7.0"
             },
@@ -240,20 +240,20 @@
                 "orm",
                 "symfony"
             ],
-            "time": "2017-04-04T07:04:08+00:00"
+            "time": "2017-04-29T16:50:03+00:00"
         },
         {
             "name": "bengor-file/file",
-            "version": "v0.3.1",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/File.git",
-                "reference": "4bfbe0214a1aff3a628a6e697543309ba4a37689"
+                "reference": "955efd6174c7ed9acfab14f68856ff164f4a8931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/File/zipball/4bfbe0214a1aff3a628a6e697543309ba4a37689",
-                "reference": "4bfbe0214a1aff3a628a6e697543309ba4a37689",
+                "url": "https://api.github.com/repos/BenGorFile/File/zipball/955efd6174c7ed9acfab14f68856ff164f4a8931",
+                "reference": "955efd6174c7ed9acfab14f68856ff164f4a8931",
                 "shasum": ""
             },
             "require": {
@@ -300,24 +300,24 @@
                 "ddd",
                 "file"
             ],
-            "time": "2017-03-24T14:50:38+00:00"
+            "time": "2017-04-29T16:22:23+00:00"
         },
         {
             "name": "bengor-file/file-bundle",
-            "version": "v0.3.3",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/FileBundle.git",
-                "reference": "bf0d307b5df85028a81889c7d7034d9d532dcab7"
+                "reference": "10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/FileBundle/zipball/bf0d307b5df85028a81889c7d7034d9d532dcab7",
-                "reference": "bf0d307b5df85028a81889c7d7034d9d532dcab7",
+                "url": "https://api.github.com/repos/BenGorFile/FileBundle/zipball/10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba",
+                "reference": "10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/file": "^0.3",
+                "bengor-file/file": "^0.4",
                 "php": "^5.5 || ^7.0",
                 "symfony/form": "^2.8 || ^3.0",
                 "symfony/framework-bundle": "^2.8 || ^3.0",
@@ -363,25 +363,25 @@
                 "ddd",
                 "file"
             ],
-            "time": "2017-03-27T07:00:34+00:00"
+            "time": "2017-04-29T16:47:07+00:00"
         },
         {
             "name": "bengor-file/simple-bus-bridge",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/SimpleBusBridge.git",
-                "reference": "9dae230a697887badfdbfbe115855ae242498075"
+                "reference": "92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridge/zipball/9dae230a697887badfdbfbe115855ae242498075",
-                "reference": "9dae230a697887badfdbfbe115855ae242498075",
+                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridge/zipball/92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096",
+                "reference": "92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096",
                 "shasum": ""
             },
             "require": {
                 "ajgl/simple-bus-query-bus": "^0.1",
-                "bengor-file/file": "^0.3.0",
+                "bengor-file/file": "^0.4",
                 "php": "^5.5 || ^7.0",
                 "simple-bus/message-bus": "^2.2"
             },
@@ -426,24 +426,24 @@
                 "file",
                 "simple-bus"
             ],
-            "time": "2017-03-23T10:33:25+00:00"
+            "time": "2017-04-29T16:51:16+00:00"
         },
         {
             "name": "bengor-file/simple-bus-bridge-bundle",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/SimpleBusBridgeBundle.git",
-                "reference": "fc372ce2144e6aee758fda0cd32cac63a93ddd3b"
+                "reference": "f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridgeBundle/zipball/fc372ce2144e6aee758fda0cd32cac63a93ddd3b",
-                "reference": "fc372ce2144e6aee758fda0cd32cac63a93ddd3b",
+                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridgeBundle/zipball/f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51",
+                "reference": "f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/file-bundle": "^0.2 || ^0.3",
+                "bengor-file/file-bundle": "^0.2 || ^0.3 || ^0.4",
                 "bengor-file/simple-bus-bridge": "^1.0.0",
                 "php": "^5.5 || ^7.0",
                 "simple-bus/doctrine-orm-bridge": "^4.0",
@@ -492,24 +492,24 @@
                 "simple-bus",
                 "symfony"
             ],
-            "time": "2017-03-23T07:31:51+00:00"
+            "time": "2017-04-29T16:54:07+00:00"
         },
         {
             "name": "bengor-file/symfony-filesystem-bridge",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/SymfonyFilesystemBridge.git",
-                "reference": "e7dcfe6ada1e922471f4cb9f789261ad4d81e480"
+                "reference": "6c25dfd317a78f14a301abe015a86bab6280e40b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridge/zipball/e7dcfe6ada1e922471f4cb9f789261ad4d81e480",
-                "reference": "e7dcfe6ada1e922471f4cb9f789261ad4d81e480",
+                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridge/zipball/6c25dfd317a78f14a301abe015a86bab6280e40b",
+                "reference": "6c25dfd317a78f14a301abe015a86bab6280e40b",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/file": "^0.2 || ^0.3",
+                "bengor-file/file": "^0.2 || ^0.3 || ^0.4",
                 "php": "^5.5 || ^7.0",
                 "symfony/filesystem": "^2.8 || ^3.0"
             },
@@ -554,24 +554,24 @@
                 "filesystem",
                 "symfony"
             ],
-            "time": "2017-03-23T07:18:32+00:00"
+            "time": "2017-04-29T17:06:10+00:00"
         },
         {
             "name": "bengor-file/symfony-filesystem-bridge-bundle",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorFile/SymfonyFilesystemBridgeBundle.git",
-                "reference": "f8ded84a311bdc8aa825c3b391549ae8295e7230"
+                "reference": "7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridgeBundle/zipball/f8ded84a311bdc8aa825c3b391549ae8295e7230",
-                "reference": "f8ded84a311bdc8aa825c3b391549ae8295e7230",
+                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridgeBundle/zipball/7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded",
+                "reference": "7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded",
                 "shasum": ""
             },
             "require": {
-                "bengor-file/file-bundle": "^0.2 || ^0.3",
+                "bengor-file/file-bundle": "^0.2 || ^0.3 || ^0.4",
                 "bengor-file/symfony-filesystem-bridge": "^1.0.0",
                 "php": "^5.5 || ^7.0"
             },
@@ -617,7 +617,7 @@
                 "filesystem",
                 "symfony"
             ],
-            "time": "2017-03-23T07:20:20+00:00"
+            "time": "2017-04-29T17:05:17+00:00"
         },
         {
             "name": "bengor-user/doctrine-orm-bridge",
@@ -1258,16 +1258,16 @@
         },
         {
             "name": "bengor-user/twig-bridge",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorUser/TwigBridge.git",
-                "reference": "766be9b779bccf70c0f332cb703601b4f82c018f"
+                "reference": "770c8b3d55eec231d4a7e4a504f04d017af9a091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorUser/TwigBridge/zipball/766be9b779bccf70c0f332cb703601b4f82c018f",
-                "reference": "766be9b779bccf70c0f332cb703601b4f82c018f",
+                "url": "https://api.github.com/repos/BenGorUser/TwigBridge/zipball/770c8b3d55eec231d4a7e4a504f04d017af9a091",
+                "reference": "770c8b3d55eec231d4a7e4a504f04d017af9a091",
                 "shasum": ""
             },
             "require": {
@@ -1318,7 +1318,7 @@
                 "twig",
                 "user"
             ],
-            "time": "2017-02-02T17:48:26+00:00"
+            "time": "2017-04-29T18:31:44+00:00"
         },
         {
             "name": "bengor-user/twig-bridge-bundle",
@@ -1446,16 +1446,16 @@
         },
         {
             "name": "bengor-user/user-bundle",
-            "version": "v0.8.2",
+            "version": "v0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenGorUser/UserBundle.git",
-                "reference": "09830cc37daa290d4d25e8bb8b5208cbefa8c39b"
+                "reference": "564c960a9830da775299c74d6f4b9cdc3e66d9f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenGorUser/UserBundle/zipball/09830cc37daa290d4d25e8bb8b5208cbefa8c39b",
-                "reference": "09830cc37daa290d4d25e8bb8b5208cbefa8c39b",
+                "url": "https://api.github.com/repos/BenGorUser/UserBundle/zipball/564c960a9830da775299c74d6f4b9cdc3e66d9f0",
+                "reference": "564c960a9830da775299c74d6f4b9cdc3e66d9f0",
                 "shasum": ""
             },
             "require": {
@@ -1509,7 +1509,7 @@
                 "ddd",
                 "user"
             ],
-            "time": "2017-02-24T09:40:29+00:00"
+            "time": "2017-04-29T18:25:30+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -2476,16 +2476,16 @@
         },
         {
             "name": "fullpipe/twig-webpack-extension",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fullpipe/twig-webpack-extension.git",
-                "reference": "56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67"
+                "reference": "62751b8b6a0aed72b4ecfa005bd0aeaf96218681"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fullpipe/twig-webpack-extension/zipball/56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67",
-                "reference": "56daf308a3d4a2bd1e27b81f3bbdfad25c81ab67",
+                "url": "https://api.github.com/repos/fullpipe/twig-webpack-extension/zipball/62751b8b6a0aed72b4ecfa005bd0aeaf96218681",
+                "reference": "62751b8b6a0aed72b4ecfa005bd0aeaf96218681",
                 "shasum": ""
             },
             "require": {
@@ -2513,7 +2513,7 @@
                 "twig",
                 "webpack"
             ],
-            "time": "2016-12-30T08:09:06+00:00"
+            "time": "2017-04-20T09:53:55+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2668,12 +2668,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/AdminBundle.git",
-                "reference": "e7e17a2216c3212480ea3bfdc5efe745af70d4e7"
+                "reference": "391cb6127b33d81a9a64da8435a97a91a12e3d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/e7e17a2216c3212480ea3bfdc5efe745af70d4e7",
-                "reference": "e7e17a2216c3212480ea3bfdc5efe745af70d4e7",
+                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/391cb6127b33d81a9a64da8435a97a91a12e3d2a",
+                "reference": "391cb6127b33d81a9a64da8435a97a91a12e3d2a",
                 "shasum": ""
             },
             "require": {
@@ -2710,7 +2710,7 @@
                 }
             ],
             "description": "Admin Bundle in the LIN3S way",
-            "time": "2017-04-12 09:01:34"
+            "time": "2017-04-29 12:53:34"
         },
         {
             "name": "lin3s/admin-ddd-extensions-bundle",
@@ -2764,12 +2764,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "83819769e8b4829906868d47e71841fc074328f0"
+                "reference": "1bba0aa7fcd81343efc291193e1e8cacee08d3c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/83819769e8b4829906868d47e71841fc074328f0",
-                "reference": "83819769e8b4829906868d47e71841fc074328f0",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/1bba0aa7fcd81343efc291193e1e8cacee08d3c3",
+                "reference": "1bba0aa7fcd81343efc291193e1e8cacee08d3c3",
                 "shasum": ""
             },
             "require": {
@@ -2808,7 +2808,7 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-04-20 08:51:38"
+            "time": "2017-05-03 07:33:46"
         },
         {
             "name": "lin3s/distribution",
@@ -3334,16 +3334,16 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v5.0.18",
+            "version": "v5.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "17846680901003d26d823c2e3ac9228702837916"
+                "reference": "654c4fa3d11448c8005400a244987896243a990a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/17846680901003d26d823c2e3ac9228702837916",
-                "reference": "17846680901003d26d823c2e3ac9228702837916",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/654c4fa3d11448c8005400a244987896243a990a",
+                "reference": "654c4fa3d11448c8005400a244987896243a990a",
                 "shasum": ""
             },
             "require": {
@@ -3382,7 +3382,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2017-01-10T14:58:45+00:00"
+            "time": "2017-04-23T22:28:23+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -3727,16 +3727,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.6",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e"
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
-                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
                 "shasum": ""
             },
             "require": {
@@ -3777,7 +3777,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-02-13T07:52:53+00:00"
+            "time": "2017-04-20T17:32:18+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -4237,16 +4237,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64"
+                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
-                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/85959c2abbe4d2f050f950f39c9c3cf83819f3df",
+                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df",
                 "shasum": ""
             },
             "require": {
@@ -4377,7 +4377,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-04-05T12:52:29+00:00"
+            "time": "2017-05-01T17:47:03+00:00"
         },
         {
             "name": "twig/extensions",
@@ -4433,16 +4433,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.33.1",
+            "version": "v1.33.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a87f959f4b691da66aada267a2dfdb260d0bb58a"
+                "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a87f959f4b691da66aada267a2dfdb260d0bb58a",
-                "reference": "a87f959f4b691da66aada267a2dfdb260d0bb58a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/dd6ca96227917e1e85b41c7c3cc6507b411e0927",
+                "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927",
                 "shasum": ""
             },
             "require": {
@@ -4491,7 +4491,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-04-18T21:43:11+00:00"
+            "time": "2017-04-20T17:39:48+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -5224,16 +5224,16 @@
         },
         {
             "name": "phpspec/phpspec",
-            "version": "3.2.3",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "97246d90708cf98983d95d609bbe6f4b039b8600"
+                "reference": "1c77d11878c4bd475bc66f0eaa2686df0fcfa30f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/97246d90708cf98983d95d609bbe6f4b039b8600",
-                "reference": "97246d90708cf98983d95d609bbe6f4b039b8600",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/1c77d11878c4bd475bc66f0eaa2686df0fcfa30f",
+                "reference": "1c77d11878c4bd475bc66f0eaa2686df0fcfa30f",
                 "shasum": ""
             },
             "require": {
@@ -5242,7 +5242,7 @@
                 "php": "^5.6 || ^7.0",
                 "phpspec/php-diff": "^1.0.0",
                 "phpspec/prophecy": "^1.5",
-                "sebastian/exporter": "^1.0 || ^2.0",
+                "sebastian/exporter": "^1.0 || ^2.0 || ^3.0",
                 "symfony/console": "^2.7 || ^3.0",
                 "symfony/event-dispatcher": "^2.7 || ^3.0",
                 "symfony/finder": "^2.7 || ^3.0",
@@ -5250,9 +5250,9 @@
                 "symfony/yaml": "^2.7 || ^3.0"
             },
             "require-dev": {
-                "behat/behat": "^3.1",
+                "behat/behat": "^3.3",
                 "ciaranmcnulty/versionbasedtestskipper": "^0.2.1",
-                "phpunit/phpunit": "^5.4",
+                "phpunit/phpunit": "^5.5|^6.0",
                 "symfony/filesystem": "^3.0"
             },
             "suggest": {
@@ -5302,7 +5302,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2017-01-29T12:28:48+00:00"
+            "time": "2017-04-27T12:40:39+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -5369,30 +5369,30 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
+                "reference": "20f84f468cb67efee293246e6a09619b891f55f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
-                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/20f84f468cb67efee293246e6a09619b891f55f0",
+                "reference": "20f84f468cb67efee293246e6a09619b891f55f0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "sebastian/diff": "~1.2",
-                "sebastian/exporter": "~1.2 || ~2.0"
+                "php": "^7.0",
+                "sebastian/diff": "^1.2",
+                "sebastian/exporter": "^3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.4"
+                "phpunit/phpunit": "^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -5429,7 +5429,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-01-29T09:50:25+00:00"
+            "time": "2017-03-03T06:26:08+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -5485,30 +5485,30 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "2.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4"
+                "reference": "234199f4528de6d12aaa58b612e98f7d36adb937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
-                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/234199f4528de6d12aaa58b612e98f7d36adb937",
+                "reference": "234199f4528de6d12aaa58b612e98f7d36adb937",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "sebastian/recursion-context": "~2.0"
+                "php": "^7.0",
+                "sebastian/recursion-context": "^3.0"
             },
             "require-dev": {
                 "ext-mbstring": "*",
-                "phpunit/phpunit": "~4.4"
+                "phpunit/phpunit": "^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -5548,32 +5548,32 @@
                 "export",
                 "exporter"
             ],
-            "time": "2016-11-19T08:54:04+00:00"
+            "time": "2017-04-03T13:19:02+00:00"
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a"
+                "reference": "5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/2c3ba150cbec723aa057506e73a8d33bdb286c9a",
-                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8",
+                "reference": "5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.4"
+                "phpunit/phpunit": "^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -5601,7 +5601,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-19T07:33:16+00:00"
+            "time": "2017-03-03T06:23:57+00:00"
         },
         {
             "name": "webmozart/assert",

@@ -25,6 +25,10 @@ lin3s_admin:
                     options:
                         name: admin.page.action.edit
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageType
+                remove:
+                    type: remove
+                    options:
+                        name: admin.action.name.remove
                 translate:
                     type: translate
                     options:
@@ -49,7 +53,7 @@ lin3s_admin:
                         name: lin3s_admin.list.table.actions
                         type: actions
                         options:
-                            actions: ["edit"]
+                            actions: ["edit", "remove"]
                             name: lin3s_admin.list.table.actions
                     translations:
                         type: translate
@@ -77,6 +81,8 @@ lin3s_admin:
                     options:
                         name: admin.menu.action.new
                         form: LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\Menu\AddMenuType
+                        catchable_exceptions:
+                            LIN3S\CMSKernel\Domain\Model\Menu\EmptyMenuCodeException: sdfsdfs
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
                             title: cms_kernel_admin_bridge.new.confirm.title
@@ -94,11 +100,11 @@ lin3s_admin:
                     type: remove_translation
             list:
                 fields:
-                    id:
-                        name: Id
+                    code:
+                        name: admin.menu.list.fields.code
                         type: string
                         options:
-                            field: id
+                            field: code.code
                     name:
                         name: admin.menu.list.fields.name
                         type: translatable_string
@@ -109,10 +115,10 @@ lin3s_admin:
                         options:
                             action: "translate"
                 filters:
-                    id:
-                        name: Id
+                    code:
+                        name: admin.menu.list.filters.code
                         type: text
-                        field: id
+                        field: code.code
                     name:
                         name: admin.menu.list.filters.name
                         type: text

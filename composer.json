@@ -21,7 +21,7 @@
         "bengor-user/twig-bridge-bundle": "^1.0.1",
         "bengor-user/user-bundle": "^0.8",
         "bengor-file/doctrine-orm-bridge-bundle": "^1.1",
-        "bengor-file/file-bundle": "^0.3",
+        "bengor-file/file-bundle": "^0.4",
         "bengor-file/simple-bus-bridge-bundle": "^1.0",
         "bengor-file/symfony-filesystem-bridge-bundle": "^1.0",
         "doctrine/orm": "^2.5",

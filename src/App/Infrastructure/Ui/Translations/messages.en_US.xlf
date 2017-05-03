@@ -2,6 +2,22 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
+            <trans-unit id="admin.menu.list.fields.name">
+                <source>admin.menu.list.fields.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="admin.menu.list.filters.name">
+                <source>admin.menu.list.filters.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="admin.menu.list.fields.code">
+                <source>admin.menu.list.fields.code</source>
+                <target>Code</target>
+            </trans-unit>
+            <trans-unit id="admin.menu.list.filters.code">
+                <source>admin.menu.list.filters.code</source>
+                <target>Code</target>
+            </trans-unit>
             <trans-unit id="admin.page.name.singular">
                 <source>admin.page.name.singular</source>
                 <target>Page</target>
