@@ -25,10 +25,6 @@ lin3s_admin:
                     options:
                         name: admin.page.action.edit
                         form: App\Infrastructure\Symfony\Form\Type\Page\EditPageType
-                remove:
-                    type: remove
-                    options:
-                        name: admin.action.name.remove
                 translate:
                     type: translate
                     options:
@@ -53,7 +49,7 @@ lin3s_admin:
                         name: lin3s_admin.list.table.actions
                         type: actions
                         options:
-                            actions: ["edit", "remove"]
+                            actions: ["edit"]
                             name: lin3s_admin.list.table.actions
                     translations:
                         type: translate
@@ -82,7 +78,7 @@ lin3s_admin:
                         name: admin.menu.action.new
                         form: LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\Menu\AddMenuType
                         catchable_exceptions:
-                            LIN3S\CMSKernel\Domain\Model\Menu\EmptyMenuCodeException: sdfsdfs
+                            LIN3S\CMSKernel\Domain\Model\Menu\EmptyMenuCodeException: "The menu code should not be blank"
                         confirm:
                             button: cms_kernel_admin_bridge.new.confirm.button
                             title: cms_kernel_admin_bridge.new.confirm.title
