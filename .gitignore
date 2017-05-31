@@ -10,6 +10,8 @@
 
 /.editorconfig
 /.lin3s_cs.yml
+/.php_cs*
+/.phpspec_cs*
 /composer.phar
 /parameters.yml
 /src/App/Infrastructure/Ui/Assets/.eslint.yml

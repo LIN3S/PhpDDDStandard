@@ -3,11 +3,13 @@
 /*
  * This file is part of the Php DDD Standard project.
  *
- * Copyright (c) 2017 LIN3S <info@lin3s.com>
+ * Copyright (c) 2017-present-present LIN3S <info@lin3s.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+declare(strict_types=1);
 
 namespace App\Infrastructure\Symfony\Framework;
 
@@ -24,12 +26,13 @@ use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Bundle\WebProfilerBundle\WebProfilerBundle;
+use Symfony\Bundle\WebServerBundle\WebServerBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
 
 class AppKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles() : array
     {
         $bundles = [
             new AcceleratorCacheBundle(),
@@ -48,27 +51,31 @@ class AppKernel extends Kernel
             $bundles[] = new DebugBundle();
             $bundles[] = new WebProfilerBundle();
             $bundles[] = new SensioDistributionBundle();
+
+            if ('dev' === $this->getEnvironment()) {
+                $bundles[] = new WebServerBundle();
+            }
         }
 
         return $bundles;
     }
 
-    public function getRootDir()
+    public function getRootDir() : string
     {
         return __DIR__;
     }
 
-    public function getCacheDir()
+    public function getCacheDir() : string
     {
         return dirname(__DIR__) . '/../../../../var/cache/' . $this->getEnvironment();
     }
 
-    public function getLogDir()
+    public function getLogDir() : string
     {
         return dirname(__DIR__) . '/../../../../var/logs';
     }
 
-    public function registerContainerConfiguration(LoaderInterface $loader)
+    public function registerContainerConfiguration(LoaderInterface $loader) : void
     {
         $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
