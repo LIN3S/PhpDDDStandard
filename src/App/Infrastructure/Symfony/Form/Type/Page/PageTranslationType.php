@@ -16,6 +16,7 @@ use App\Domain\Model\Page\Template\DefaultTemplate;
 use App\Infrastructure\Symfony\Form\Type\Page\Template\ContactTemplateType;
 use App\Infrastructure\Symfony\Form\Type\Page\Template\DefaultTemplateType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\SeoType;
+use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\SlugType;
 use LIN3S\CMSKernel\Infrastructure\Symfony\Form\Type\TemplateSelectorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -30,7 +31,9 @@ class PageTranslationType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('slug', TextType::class)
+            ->add('slug', SlugType::class, [
+                'from' => 'title',
+            ])
             ->add('seo', SeoType::class)
             ->add('templateSelector', TemplateSelectorType::class, [
                 'templates' => [
