@@ -8,7 +8,22 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-app_homepage:
-    path: /
-    defaults:
-        _controller: "app.http_action.home:__invoke"
+ben_gor_user:
+    resource: "@BenGorUserBundle/Resources/config/routing/all.yml"
+
+ben_gor_file:
+    resource: "@BenGorFileBundle/Resources/config/routing/all.yml"
+
+cms_kernel_admin_bridge:
+    resource: "@CmsKernelAdminBridgeBundle/Resources/config/routing_locale.yml"
+    prefix: "admin/"
+
+cms_kernel_bengor_file_bridge:
+    resource: "@CmsKernelBenGorFileBridgeBundle/Resources/config/routing.yml"
+
+lin3s_admin:
+    resource: "@Lin3sAdminBundle/Resources/config/routing.yml"
+    prefix: "admin/"
+
+app:
+    resource: "routing_app.yml"

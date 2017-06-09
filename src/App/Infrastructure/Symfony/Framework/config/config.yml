@@ -10,15 +10,19 @@
 
 imports:
     - { resource: ../../../../../../parameters.yml }
+    - { resource: admin.yml }
     - { resource: security.yml }
     - { resource: doctrine.yml }
     - { resource: services/, type: directory }
 
 parameters:
-    locale: en
+    locale: en_US
 
 framework:
-    translator: { fallbacks: ["%locale%"] }
+    translator:
+        fallbacks: ["%locale%"]
+        paths:
+            - "%kernel.root_dir%/../../Ui/Translations"
     secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -42,7 +46,7 @@ twig:
     debug: "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     paths:
-        "%kernel.root_dir%/../../Ui/Templates/Twig": ~
+        - "%kernel.root_dir%/../../Ui/Templates/Twig"
 
 swiftmailer:
     transport: "%mailer_transport%"
@@ -54,6 +58,44 @@ swiftmailer:
 accelerator_cache:
     host: "%router.request_context.scheme%://%router.request_context.host%"
     web_dir: "%kernel.root_dir%/../../Ui/Http/Symfony"
+
+ben_gor_user:
+    user_class:
+        user:
+            class: App\Domain\Model\User\User
+            firewall: main
+            use_cases:
+                security:
+                    enabled: true
+                sign_up:
+                    enabled: false
+                change_password:
+                    enabled: false
+                remove:
+                    enabled: false
+            routes:
+                security:
+                    login:
+                        path: /admin/login
+                    login_check:
+                        path: /admin/login-check
+                    logout:
+                        path: /admin/logout
+                    success_redirection_route:
+                        route: lin3s_admin_dashboard
+
+ben_gor_file:
+    file_class:
+        file:
+            class: App\Domain\Model\File\File
+            upload_strategy: "suffix_number"
+            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads/files'
+            download_base_url: files
+        image:
+            class: App\Domain\Model\Image\Image
+            upload_strategy: "suffix_number"
+            upload_destination: '%kernel.root_dir%/../../Ui/Http/Symfony/uploads/images'
+            download_base_url: images
 
 lin3s_distribution:
     webpack:

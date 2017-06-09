@@ -11,11 +11,35 @@
 
 namespace App\Infrastructure\Symfony\Framework;
 
+use BenGorFile\DoctrineORMBridgeBundle\BenGorFileDoctrineORMBridgeBundle;
+use BenGorFile\FileBundle\BenGorFileBundle;
+use BenGorFile\SimpleBusBridgeBundle\BenGorFileSimpleBusBridgeBundle;
+use BenGorFile\SimpleBusBridgeBundle\BenGorFileSimpleBusDoctrineORMBridgeBundle;
+use BenGorFile\SymfonyFilesystemBridgeBundle\BenGorFileSymfonyFilesystemBridgeBundle;
+use BenGorUser\DoctrineORMBridgeBundle\DoctrineORMBridgeBundle;
+use BenGorUser\SimpleBusBridgeBundle\SimpleBusBridgeBundle;
+use BenGorUser\SimpleBusBridgeBundle\SimpleBusDoctrineORMBridgeBundle as BenGorUserSimpleBusDoctrineOrmBridgeBundle;
+use BenGorUser\SwiftMailerBridgeBundle\SwiftMailerBridgeBundle;
+use BenGorUser\SymfonyRoutingBridgeBundle\SymfonyRoutingBridgeBundle;
+use BenGorUser\SymfonySecurityBridgeBundle\SymfonySecurityBridgeBundle;
+use BenGorUser\TwigBridgeBundle\TwigBridgeBundle;
+use BenGorUser\UserBundle\BenGorUserBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
+use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle;
+use LIN3S\AdminBundle\Lin3sAdminBundle;
+use LIN3S\AdminDDDExtensionsBundle\Lin3sAdminDDDExtensionsBundle;
+use LIN3S\CMSKernel\Infrastructure\BenGorFileBundle\CmsKernelBenGorFileBridgeBundle;
+use LIN3S\CMSKernel\Infrastructure\BenGorUserBundle\CmsKernelBenGorUserBridgeBundle;
+use LIN3S\CMSKernel\Infrastructure\Lin3sAdminBundle\CmsKernelAdminBridgeBundle;
+use LIN3S\CMSKernel\Infrastructure\Symfony\Bundle\Lin3sCmsKernelBundle;
 use LIN3S\Distribution\Php\Symfony\Lin3sDistributionBundle;
+use LIN3S\SharedKernel\Infrastructure\Symfony\Bundle\Lin3sSharedKernelBundle;
 use Sensio\Bundle\DistributionBundle\SensioDistributionBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use SimpleBus\SymfonyBridge\DoctrineOrmBridgeBundle as SimpleBusDoctrineOrmBridgeBundle;
+use SimpleBus\SymfonyBridge\SimpleBusCommandBusBundle;
+use SimpleBus\SymfonyBridge\SimpleBusEventBusBundle;
 use SmartCore\Bundle\AcceleratorCacheBundle\AcceleratorCacheBundle;
 use Symfony\Bundle\DebugBundle\DebugBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
@@ -37,14 +61,42 @@ class AppKernel extends Kernel
             new DoctrineBundle(),
             new FrameworkBundle(),
             new Lin3sDistributionBundle(),
+            new Lin3sSharedKernelBundle(),
             new MonologBundle(),
             new SecurityBundle(),
             new SensioFrameworkExtraBundle(),
+            new SimpleBusCommandBusBundle(),
+            new SimpleBusDoctrineOrmBridgeBundle(),
+            new SimpleBusEventBusBundle(),
             new SwiftmailerBundle(),
             new TwigBundle(),
+
+            new BenGorUserSimpleBusDoctrineOrmBridgeBundle(),
+            new DoctrineORMBridgeBundle(),
+            new SimpleBusBridgeBundle(),
+            new SwiftMailerBridgeBundle(),
+            new SymfonyRoutingBridgeBundle(),
+            new SymfonySecurityBridgeBundle(),
+            new TwigBridgeBundle(),
+            new BenGorUserBundle(),
+
+            new BenGorFileSymfonyFilesystemBridgeBundle(),
+            new BenGorFileDoctrineORMBridgeBundle(),
+            new BenGorFileSimpleBusBridgeBundle(),
+            new BenGorFileSimpleBusDoctrineORMBridgeBundle(),
+            new BenGorFileBundle(),
+
+            new Lin3sAdminBundle(),
+            new Lin3sAdminDDDExtensionsBundle(),
+            new Lin3sCmsKernelBundle(),
+
+            new CmsKernelAdminBridgeBundle(),
+            new CmsKernelBenGorFileBridgeBundle(),
+            new CmsKernelBenGorUserBridgeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            $bundles[] = new DoctrineFixturesBundle();
             $bundles[] = new DebugBundle();
             $bundles[] = new WebProfilerBundle();
             $bundles[] = new SensioDistributionBundle();

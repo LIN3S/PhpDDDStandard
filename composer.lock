@@ -4,8 +4,1513 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "10420d994dfb10ac328bdbb50fdf8318",
+    "content-hash": "5a4541503d176cdc463c5e742f3ca9c1",
     "packages": [
+        {
+            "name": "ajgl/simple-bus-query-bus",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ajgarlag/AjglSimpleBusQueryBus.git",
+                "reference": "331186b0891fbab8f70cae25cebf484cdd39c118"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ajgarlag/AjglSimpleBusQueryBus/zipball/331186b0891fbab8f70cae25cebf484cdd39c118",
+                "reference": "331186b0891fbab8f70cae25cebf484cdd39c118",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "simple-bus/message-bus": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ajgl\\SimpleBus\\Message\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio J. García Lagar",
+                    "email": "aj@garcialagar.es",
+                    "homepage": "http://aj.garcialagar.es",
+                    "role": "developer"
+                }
+            ],
+            "description": "Extension to simple-bus/message-bus to create query buses.",
+            "homepage": "https://github.com/ajgarlag/AjglSimpleBusQueryBus",
+            "keywords": [
+                "Query Bus",
+                "message",
+                "simple bus"
+            ],
+            "time": "2016-06-16T10:36:26+00:00"
+        },
+        {
+            "name": "beberlei/assert",
+            "version": "v2.7.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/assert.git",
+                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/8726e183ebbb0169cb6cb4832e22ebd355524563",
+                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.1.1",
+                "phpunit/phpunit": "^4|^5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                },
+                "files": [
+                    "lib/Assert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Thin assertion library for input validation in business models.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "validation"
+            ],
+            "time": "2017-05-04T02:00:24+00:00"
+        },
+        {
+            "name": "bengor-file/doctrine-orm-bridge",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/DoctrineORMBridge.git",
+                "reference": "b45aaa9fe16a8a410976961571fafae0ee5ca511"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridge/zipball/b45aaa9fe16a8a410976961571fafae0ee5ca511",
+                "reference": "b45aaa9fe16a8a410976961571fafae0ee5ca511",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/file": "^0.4",
+                "doctrine/orm": "^2.5",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\DoctrineORMBridge\\": "src/BenGorFile/DoctrineORMBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make File compatible with Doctrine ORM",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "doctrine",
+                "file",
+                "orm"
+            ],
+            "time": "2017-04-29T16:30:31+00:00"
+        },
+        {
+            "name": "bengor-file/doctrine-orm-bridge-bundle",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/DoctrineORMBridgeBundle.git",
+                "reference": "d2724e0589c83026ea97c57c437ecd6e7679ec70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/DoctrineORMBridgeBundle/zipball/d2724e0589c83026ea97c57c437ecd6e7679ec70",
+                "reference": "d2724e0589c83026ea97c57c437ecd6e7679ec70",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/doctrine-orm-bridge": "^2.0",
+                "bengor-file/file-bundle": "^0.4",
+                "doctrine/doctrine-bundle": "^1.6",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\DoctrineORMBridgeBundle\\": "src/BenGorFile/DoctrineORMBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues FileBundle and DoctrineORMBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "doctrine",
+                "file",
+                "orm",
+                "symfony"
+            ],
+            "time": "2017-04-29T16:50:03+00:00"
+        },
+        {
+            "name": "bengor-file/file",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/File.git",
+                "reference": "955efd6174c7ed9acfab14f68856ff164f4a8931"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/File/zipball/955efd6174c7ed9acfab14f68856ff164f4a8931",
+                "reference": "955efd6174c7ed9acfab14f68856ff164f4a8931",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "ramsey/uuid": "^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\File\\": "src/BenGorFile/File/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Lightweight file library developed using Domain-Driven Design",
+            "keywords": [
+                "component",
+                "ddd",
+                "file"
+            ],
+            "time": "2017-04-29T16:22:23+00:00"
+        },
+        {
+            "name": "bengor-file/file-bundle",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/FileBundle.git",
+                "reference": "10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/FileBundle/zipball/10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba",
+                "reference": "10d8a3382307fde09e8bc9073cc7a2d8f8ecd0ba",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/file": "^0.4",
+                "php": "^5.5 || ^7.0",
+                "symfony/form": "^2.8 || ^3.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0",
+                "symfony/twig-bundle": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\FileBundle\\": "src/BenGorFile/FileBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle on top of BenGor's file library",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "file"
+            ],
+            "time": "2017-04-29T16:47:07+00:00"
+        },
+        {
+            "name": "bengor-file/simple-bus-bridge",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/SimpleBusBridge.git",
+                "reference": "92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridge/zipball/92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096",
+                "reference": "92fa6ad0f4a0fb5a5677c5c080d8bc0efd528096",
+                "shasum": ""
+            },
+            "require": {
+                "ajgl/simple-bus-query-bus": "^0.1",
+                "bengor-file/file": "^0.4",
+                "php": "^5.5 || ^7.0",
+                "simple-bus/message-bus": "^2.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\SimpleBusBridge\\": "src/BenGorFile/SimpleBusBridge"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make File compatible with Matthias Noback's SimpleBus",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "file",
+                "simple-bus"
+            ],
+            "time": "2017-04-29T16:51:16+00:00"
+        },
+        {
+            "name": "bengor-file/simple-bus-bridge-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/SimpleBusBridgeBundle.git",
+                "reference": "f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/SimpleBusBridgeBundle/zipball/f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51",
+                "reference": "f1a9c2bd4c6a257f1a3092e74e2c36c46d7afd51",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/file-bundle": "^0.2 || ^0.3 || ^0.4",
+                "bengor-file/simple-bus-bridge": "^1.0.0",
+                "php": "^5.5 || ^7.0",
+                "simple-bus/doctrine-orm-bridge": "^4.0",
+                "simple-bus/symfony-bridge": "^4.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "~1.0",
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\SimpleBusBridgeBundle\\": "src/BenGorFile/SimpleBusBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues FileBundle and Matthias Noback's SimpleBus",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "file",
+                "simple-bus",
+                "symfony"
+            ],
+            "time": "2017-04-29T16:54:07+00:00"
+        },
+        {
+            "name": "bengor-file/symfony-filesystem-bridge",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/SymfonyFilesystemBridge.git",
+                "reference": "6c25dfd317a78f14a301abe015a86bab6280e40b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridge/zipball/6c25dfd317a78f14a301abe015a86bab6280e40b",
+                "reference": "6c25dfd317a78f14a301abe015a86bab6280e40b",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/file": "^0.2 || ^0.3 || ^0.4",
+                "php": "^5.5 || ^7.0",
+                "symfony/filesystem": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\SymfonyFilesystemBridge\\": "src/BenGorFile/SymfonyFilesystemBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make File compatible with Symfony filesystem",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "file",
+                "filesystem",
+                "symfony"
+            ],
+            "time": "2017-04-29T17:06:10+00:00"
+        },
+        {
+            "name": "bengor-file/symfony-filesystem-bridge-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorFile/SymfonyFilesystemBridgeBundle.git",
+                "reference": "7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorFile/SymfonyFilesystemBridgeBundle/zipball/7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded",
+                "reference": "7ab53bbb22b170c4de7a505f0d2cc1aed78e5ded",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-file/file-bundle": "^0.2 || ^0.3 || ^0.4",
+                "bengor-file/symfony-filesystem-bridge": "^1.0.0",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorFile\\SymfonyFilesystemBridgeBundle\\": "src/BenGorFile/SymfonyFilesystemBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues FileBundle and SymfonyFilesystemBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "file",
+                "filesystem",
+                "symfony"
+            ],
+            "time": "2017-04-29T17:05:17+00:00"
+        },
+        {
+            "name": "bengor-user/doctrine-orm-bridge",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/DoctrineORMBridge.git",
+                "reference": "0ad9799a0d7f3502f5b86292d426d83d9c245c86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/DoctrineORMBridge/zipball/0ad9799a0d7f3502f5b86292d426d83d9c245c86",
+                "reference": "0ad9799a0d7f3502f5b86292d426d83d9c245c86",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.8",
+                "doctrine/orm": "^2.5",
+                "php": "^5.5 || ^7.0",
+                "symfony/yaml": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\DoctrineORMBridge\\": "src/BenGorUser/DoctrineORMBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with Doctrine ORM",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "doctrine",
+                "orm",
+                "user"
+            ],
+            "time": "2017-02-23T16:11:18+00:00"
+        },
+        {
+            "name": "bengor-user/doctrine-orm-bridge-bundle",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/DoctrineORMBridgeBundle.git",
+                "reference": "19648d98086016853fd4af61039f6a02215c11ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/DoctrineORMBridgeBundle/zipball/19648d98086016853fd4af61039f6a02215c11ba",
+                "reference": "19648d98086016853fd4af61039f6a02215c11ba",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/doctrine-orm-bridge": "^1.0 || ^2.0",
+                "bengor-user/user-bundle": "^0.6 || ^0.7 || ^0.8",
+                "doctrine/doctrine-bundle": "^1.6",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\DoctrineORMBridgeBundle\\": "src/BenGorUser/DoctrineORMBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and DoctrineORMBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "doctrine",
+                "orm",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T18:12:55+00:00"
+        },
+        {
+            "name": "bengor-user/simple-bus-bridge",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SimpleBusBridge.git",
+                "reference": "fb5c8265383f29df381d99b98f519aa658701553"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SimpleBusBridge/zipball/fb5c8265383f29df381d99b98f519aa658701553",
+                "reference": "fb5c8265383f29df381d99b98f519aa658701553",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "simple-bus/message-bus": "^2.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SimpleBusBridge\\": "src/BenGorUser/SimpleBusBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with Matthias Noback's SimpleBus",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "simple-bus",
+                "user"
+            ],
+            "time": "2017-02-02T18:22:55+00:00"
+        },
+        {
+            "name": "bengor-user/simple-bus-bridge-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SimpleBusBridgeBundle.git",
+                "reference": "76b07f14254749231f78f04b1d2a47b1c40ccc2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SimpleBusBridgeBundle/zipball/76b07f14254749231f78f04b1d2a47b1c40ccc2d",
+                "reference": "76b07f14254749231f78f04b1d2a47b1c40ccc2d",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/simple-bus-bridge": "^1.0",
+                "bengor-user/user-bundle": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "simple-bus/doctrine-orm-bridge": "^4.0",
+                "simple-bus/symfony-bridge": "^4.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "~1.0",
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SimpleBusBridgeBundle\\": "src/BenGorUser/SimpleBusBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and Matthias Noback's SimpleBus",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "simple-bus",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T18:26:05+00:00"
+        },
+        {
+            "name": "bengor-user/swift-mailer-bridge",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SwiftMailerBridge.git",
+                "reference": "cf9d71a295e888a6377fc08364ba227f042c36fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SwiftMailerBridge/zipball/cf9d71a295e888a6377fc08364ba227f042c36fa",
+                "reference": "cf9d71a295e888a6377fc08364ba227f042c36fa",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "swiftmailer/swiftmailer": "^5.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SwiftMailerBridge\\": "src/BenGorUser/SwiftMailerBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with SwiftMailer",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "mailing",
+                "swift-mailer",
+                "user"
+            ],
+            "time": "2017-02-02T18:33:52+00:00"
+        },
+        {
+            "name": "bengor-user/swift-mailer-bridge-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SwiftMailerBridgeBundle.git",
+                "reference": "3b46c3e39adbbe64281aeae19a5f1dac48ab0f78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SwiftMailerBridgeBundle/zipball/3b46c3e39adbbe64281aeae19a5f1dac48ab0f78",
+                "reference": "3b46c3e39adbbe64281aeae19a5f1dac48ab0f78",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/swift-mailer-bridge": "^1.0",
+                "bengor-user/user-bundle": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/swiftmailer-bundle": "^2.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SwiftMailerBridgeBundle\\": "src/BenGorUser/SwiftMailerBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and SwiftMailerBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "swift-mailer",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T18:38:42+00:00"
+        },
+        {
+            "name": "bengor-user/symfony-routing-bridge",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SymfonyRoutingBridge.git",
+                "reference": "fb023ecebb432689e87d9c7e61777fe9d25ee907"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SymfonyRoutingBridge/zipball/fb023ecebb432689e87d9c7e61777fe9d25ee907",
+                "reference": "fb023ecebb432689e87d9c7e61777fe9d25ee907",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/routing": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SymfonyRoutingBridge\\": "src/BenGorUser/SymfonyRoutingBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with Symfony routing component",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "routing",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T17:15:31+00:00"
+        },
+        {
+            "name": "bengor-user/symfony-routing-bridge-bundle",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SymfonyRoutingBridgeBundle.git",
+                "reference": "836156953f58df65ee9c95cefff03b00fda2be23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SymfonyRoutingBridgeBundle/zipball/836156953f58df65ee9c95cefff03b00fda2be23",
+                "reference": "836156953f58df65ee9c95cefff03b00fda2be23",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/symfony-routing-bridge": "^2.0",
+                "bengor-user/user-bundle": "^0.8",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SymfonyRoutingBridgeBundle\\": "src/BenGorUser/SymfonyRoutingBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and SymfonyRouting",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "routing",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T17:26:03+00:00"
+        },
+        {
+            "name": "bengor-user/symfony-security-bridge",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SymfonySecurityBridge.git",
+                "reference": "bdb7dbc471f389fe60402ca22905d720aaaeac0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SymfonySecurityBridge/zipball/bdb7dbc471f389fe60402ca22905d720aaaeac0b",
+                "reference": "bdb7dbc471f389fe60402ca22905d720aaaeac0b",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/security-core": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SymfonySecurityBridge\\": "src/BenGorUser/SymfonySecurityBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with Symfony security component",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "security",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T18:29:19+00:00"
+        },
+        {
+            "name": "bengor-user/symfony-security-bridge-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/SymfonySecurityBridgeBundle.git",
+                "reference": "3e64ac5e30738dcc20797f08d148afc2bc57a825"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/SymfonySecurityBridgeBundle/zipball/3e64ac5e30738dcc20797f08d148afc2bc57a825",
+                "reference": "3e64ac5e30738dcc20797f08d148afc2bc57a825",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/symfony-security-bridge": "^1.0",
+                "bengor-user/user-bundle": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/security-bundle": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\SymfonySecurityBridgeBundle\\": "src/BenGorUser/SymfonySecurityBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and SymfonySecurityBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "security",
+                "symfony",
+                "user"
+            ],
+            "time": "2017-02-02T18:31:13+00:00"
+        },
+        {
+            "name": "bengor-user/twig-bridge",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/TwigBridge.git",
+                "reference": "770c8b3d55eec231d4a7e4a504f04d017af9a091"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/TwigBridge/zipball/770c8b3d55eec231d4a7e4a504f04d017af9a091",
+                "reference": "770c8b3d55eec231d4a7e4a504f04d017af9a091",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/config": "^2.8 || ^3.0",
+                "symfony/translation": "^2.8 || ^3.0",
+                "symfony/twig-bridge": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\TwigBridge\\": "src/BenGorUser/TwigBridge/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Adapter to make User compatible with Twig",
+            "keywords": [
+                "adapter",
+                "ddd",
+                "twig",
+                "user"
+            ],
+            "time": "2017-04-29T18:31:44+00:00"
+        },
+        {
+            "name": "bengor-user/twig-bridge-bundle",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/TwigBridgeBundle.git",
+                "reference": "0a37e15731025ce1a43218d1df57c153567ec1e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/TwigBridgeBundle/zipball/0a37e15731025ce1a43218d1df57c153567ec1e4",
+                "reference": "0a37e15731025ce1a43218d1df57c153567ec1e4",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/twig-bridge": "^1.0",
+                "bengor-user/user-bundle": "^0.6 || ^0.7 || ^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/twig-bundle": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\TwigBridgeBundle\\": "src/BenGorUser/TwigBridgeBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle that glues UserBundle and TwigBridge",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "symfony",
+                "twig",
+                "user"
+            ],
+            "time": "2017-02-02T17:51:42+00:00"
+        },
+        {
+            "name": "bengor-user/user",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/User.git",
+                "reference": "734900f463042194502191e4fb3e4f588cb7bf6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/User/zipball/734900f463042194502191e4fb3e4f588cb7bf6f",
+                "reference": "734900f463042194502191e4fb3e4f588cb7bf6f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "ramsey/uuid": "^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\User\\": "src/BenGorUser/User/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Lightweight user library developed using Domain-Driven Design",
+            "keywords": [
+                "component",
+                "ddd",
+                "user"
+            ],
+            "time": "2017-03-30T11:48:33+00:00"
+        },
+        {
+            "name": "bengor-user/user-bundle",
+            "version": "v0.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenGorUser/UserBundle.git",
+                "reference": "564c960a9830da775299c74d6f4b9cdc3e66d9f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenGorUser/UserBundle/zipball/564c960a9830da775299c74d6f4b9cdc3e66d9f0",
+                "reference": "564c960a9830da775299c74d6f4b9cdc3e66d9f0",
+                "shasum": ""
+            },
+            "require": {
+                "bengor-user/user": "^0.8",
+                "php": "^5.5 || ^7.0",
+                "symfony/form": "^2.8 || ^3.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0",
+                "symfony/security-bundle": "^2.8 || ^3.0",
+                "symfony/templating": "^2.8 || ^3.0",
+                "symfony/translation": "^2.8 || ^3.0",
+                "symfony/twig-bundle": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "lexik/jwt-authentication-bundle": "^2.1",
+                "phpspec/phpspec": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenGorUser\\UserBundle\\": "src/BenGorUser/UserBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beñat Espiña Diaz",
+                    "email": "benatespina@gmail.com",
+                    "homepage": "http://benatespina.com"
+                },
+                {
+                    "name": "Gorka Laucirica Ibarra",
+                    "email": "gorka.lauzirika@gmail.com",
+                    "homepage": "http://gorkalaucirica.net"
+                }
+            ],
+            "description": "Symfony bundle on top of BenGor's user library",
+            "keywords": [
+                "bundle",
+                "ddd",
+                "user"
+            ],
+            "time": "2017-04-29T18:25:30+00:00"
+        },
         {
             "name": "composer/ca-bundle",
             "version": "1.0.7",
@@ -1112,6 +2617,201 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
+            "name": "keyvanakbary/slugifier",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/keyvanakbary/slugifier.git",
+                "reference": "0246c5b5b31a10bbdde59810152c8cf0d109fe68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/keyvanakbary/slugifier/zipball/0246c5b5b31a10bbdde59810152c8cf0d109fe68",
+                "reference": "0246c5b5b31a10bbdde59810152c8cf0d109fe68",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/slugifier.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Keyvan Akbary",
+                    "email": "kiwwito@gmail.com"
+                }
+            ],
+            "description": "A full-featured, simple, clean and pure functional implementation for creating slugs",
+            "keywords": [
+                "slug",
+                "slugifier",
+                "slugify",
+                "url",
+                "urlize"
+            ],
+            "time": "2015-08-02T23:48:01+00:00"
+        },
+        {
+            "name": "lin3s/admin-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LIN3S/AdminBundle.git",
+                "reference": "8e0e9a36f904196f36cda82c64d145371084db43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LIN3S/AdminBundle/zipball/8e0e9a36f904196f36cda82c64d145371084db43",
+                "reference": "8e0e9a36f904196f36cda82c64d145371084db43",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/orm": "^2.5",
+                "php": "^5.5 || ^7.0",
+                "symfony/symfony": "^2.8 || ^3.0",
+                "twig/twig": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpspec/phpspec": "^2.5",
+                "symfony/var-dumper": "^2.8 || ^3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "LIN3S\\AdminBundle\\": "src/LIN3S/AdminBundle/",
+                    "Tests\\Application\\": "tests/Application/src/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LIN3S",
+                    "email": "info@lin3s.com",
+                    "homepage": "https://lin3s.com"
+                }
+            ],
+            "description": "Admin Bundle in the LIN3S way",
+            "time": "2017-05-19 07:47:20"
+        },
+        {
+            "name": "lin3s/admin-ddd-extensions-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LIN3S/AdminDDDExtensionsBundle.git",
+                "reference": "2bac914e0a0f116e29f424f7eec5a0b3e969c36f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LIN3S/AdminDDDExtensionsBundle/zipball/2bac914e0a0f116e29f424f7eec5a0b3e969c36f",
+                "reference": "2bac914e0a0f116e29f424f7eec5a0b3e969c36f",
+                "shasum": ""
+            },
+            "require": {
+                "lin3s/admin-bundle": "dev-master",
+                "lin3s/shared-kernel": "^0.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "lin3s/cms-kernel": "dev-master",
+                "simple-bus/symfony-bridge": "^4.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "LIN3S\\AdminDDDExtensionsBundle\\": "src/LIN3S/AdminDDDExtensionsBundle/"
+                },
+                "exclude-from-classmap": [
+                    "/spec/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LIN3S",
+                    "email": "info@lin3s.com",
+                    "homepage": "https://lin3s.com"
+                }
+            ],
+            "description": "DDD extensions for LIN3S-Admin",
+            "time": "2017-04-19 10:28:53"
+        },
+        {
+            "name": "lin3s/cms-kernel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LIN3S/CMSKernel.git",
+                "reference": "ab7b6113677a2a17612ff25e72e852f751ecba34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/ab7b6113677a2a17612ff25e72e852f751ecba34",
+                "reference": "ab7b6113677a2a17612ff25e72e852f751ecba34",
+                "shasum": ""
+            },
+            "require": {
+                "lin3s/shared-kernel": "^0.3",
+                "php": "^5.6 || ^7.0",
+                "twig/extensions": "^1.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.12",
+                "phpspec/phpspec": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LIN3S\\CMSKernel\\": "src/LIN3S/CMSKernel/",
+                    "LIN3S\\CMSKernel\\Tests\\": "tests/"
+                },
+                "exclude-from-classmap": [
+                    "tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LIN3S",
+                    "email": "info@lin3s.com",
+                    "homepage": "https://lin3s.com"
+                }
+            ],
+            "description": "Base package to make CMS in an easy way",
+            "keywords": [
+                "bounded-context",
+                "cms-kernel",
+                "ddd",
+                "lin3s"
+            ],
+            "time": "2017-05-31 13:59:57"
+        },
+        {
             "name": "lin3s/distribution",
             "version": "v2.4.2",
             "source": {
@@ -1161,6 +2861,61 @@
                 "lin3s"
             ],
             "time": "2017-03-31T10:37:49+00:00"
+        },
+        {
+            "name": "lin3s/shared-kernel",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LIN3S/SharedKernel.git",
+                "reference": "f736dff5d73da79806731bbef348efdd6d2864a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LIN3S/SharedKernel/zipball/f736dff5d73da79806731bbef348efdd6d2864a8",
+                "reference": "f736dff5d73da79806731bbef348efdd6d2864a8",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": "^1.3",
+                "keyvanakbary/slugifier": "^4.0",
+                "php": "^5.6 || ^7.0",
+                "ramsey/uuid": "^3.5"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.5",
+                "friendsofphp/php-cs-fixer": "^1.12",
+                "phpspec/phpspec": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LIN3S\\SharedKernel\\": "src/LIN3S/SharedKernel/",
+                    "LIN3S\\SharedKernel\\Tests\\": "tests/"
+                },
+                "exclude-from-classmap": [
+                    "tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LIN3S",
+                    "email": "info@lin3s.com",
+                    "homepage": "https://lin3s.com"
+                }
+            ],
+            "description": "Shared Kernel of LIN3S projects for different purposes",
+            "keywords": [
+                "bounded-context",
+                "ddd",
+                "lin3s",
+                "shared-kernel"
+            ],
+            "time": "2017-03-15T09:13:41+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1499,6 +3254,88 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "ramsey/uuid",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "^1.0|^2.0",
+                "php": "^5.4 || ^7.0"
+            },
+            "replace": {
+                "rhumsaa/uuid": "self.version"
+            },
+            "require-dev": {
+                "apigen/apigen": "^4.1",
+                "codeception/aspect-mock": "^1.0 | ^2.0",
+                "doctrine/annotations": "~1.2.0",
+                "goaop/framework": "1.0.0-alpha.2 | ^1.0 | ^2.1",
+                "ircmaxell/random-lib": "^1.1",
+                "jakub-onderka/php-parallel-lint": "^0.9.0",
+                "mockery/mockery": "^0.9.4",
+                "moontoast/math": "^1.1",
+                "php-mock/php-mock-phpunit": "^0.3|^1.1",
+                "phpunit/phpunit": "^4.7|>=5.0 <5.4",
+                "satooshi/php-coveralls": "^0.6.1",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides the PECL libsodium extension for use with the SodiumRandomGenerator",
+                "ext-uuid": "Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator",
+                "ircmaxell/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
+                "moontoast/math": "Provides support for converting UUID to 128-bit integer (in string form).",
+                "ramsey/uuid-console": "A console application for generating UUIDs with ramsey/uuid",
+                "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Huizendveld",
+                    "email": "marijn.huizendveld@gmail.com"
+                },
+                {
+                    "name": "Thibaud Fabre",
+                    "email": "thibaud@aztech.io"
+                },
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
+            "homepage": "https://github.com/ramsey/uuid",
+            "keywords": [
+                "guid",
+                "identifier",
+                "uuid"
+            ],
+            "time": "2017-03-26T20:37:53+00:00"
+        },
+        {
             "name": "sensio/distribution-bundle",
             "version": "v5.0.20",
             "source": {
@@ -1664,6 +3501,174 @@
             ],
             "description": "A security checker for your composer.lock",
             "time": "2017-03-31T14:50:32+00:00"
+        },
+        {
+            "name": "simple-bus/doctrine-orm-bridge",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimpleBus/DoctrineORMBridge.git",
+                "reference": "46df998f26940d9525f8e35c40641328c679dbfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimpleBus/DoctrineORMBridge/zipball/46df998f26940d9525f8e35c40641328c679dbfe",
+                "reference": "46df998f26940d9525f8e35c40641328c679dbfe",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "~2.0",
+                "doctrine/orm": "~2.2",
+                "php": ">=5.4",
+                "simple-bus/message-bus": "~2.0"
+            },
+            "require-dev": {
+                "matthiasnoback/doctrine-orm-test-service-provider": "~2.0",
+                "phpunit/phpunit": "~4.5",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "suggest": {
+                "simple-bus/symfony-bridge": "Bridge for using command buses and event buses with Symfony"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleBus\\DoctrineORMBridge\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Noback",
+                    "email": "matthiasnoback@gmail.com",
+                    "homepage": "http://php-and-symfony.matthiasnoback.nl"
+                }
+            ],
+            "description": "Doctrine ORM bridge for using command and event buses",
+            "homepage": "http://github.com/SimpleBus/DoctrineORMBridge",
+            "keywords": [
+                "command bus",
+                "doctrine",
+                "event bus"
+            ],
+            "time": "2015-04-29T12:27:27+00:00"
+        },
+        {
+            "name": "simple-bus/message-bus",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimpleBus/MessageBus.git",
+                "reference": "723bf20b93e17e9e87e83032ec21d8b2452328cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimpleBus/MessageBus/zipball/723bf20b93e17e9e87e83032ec21d8b2452328cf",
+                "reference": "723bf20b93e17e9e87e83032ec21d8b2452328cf",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "~2.0",
+                "php": ">=5.4",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleBus\\Message\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Noback",
+                    "email": "matthiasnoback@gmail.com",
+                    "homepage": "http://php-and-symfony.matthiasnoback.nl"
+                }
+            ],
+            "description": "Generic classes and interfaces for messages and message buses",
+            "homepage": "http://github.com/SimpleBus/MessageBus",
+            "keywords": [
+                "command bus",
+                "event bus",
+                "message",
+                "message bus"
+            ],
+            "time": "2016-02-12T08:35:53+00:00"
+        },
+        {
+            "name": "simple-bus/symfony-bridge",
+            "version": "v4.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimpleBus/SymfonyBridge.git",
+                "reference": "2033629f89b57f817cdc944b043180522dba1c9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimpleBus/SymfonyBridge/zipball/2033629f89b57f817cdc944b043180522dba1c9f",
+                "reference": "2033629f89b57f817cdc944b043180522dba1c9f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "simple-bus/message-bus": "~2.0",
+                "symfony/config": "~2.3|~3.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
+                "symfony/http-kernel": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.0",
+                "doctrine/orm": "~2.3",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6",
+                "simple-bus/doctrine-orm-bridge": "~4.0",
+                "symfony/monolog-bridge": "~2.3|~3.0",
+                "symfony/monolog-bundle": "~2.3|~3.0"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "For integration with Doctrine ORM",
+                "doctrine/orm": "For integration with Doctrine ORM",
+                "simple-bus/doctrine-orm-bridge": "For integration with Doctrine ORM",
+                "symfony/monolog-bundle": "For logging messages"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleBus\\SymfonyBridge\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Noback",
+                    "email": "matthiasnoback@gmail.com",
+                    "homepage": "http://php-and-symfony.matthiasnoback.nl"
+                }
+            ],
+            "description": "Bridge for using command buses and event buses in Symfony projects",
+            "homepage": "http://github.com/SimpleBus/SymfonyBridge",
+            "keywords": [
+                "command bus",
+                "doctrine",
+                "event bus",
+                "symfony"
+            ],
+            "time": "2016-07-17T12:50:07+00:00"
         },
         {
             "name": "smart-core/accelerator-cache-bundle",
@@ -2378,22 +4383,77 @@
             "time": "2017-05-29T19:32:17+00:00"
         },
         {
-            "name": "twig/twig",
-            "version": "v2.3.2",
+            "name": "twig/extensions",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "85e8372c451510165c04bf781295f9d922fa524b"
+                "url": "https://github.com/twigphp/Twig-extensions.git",
+                "reference": "d6d74d6f3213a9574c460c4390c25a1a67c17cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/85e8372c451510165c04bf781295f9d922fa524b",
-                "reference": "85e8372c451510165c04bf781295f9d922fa524b",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/d6d74d6f3213a9574c460c4390c25a1a67c17cc3",
+                "reference": "d6d74d6f3213a9574c460c4390c25a1a67c17cc3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "twig/twig": "~1.27|~2.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~3.3@dev",
+                "symfony/translation": "~2.3|~3.0"
+            },
+            "suggest": {
+                "symfony/translation": "Allow the time_diff output to be translated"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_Extensions_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\Extensions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Common additional features for Twig that do not directly belong in core",
+            "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
+            "keywords": [
+                "i18n",
+                "text"
+            ],
+            "time": "2017-05-24T06:24:07+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.33.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/dd6ca96227917e1e85b41c7c3cc6507b411e0927",
+                "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -2403,7 +4463,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "1.33-dev"
                 }
             },
             "autoload": {
@@ -2438,7 +4498,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-04-21T00:13:02+00:00"
+            "time": "2017-04-20T17:39:48+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -2549,6 +4609,122 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "doctrine/data-fixtures",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/data-fixtures.git",
+                "reference": "17fa5bfe6ff52e35cb3d9ec37c934a2f4bd1fa2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/17fa5bfe6ff52e35cb3d9ec37c934a2f4bd1fa2e",
+                "reference": "17fa5bfe6ff52e35cb3d9ec37c934a2f4bd1fa2e",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "php": "^5.6 || ^7.0"
+            },
+            "conflict": {
+                "doctrine/orm": "< 2.4"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5.4",
+                "doctrine/orm": "^2.5.4",
+                "phpunit/phpunit": "^5.4.6"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+                "doctrine/orm": "For loading ORM fixtures",
+                "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\DataFixtures": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Data Fixtures for all Doctrine Object Managers",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database"
+            ],
+            "time": "2016-09-20T10:07:57+00:00"
+        },
+        {
+            "name": "doctrine/doctrine-fixtures-bundle",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
+                "reference": "0f1a2f91b349e10f5c343f75ab71d23aace5b029"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/0f1a2f91b349e10f5c343f75ab71d23aace5b029",
+                "reference": "0f1a2f91b349e10f5c343f75ab71d23aace5b029",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/data-fixtures": "~1.0",
+                "doctrine/doctrine-bundle": "~1.0",
+                "php": ">=5.3.2",
+                "symfony/doctrine-bridge": "~2.3|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\FixturesBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony DoctrineFixturesBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "Fixture",
+                "persistence"
+            ],
+            "time": "2015-11-04T21:23:23+00:00"
+        },
         {
             "name": "friendsofphp/php-cs-fixer",
             "version": "v1.13.1",
@@ -3487,7 +5663,11 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "lin3s/admin-bundle": 20,
+        "lin3s/admin-ddd-extensions-bundle": 20,
+        "lin3s/cms-kernel": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
