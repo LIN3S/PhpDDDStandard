@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3ff63a9c3e786f6f128d82514261070",
+    "content-hash": "7fedff923f38a775ddc57ebbf5687fe3",
     "packages": [
         {
             "name": "ajgl/simple-bus-query-bus",
@@ -2820,19 +2820,20 @@
         },
         {
             "name": "lin3s/cms-kernel",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LIN3S/CMSKernel.git",
-                "reference": "08b3c66115cddc6c734bc3e001e9a06c81823f5d"
+                "reference": "ce8d79b5723f26af7a67184b46b1ca1f067e5b96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/08b3c66115cddc6c734bc3e001e9a06c81823f5d",
-                "reference": "08b3c66115cddc6c734bc3e001e9a06c81823f5d",
+                "url": "https://api.github.com/repos/LIN3S/CMSKernel/zipball/ce8d79b5723f26af7a67184b46b1ca1f067e5b96",
+                "reference": "ce8d79b5723f26af7a67184b46b1ca1f067e5b96",
                 "shasum": ""
             },
             "require": {
+                "ext-intl": "*",
                 "lin3s/shared-kernel": "^0.3",
                 "php": "^5.6 || ^7.0",
                 "twig/extensions": "^1.4"
@@ -2869,7 +2870,7 @@
                 "ddd",
                 "lin3s"
             ],
-            "time": "2017-07-18 10:58:31"
+            "time": "2017-07-27T11:30:53+00:00"
         },
         {
             "name": "lin3s/distribution",
@@ -5990,9 +5991,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "lin3s/cms-kernel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

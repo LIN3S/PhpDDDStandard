@@ -31,7 +31,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "lin3s/admin-bundle": "^0.5",
         "lin3s/admin-ddd-extensions-bundle": "^0.1",
-        "lin3s/cms-kernel": "dev-master",
+        "lin3s/cms-kernel": "^0.2",
         "lin3s/distribution": "^4.0.1",
         "lin3s/shared-kernel": "^0.3",
         "sensio/distribution-bundle": "^5.0",
