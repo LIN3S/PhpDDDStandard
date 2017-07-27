@@ -1,26 +1,24 @@
-# This file is part of the Php DDD Standard project.
+# This file is part of the Re_ Magazine project.
 #
-# Copyright (c) 2017 LIN3S <info@lin3s.com>
+# Copyright (c) 2016-present LIN3S <info@lin3s.com>
 #
 # For the full copyright and license information, please view the LICENSE
 # file that was distributed with this source code.
 #
-# @author Beñat Espiña <benatespina@gmail.com>
+# @author Beñat Espiña <bespina@lin3s.com>
 
 parameters:
     enabled:
-        - phpmd
-        - phpformatter
+        - twigcs
         - phpcsfixer
-        - scsslint
+        - stylelint
         - eslint
 
-    name: Php DDD Standard
+    name: Php DDD Standard project
     type: project
-    year: 2017
+    year: 2017-present
     author: LIN3S
     email: info@lin3s.com
-    version: 0.1
 
     phpmd_path: src
     phpmd_rules:
@@ -29,51 +27,51 @@ parameters:
         - codesize
         - naming
 
-    phpformatter_path: src
+    twigcs_path: src/App/Infrastructure/Ui/Templates/Twig
 
     phpcsfixer_path: src
-    phpcsfixer_level: symfony   # can be psr0, psr1, psr2 or symfony
-    phpcsfixer_fixers:
-        - -unalign_double_arrow
-        - -concat_without_spaces
+    phpcsfixer_test_path: tests
+    phpcsfixer_file_location: .
 
-        - align_double_arrow
-        - concat_with_spaces
-        - multiline_spaces_before_semicolon
-        - newline_after_open_tag
-        - ordered_use
-        - php4_constructor
-        - phpdoc_order
-        - phpdoc_var_to_type
-        - short_array_syntax
-        - short_echo_tag
-        - strict
-        - strict_param
+    stylelint_path: src/App/Infrastructure/Ui/Assets/scss
+    stylelint_file_location: src/App/Infrastructure/Ui/Assets
+    stylelint_exclude: []
+    stylelint_rules: []
 
-    scsslint_path: src/App/Infrastructure/Ui/Assets/scss
-    scsslint_file_location: src/App/Infrastructure/Ui/Assets
-    scsslint_exclude: []
-    scsslint_rules:             # available rules can view for https://github.com/brigade/scss-lint/blob/master/config/default.yml
-        linters:
-            SelectorFormat:
-                enabled: true
-                convention: hyphenated_BEM
     eslint_path: src/App/Infrastructure/Ui/Assets/js
     eslint_file_location: src/App/Infrastructure/Ui/Assets
     eslint_exclude: []
-    eslint_rules:           # check the LIN3SCS config if you need to use React.js in your project https://github.com/LIN3S/CS#use-eslint-in-a-reactjs-environment
-        ecmaFeatures:
-            modules: true
-        env:
-            es6: true
-            browser: true
-        parserOptions:
-            sourceType: module
-            ecmaFeatures:
-                classes: true
-                experimentalObjectRestSpread: true
-                templateStrings: true
-        globals:
-            dataLayer: true
-            FB: true
-            google: true
+    eslint_rules:
+        plugins:
+            - babel
+            - react
+            - class-property
+        rules:
+            babel/semi: [error, always]
+            react/display-name: off
+            react/forbid-prop-types: off
+            react/jsx-boolean-value: off
+            react/jsx-closing-bracket-location: off
+            react/jsx-curly-spacing: off
+            react/jsx-indent-props: off
+            react/jsx-max-props-per-line: off
+            react/jsx-no-duplicate-props: error
+            react/jsx-no-literals: off
+            react/jsx-no-undef: error
+            jsx-quotes: error
+            react/jsx-sort-props: error
+            react/jsx-uses-react: error
+            react/jsx-uses-vars: error
+            react/no-danger: error
+            react/no-did-mount-set-state: error
+            react/no-did-update-set-state: error
+            react/no-direct-mutation-state: error
+            react/no-set-state: off
+            react/no-unknown-property: error
+            react/prop-types: off
+            react/react-in-jsx-scope: off
+            react/require-extension: off
+            react/self-closing-comp: off
+            react/sort-comp: off
+            react/sort-prop-types: error
+            react/wrap-multilines: off
