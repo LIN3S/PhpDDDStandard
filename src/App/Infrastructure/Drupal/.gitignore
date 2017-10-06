@@ -1,0 +1,17 @@
+vendor/
+
+core/
+modules/contrib/
+themes/contrib/
+profiles/contrib/
+libraries/
+
+# Ignore sensitive information
+sites/*/settings.php
+sites/*/settings.local.php
+
+# Ignore Drupal's file directory
+sites/*/files/
+
+# Ignore SimpleTest multi-site environment.
+sites/simpletest
