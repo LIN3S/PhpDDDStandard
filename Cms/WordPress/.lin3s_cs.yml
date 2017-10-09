@@ -1,0 +1,35 @@
+# This file is auto-generated during the composer install
+parameters:
+    enabled:
+        - phpmd
+        - twigcs
+        - phpcsfixer
+        - stylelint
+        - eslint
+    name: 'Php DDD Standard'
+    type: project
+    year: 2017
+    author: LIN3S
+    email: info@lin3s.com
+    version: 0.1
+    phpmd_path: src
+    phpmd_rules:
+        - controversial
+        - unusedcode
+        - codesize
+        - naming
+    twigcs_path: src
+    phpcsfixer_path: src
+    phpcsfixer_test_path: tests
+    phpcsfixer_file_location: vendor/lin3s/cs/src/LIN3S/CS/
+    stylelint_path: app/Resources/assets/scss
+    stylelint_file_location: vendor/lin3s/cs/src/LIN3S/CS/
+    stylelint_exclude: {  }
+    stylelint_rules: {  }
+    eslint_path: app/Resources/assets/js
+    eslint_file_location: vendor/lin3s/cs/src/LIN3S/CS/
+    eslint_exclude: {  }
+    eslint_rules:
+        globals:
+            Modernizr: true
+            svg4everybody: true
