@@ -10,10 +10,7 @@
 parameters:
     enabled:
         - phpmd
-        - twigcs
         - phpcsfixer
-        - stylelint
-        - eslint
 
     name: Php DDD Standard
     type: project
@@ -29,21 +26,6 @@ parameters:
         - codesize
         - naming
 
-    twigcs_path: src
-
     phpcsfixer_path: src
     phpcsfixer_test_path: tests
     phpcsfixer_file_location: vendor/lin3s/cs/src/LIN3S/CS/
-
-    stylelint_path: app/Resources/assets/scss
-    stylelint_file_location: vendor/lin3s/cs/src/LIN3S/CS/
-    stylelint_exclude: []
-    stylelint_rules: []         # https://stylelint.io/user-guide/rules/
-
-    eslint_path: app/Resources/assets/js
-    eslint_file_location: vendor/lin3s/cs/src/LIN3S/CS/
-    eslint_exclude: []
-    eslint_rules:               # available rules can view in http://eslint.org/docs/rules/
-        globals:
-            "Modernizr": true
-            "svg4everybody": true

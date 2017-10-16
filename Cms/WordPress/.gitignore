@@ -8,8 +8,15 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
+/.editorconfig
+/.eslintrc.js
+/.lin3s_cs.yml
+/.php_cs*
+/.phpspec_cs*
+/.stylelintrc.js
 /core
 /plugins
+!/plugins/app
 /themes
 /uploads
 /mu-plugins
