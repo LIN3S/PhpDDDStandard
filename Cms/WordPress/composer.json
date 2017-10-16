@@ -1,0 +1,69 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/marceldillen/wordpress-headless-theme.git"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^4.8",
+        "lin3s/wp-foundation": "^1.6",
+        "marceldillen/wordpress-headless-theme": "^1.0",
+        "wpackagist-plugin/acf-to-rest-api": "^2.2",
+        "wpackagist-plugin/wordpress-seo": "^5.5",
+        "wpackagist-plugin/wp-api-yoast-meta": "^1.2",
+        "wpackagist-plugin/wp-rest-api-cache": "^1.2",
+        "wpackagist-theme/twentyseventeen": "^1.3"
+    },
+    "require-dev": {
+        "lin3s/cs": "^0.7"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/"
+        }
+    },
+    "scripts": {
+        "lin3scs-scripts": [
+            "LIN3S\\CS\\Composer\\Hooks::buildDistFile",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "LIN3S\\CS\\Composer\\Hooks::addHooks",
+            "LIN3S\\CS\\Composer\\Hooks::addFiles"
+        ]
+    },
+    "suggest": {
+        "sitepress-multilingual-cms": "It allows to implement the multilingual in an easy way",
+        "wpml-media": "It allows to implement the multilingual in an easy way",
+        "wpml-string-translation": "It allows to implement the multilingual in an easy way",
+        "wpackagist-plugin/categories-images": "It allows to assign easily images to categories",
+        "wpackagist-plugin/wp-smushit": "Image optimization done for you",
+        "wpackagist-plugin/w3-total-cache": "Easy Web Performance Optimization (WPO) using caching"
+    },
+    "extra": {
+        "wordpress-install-dir": "core",
+        "installer-paths": {
+            "plugins/{$name}/": ["type:wordpress-plugin"],
+            "themes/{$name}/": ["type:wordpress-theme"],
+            "mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        },
+        "incenteev-parameters": {
+            "file": ".lin3s_cs.yml",
+            "dist-file": ".lin3s_cs.yml.dist"
+        },
+        "scripts-dev": {
+            "post-install-cmd": [
+                "@lin3scs-scripts"
+            ],
+            "post-update-cmd": [
+                "@lin3scs-scripts"
+            ]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+# This file is part of the Php DDD Standard project.
+#
+# Copyright (c) 2017 LIN3S <info@lin3s.com>
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @author Gorka Laucirica <gorka.lauzirika@gmail.com>
+# @author Beñat Espiña <benatespina@gmail.com>
+# @author Jon Torrado <jontorrado@gmail.com>
+
+# BEGIN LIN3S - Basic WordPress (non Multisite)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Securize some files
+    RewriteRule ^composer\.(lock|json)$ - [F,L]
+    RewriteRule ^vendor/.*$ - [F,L]
+    RewriteRule ^Capfile - [F,L]
+    RewriteRule ^.git - [F,L]
+    RewriteRule ^config - [F,L]
+
+    # Make the admin still accessible from /wp-admin
+    RewriteCond %{REQUEST_URI} ^/wp-admin/?(.*)
+    RewriteRule ^wp-admin/(.*) core/wp-admin/$1 [R=301,L]
+
+    # Default WordPress rules
+    RewriteRule ^core/index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . core/index.php [L]
+    RewriteRule ^$ core/index.php [L]
+</IfModule>
+# END LIN3S
+
+# BEGIN WordPress
+# END WordPress

@@ -1,16 +1,4 @@
 {
-    "name": "lin3s/php-ddd-standard",
-    "description": "The \"Php DDD Standard Edition\" distribution in the LIN3S way",
-    "keywords": ["lin3s", "php", "ddd", "standard"],
-    "license": "MIT",
-    "type": "project",
-    "authors": [
-        {
-            "name": "LIN3S",
-            "email": "info@lin3s.com",
-            "homepage": "https://lin3s.com"
-        }
-    ],
     "require": {
         "php": "^7.1",
         "doctrine/orm": "^2.5",

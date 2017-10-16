@@ -1,0 +1,31 @@
+# This file is part of the Php DDD Standard project.
+#
+# Copyright (c) 2017 LIN3S <info@lin3s.com>
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @author Beñat Espiña <benatespina@gmail.com>
+
+parameters:
+    enabled:
+        - phpmd
+        - phpcsfixer
+
+    name: Php DDD Standard
+    type: project
+    year: 2017
+    author: LIN3S
+    email: info@lin3s.com
+    version: 0.1
+
+    phpmd_path: src
+    phpmd_rules:
+        - controversial
+        - unusedcode
+        - codesize
+        - naming
+
+    phpcsfixer_path: src
+    phpcsfixer_test_path: tests
+    phpcsfixer_file_location: vendor/lin3s/cs/src/LIN3S/CS/
