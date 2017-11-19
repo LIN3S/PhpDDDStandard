@@ -8,6 +8,7 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-services:
-    app.http_action.home:
-        class: App\Infrastructure\Symfony\HttpAction\HomeAction
+app_homepage:
+    path: /
+    defaults:
+        _controller: "composite_ui.http_action.home:__invoke"

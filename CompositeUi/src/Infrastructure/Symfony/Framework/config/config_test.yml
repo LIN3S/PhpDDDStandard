@@ -8,6 +8,17 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-services:
-    app.http_action.home:
-        class: App\Infrastructure\Symfony\HttpAction\HomeAction
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    profiler:
+        collect: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+

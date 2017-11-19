@@ -9,14 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Infrastructure\Symfony\HttpAction;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 
-use Symfony\Component\HttpFoundation\JsonResponse;
+$loader = require __DIR__ . '/../../../../vendor/autoload.php';
 
-class HomeAction
-{
-    public function __invoke() : JsonResponse
-    {
-        return new JsonResponse(['message' => 'Hello world!']);
-    }
-}
+AnnotationRegistry::registerLoader([$loader, 'loadClass']);
+
+return $loader;

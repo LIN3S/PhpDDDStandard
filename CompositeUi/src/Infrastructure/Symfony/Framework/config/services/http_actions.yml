@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # This file is part of the Php DDD Standard project.
 #
 # Copyright (c) 2017-present LIN3S <info@lin3s.com>
@@ -10,6 +8,8 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-$(dirname $0)/../bin/symfony-console server:start 127.0.0.1:8002 \
-    --docroot=src/App/Infrastructure/Ui/Http/Symfony \
-    --force
+services:
+    composite_ui.http_action.home:
+        class: CompositeUi\Infrastructure\Symfony\HttpAction\HomeAction
+        arguments:
+            - "@twig"

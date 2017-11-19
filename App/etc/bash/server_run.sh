@@ -10,5 +10,5 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-export SYMFONY_ENV=dev
-$(dirname $0)/../bin/symfony-console server:stop 127.0.0.1:8002
+$(dirname $0)/../bin/symfony-console server:run 127.0.0.1:8002 \
+    --docroot=src/App/Infrastructure/Ui/Http/Symfony \

@@ -9,14 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Infrastructure\Symfony\HttpAction;
+namespace CompositeUi\Infrastructure\Symfony\Framework;
 
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
-class HomeAction
+class AppCache extends HttpCache
 {
-    public function __invoke() : JsonResponse
-    {
-        return new JsonResponse(['message' => 'Hello world!']);
-    }
 }
