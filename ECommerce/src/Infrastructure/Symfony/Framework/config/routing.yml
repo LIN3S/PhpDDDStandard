@@ -21,3 +21,6 @@ sylius_shop_payum:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+sylius_shop_api:
+    resource: "@ShopApiPlugin/Resources/config/routing.yml"
