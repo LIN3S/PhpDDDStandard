@@ -15,11 +15,15 @@ import {Webpack} from 'lin3s-distribution';
 
 const options = {
   entry: {
-    'app': './js/entry-app.js',
+    'app': [
+      './js/polyfills.js',
+      './js/entry-app.js',
+    ]
   },
   input: {
     base: '',
-    scss: `scss`
+    scss: `scss`,
+    includedNodeModules: ['lin3s-front-foundation', 'lin3s-event-bus', 'validatory']
   },
   output: {
     jsPath: './build',

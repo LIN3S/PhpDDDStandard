@@ -7,10 +7,17 @@
 //
 // @author Beñat Espiña <benatespina@gmail.com>
 
-.form-error {}
+@import './../_definitions/animations';
+@import './../_variables/colors';
+@import './../_variables/typography';
 
-/*
-  In order to use parsley.js you can use the built-in solution:
+// $form-error-background-color: transparent;
+// $form-error-text-color: $color-primary-faded;
+// $form-error-border-color: transparent;
+// $form-error-animation: $animation-vertical-node-in;
+// $form-error-font-family: $font-family-secondary;
+// $form-error-font-size: $font-size-14;
+// $form-error-font-weight: $font-weight-primary-regular;
+// $form-error-line-height: $line-height-for-font-size-14;
 
-  @import '../../../node_modules/lin3s-front-foundation/src/scss/atoms/parsley-form-error';
-*/
+@import './../../../node_modules/lin3s-front-foundation/dist/scss/ui/atoms/form-error';

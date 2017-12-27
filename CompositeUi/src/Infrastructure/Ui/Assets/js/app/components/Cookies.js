@@ -9,8 +9,6 @@
  * @author Beñat Espiña <benatespina@gmail.com>
  */
 
-'use strict';
-
 import {onDomReady} from 'lin3s-event-bus';
 import {BenGorCookies} from 'bengor-cookies';
 

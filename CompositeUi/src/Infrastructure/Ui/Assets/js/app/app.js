@@ -9,20 +9,9 @@
  * @author Beñat Espiña <benatespina@gmail.com>
  */
 
-'use strict';
-
-import FastClick from 'fastclick';
-import {onDomReady} from 'lin3s-event-bus';
 import 'picturefill';
-import svg4everybody from 'svg4everybody';
 
 import './atoms/FormError';
-
 import './components/Cookies';
 
-const onReady = () => {
-  svg4everybody();
-  new FastClick(document.body);
-};
-
-onDomReady(onReady);
+import './onDomReadyActions';

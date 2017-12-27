@@ -9,8 +9,6 @@
  * @author Beñat Espiña <benatespina@gmail.com>
  */
 
-'use strict';
-
 import './../scss/app/app.scss';
 
 import './app/app';

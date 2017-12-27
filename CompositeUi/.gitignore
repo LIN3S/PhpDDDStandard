@@ -15,8 +15,8 @@
 /.web-server-pid
 /composer.phar
 /parameters.yml
-/src/Infrastructure/Ui/Assets/.eslint.yml
-/src/Infrastructure/Ui/Assets/.scss_lint.yml
+/src/Infrastructure/Ui/Assets/.eslintrc.js
+/src/Infrastructure/Ui/Assets/.stylelintrc.js
 /src/Infrastructure/Ui/Assets/node_modules
 /src/Infrastructure/Ui/Assets/build
 !/src/Infrastructure/Ui/Assets/build/.gitkeep
