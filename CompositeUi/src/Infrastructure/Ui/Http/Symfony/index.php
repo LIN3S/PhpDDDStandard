@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 
 /*
@@ -13,18 +12,11 @@
 declare(strict_types=1);
 
 use CompositeUi\Infrastructure\Symfony\Framework\Kernel;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
-
-set_time_limit(0);
+use Symfony\Component\HttpFoundation\Request;
 
 require_once __DIR__ . '/../../../../../vendor/autoload.php';
-
-if (!class_exists(Application::class)) {
-    throw new \RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
-}
 
 if (!isset($_SERVER['APP_ENV'])) {
     if (!class_exists(Dotenv::class)) {
@@ -36,17 +28,14 @@ if (!isset($_SERVER['APP_ENV'])) {
     (new Dotenv())->load(__DIR__ . '/../../../../../.env');
 }
 
-$input = new ArgvInput();
-$env = $input->getParameterOption(['--env', '-e'], $_SERVER['APP_ENV'] ?: 'dev');
-$debug = ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env)) && !$input->hasParameterOption(['--no-debug', '']);
-
-if ($debug) {
+if ($_SERVER['APP_DEBUG'] ?? ('prod' !== ($_SERVER['APP_ENV'] ?? 'dev'))) {
     umask(0000);
 
-    if (class_exists(Debug::class)) {
-        Debug::enable();
-    }
+    Debug::enable();
 }
 
-$kernel = new Kernel($env, $debug);
-(new Application($kernel))->run();
+$request = Request::createFromGlobals();
+$kernel = new Kernel($_SERVER['APP_ENV'] ?? 'dev', $_SERVER['APP_DEBUG'] ?? ('prod' !== ($_SERVER['APP_ENV'] ?? 'dev')));
+$response = $kernel->handle($request);
+$response->send();
+$kernel->terminate($request, $response);

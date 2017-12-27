@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace CompositeUi\Infrastructure\Symfony\HttpAction;
 
 use Symfony\Component\HttpFoundation\Response;
@@ -22,7 +24,7 @@ class HomeAction
         $this->twig = $twig;
     }
 
-    public function __invoke()
+    public function __invoke() : Response
     {
         return new Response(
             $this->twig->render('pages/home.html.twig')

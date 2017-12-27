@@ -1,27 +1,30 @@
 {
     "require": {
         "php": "^7.1",
-        "incenteev/composer-parameter-handler": "^2.0",
-        "lin3s/distribution": "^4.0.1",
-        "sensio/distribution-bundle": "^5.0",
-        "sensio/framework-extra-bundle": "^3.0.2",
+        "ext-iconv": "*",
+        "lin3s/distribution": "^4.2",
         "smart-core/accelerator-cache-bundle": "^1.2",
-        "symfony/monolog-bundle": "^2.8",
-        "symfony/polyfill-apcu": "^1.0",
-        "symfony/symfony": "3.3.*"
+        "symfony/console": "^4.0",
+        "symfony/dotenv": "^4.0",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.0",
+        "symfony/lts": "^4@dev",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/twig-bundle": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
-        "lin3s/cs": "^0.6",
-        "phpspec/phpspec": "^3.2"
+        "phpspec/phpspec": "^4.3"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
     },
     "scripts": {
-        "symfony-scripts": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
-        ],
+        "auto-scripts": {
+        },
         "lin3scs-scripts": [
             "LIN3S\\CS\\Composer\\Hooks::buildDistFile",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -34,42 +37,30 @@
         ],
         "test": "phpspec run",
         "post-install-cmd": [
-            "@symfony-scripts"
+            "@auto-scripts"
         ],
         "post-update-cmd": [
-            "@symfony-scripts"
+            "@auto-scripts"
         ]
     },
     "autoload": {
         "psr-4": {
             "CompositeUi\\": "src/"
-        },
-        "exclude-from-classmap": [
-            "/Tests/",
-            "/test/",
-            "/tests/"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
     },
-    "config": {
-        "sort-packages": true
+    "replace": {
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
     },
     "extra": {
-        "symfony-app-dir": "src/Infrastructure/Symfony/Framework",
-        "symfony-bin-dir": "src/Infrastructure/Ui/Cli/Symfony/",
-        "symfony-var-dir": "var",
-        "symfony-web-dir": "src/Infrastructure/Ui/Http/Symfony/",
-        "symfony-tests-dir": "tests",
-        "symfony-assets-install": "relative",
         "incenteev-parameters": [
-            {
-                "file": "parameters.yml",
-                "dist-file": "parameters.yml.dist"
-            },
             {
                 "file": ".lin3s_cs.yml",
                 "dist-file": ".lin3s_cs.yml.dist"
@@ -83,5 +74,7 @@
                 "@lin3scs-scripts"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
