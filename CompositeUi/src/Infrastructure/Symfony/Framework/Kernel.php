@@ -47,7 +47,7 @@ class Kernel extends BaseKernel
 
     public function registerBundles()
     {
-        $contents = require $this->getProjectDir() . '/src/Infrastructure/Symfony/Framework/config/bundles.php';
+        $contents = require __DIR__ . '/config/bundles.php';
         foreach ($contents as $class => $envs) {
             if (isset($envs['all']) || isset($envs[$this->environment])) {
                 yield new $class();

@@ -6,6 +6,7 @@
 # file that was distributed with this source code.
 
 /.editorconfig
+/.env
 /.lin3s_cs.yml
 /.php_cs*
 /.phpspec_cs*
@@ -29,10 +30,3 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 /vendor
-
-###> symfony/framework-bundle ###
-.env
-/public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###

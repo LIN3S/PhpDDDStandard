@@ -11,6 +11,7 @@
         "symfony/lts": "^4@dev",
         "symfony/monolog-bundle": "^3.1",
         "symfony/twig-bundle": "^4.0",
+        "symfony/web-server-bundle": "^4.0",
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
@@ -24,6 +25,8 @@
     },
     "scripts": {
         "auto-scripts": {
+            "cache:clear": "src/Infrastructure/Ui/Cli/Symfony/console cache:clear",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "src/Infrastructure/Ui/Cli/Symfony/console assets:install --symlink --relative"
         },
         "lin3scs-scripts": [
             "LIN3S\\CS\\Composer\\Hooks::buildDistFile",
@@ -46,7 +49,10 @@
     "autoload": {
         "psr-4": {
             "CompositeUi\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+            "/src/Infrastructure/Symfony/Framework/config/"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
