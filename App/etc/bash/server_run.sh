@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # This file is part of the Php DDD Standard project.
 #
 # Copyright (c) 2017-present LIN3S <info@lin3s.com>
@@ -8,6 +10,5 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-services:
-    app.http_action.home:
-        class: App\Infrastructure\Symfony\HttpAction\HomeAction
+$(dirname $0)/../bin/symfony-console server:run 127.0.0.1:8002 \
+    --docroot=src/App/Infrastructure/Ui/Http/Symfony \

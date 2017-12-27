@@ -27,19 +27,19 @@ parameters:
         - codesize
         - naming
 
-    twigcs_path: src/App/Infrastructure/Ui/Templates/Twig
+    twigcs_path: src/Infrastructure/Ui/Templates/Twig
 
     phpcsfixer_path: src
     phpcsfixer_test_path: tests
     phpcsfixer_file_location: .
 
-    stylelint_path: src/App/Infrastructure/Ui/Assets/scss
-    stylelint_file_location: src/App/Infrastructure/Ui/Assets
+    stylelint_path: src/Infrastructure/Ui/Assets/scss
+    stylelint_file_location: src/Infrastructure/Ui/Assets
     stylelint_exclude: []
     stylelint_rules: []
 
-    eslint_path: src/App/Infrastructure/Ui/Assets/js
-    eslint_file_location: src/App/Infrastructure/Ui/Assets
+    eslint_path: src/Infrastructure/Ui/Assets/js
+    eslint_file_location: src/Infrastructure/Ui/Assets
     eslint_exclude: []
     eslint_rules:
         plugins:

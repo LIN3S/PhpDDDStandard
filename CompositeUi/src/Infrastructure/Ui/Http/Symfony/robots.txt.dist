@@ -8,6 +8,5 @@
 # @author Beñat Espiña <benatespina@gmail.com>
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
-services:
-    app.http_action.home:
-        class: App\Infrastructure\Symfony\HttpAction\HomeAction
+User-agent: *
+Disallow: /
