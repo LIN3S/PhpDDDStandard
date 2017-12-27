@@ -25,11 +25,6 @@ class Kernel extends BaseKernel
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
-    public function getName() : string
-    {
-        return 'src/Infrastructure/Symfony/Framework/';
-    }
-
     public function getProjectDir() : string
     {
         return __DIR__ . '/../../../../';

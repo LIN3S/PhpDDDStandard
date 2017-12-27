@@ -7,6 +7,6 @@
 
 lin3s_distribution:
     webpack:
-        manifest_path: "%env(ASSETS_MANIFEST_PATH)%"
-        public_js_path: "%env(ASSETS_PUBLIC_JS_PATH)%"
-        public_css_path: "%env(ASSETS_PUBLIC_CSS_PATH)%"
+        manifest_path: '%kernel.root_dir%/../../Ui/manifest.json'
+        public_js_path: '/assets/'
+        public_css_path: '/assets'

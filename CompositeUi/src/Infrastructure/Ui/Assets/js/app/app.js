@@ -11,7 +11,6 @@
 
 import 'picturefill';
 
-import './atoms/FormError';
 import './components/Cookies';
 
 import './onDomReadyActions';

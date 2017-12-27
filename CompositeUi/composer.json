@@ -4,6 +4,7 @@
         "ext-iconv": "*",
         "lin3s/distribution": "^4.2",
         "smart-core/accelerator-cache-bundle": "^1.2",
+        "symfony/asset": "^4.0",
         "symfony/console": "^4.0",
         "symfony/dotenv": "^4.0",
         "symfony/flex": "^1.0",
@@ -49,10 +50,7 @@
     "autoload": {
         "psr-4": {
             "CompositeUi\\": "src/"
-        },
-        "exclude-from-classmap": [
-            "/src/Infrastructure/Symfony/Framework/config/"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

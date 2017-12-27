@@ -10,10 +10,8 @@
  */
 
 import FastClick from 'fastclick';
-import {onDomReady, LifeTimeEventPublisher} from 'lin3s-event-bus';
+import {onDomReady} from 'lin3s-event-bus';
 import * as Validatory from 'validatory';
-import FormValidationStateChangedEvent from './../event-bus/FormValidationStateChangedEvent';
-import FormElementValidationStateChangedEvent from './../event-bus/FormElementValidationStateChangedEvent';
 
 const onReady = () => {
   new FastClick(document.body);
@@ -21,10 +19,6 @@ const onReady = () => {
   Validatory.init({
     formSelector: 'form',
     formElementSelector: 'input, select, textarea',
-    onFormValidationStateChanged: formValidatorInstance =>
-      LifeTimeEventPublisher.publish(new FormValidationStateChangedEvent(formValidatorInstance)),
-    onFormElementValidationStateChanged: formElementValidatorInstance =>
-      LifeTimeEventPublisher.publish(new FormElementValidationStateChangedEvent(formElementValidatorInstance))
   });
 };
 
