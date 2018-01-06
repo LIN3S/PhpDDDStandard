@@ -19,6 +19,8 @@
 /src/Infrastructure/Ui/Assets/.eslint.yml
 /src/Infrastructure/Ui/Assets/.scss_lint.yml
 /src/Infrastructure/Ui/Assets/node_modules
+/src/Infrastructure/Ui/Assets/assets
+!/src/Infrastructure/Ui/Assets/assets/.gitkeep
 /src/Infrastructure/Ui/Assets/build
 !/src/Infrastructure/Ui/Assets/build/.gitkeep
 /src/Infrastructure/Ui/Http/Symfony/.htaccess
