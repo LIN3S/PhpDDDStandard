@@ -71,6 +71,12 @@ knp_gaufrette:
                 create: true
 
 fos_rest:
+    exception: ~
+    view:
+        formats:
+            json: true
+            xml:  true
+        empty_content: 204
     format_listener:
         rules:
             - { path: '^/shop-api', priorities: ['json'], fallback_format: json, prefer_extension: true } # <-- Add this
