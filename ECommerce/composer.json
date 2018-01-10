@@ -2,8 +2,7 @@
     "require": {
         "smart-core/accelerator-cache-bundle": "^1.3",
         "sylius/shop-api-plugin": "^1.0@beta",
-        "sylius/sylius": "^1.0",
-        "symfony/symfony": "3.3.*"
+        "sylius/sylius": "^1.0"
     },
     "require-dev": {
         "lin3s/cs": "^0.6",
