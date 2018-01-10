@@ -6,7 +6,7 @@ config = [
   '--rootPath',
   argv.rootPath || __dirname + '/assets/',
   '--nodeModulesPath',
-  argv.nodeModulesPath || __dirname + 'node_modules/'
+  argv.nodeModulesPath || __dirname + '/node_modules/'
 ];
 
 gulp.task('admin', function() {
