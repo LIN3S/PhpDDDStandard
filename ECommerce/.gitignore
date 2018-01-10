@@ -16,8 +16,8 @@
 /composer.phar
 /parameters.yml
 /src/Infrastructure/Symfony/Framework/bootstrap.php.cache
-/src/Infrastructure/Ui/Assets/.eslint.yml
-/src/Infrastructure/Ui/Assets/.scss_lint.yml
+/src/Infrastructure/Ui/Assets/.eslintrc.js
+/src/Infrastructure/Ui/Assets/.stylelintrc.js
 /src/Infrastructure/Ui/Assets/node_modules
 /src/Infrastructure/Ui/Assets/assets
 !/src/Infrastructure/Ui/Assets/assets/.gitkeep
