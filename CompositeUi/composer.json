@@ -16,6 +16,7 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+        "lin3s/cs": "^0.7.3",
         "phpspec/phpspec": "^4.3"
     },
     "config": {
@@ -25,10 +26,6 @@
         "sort-packages": true
     },
     "scripts": {
-        "auto-scripts": {
-            "cache:clear": "src/Infrastructure/Ui/Cli/Symfony/console cache:clear",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "src/Infrastructure/Ui/Cli/Symfony/console assets:install --symlink --relative"
-        },
         "lin3scs-scripts": [
             "LIN3S\\CS\\Composer\\Hooks::buildDistFile",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -41,10 +38,14 @@
         ],
         "test": "phpspec run",
         "post-install-cmd": [
-            "@auto-scripts"
+            "src/Infrastructure/Ui/Cli/Symfony/console cache:clear",
+            "src/Infrastructure/Ui/Cli/Symfony/console assets:install src/Infrastructure/Ui/Http/Symfony --symlink --relative --symlink --relative",
+            "@lin3scs-scripts"
         ],
         "post-update-cmd": [
-            "@auto-scripts"
+            "src/Infrastructure/Ui/Cli/Symfony/console cache:clear",
+            "src/Infrastructure/Ui/Cli/Symfony/console assets:install src/Infrastructure/Ui/Http/Symfony --symlink --relative --symlink --relative",
+            "@lin3scs-scripts"
         ]
     },
     "autoload": {

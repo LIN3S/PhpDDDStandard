@@ -8,5 +8,5 @@
 lin3s_distribution:
     webpack:
         manifest_path: '%kernel.root_dir%/../../Ui/manifest.json'
-        public_js_path: '/assets/'
-        public_css_path: '/assets'
+        public_js_path: '/build/'
+        public_css_path: '/build'
